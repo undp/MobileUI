@@ -7,5 +7,8 @@
 /* Bootstrap */
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+/* Custom SCSS*/
+@import "global";
+
 /* Components */
 @import "components/*";

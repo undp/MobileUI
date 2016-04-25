@@ -4,9 +4,10 @@
 // Color
 $clr-black: #000000; // Black
 $clr-white: #ffffff; // White
-$clr-gray: #666666; // gray
-$clr-blue: #0a294e; // Blue
-$clr-light-blue: #66c2ff; // Light Blue, text link
+$clr-gray: #666666; // gray, copyright text
+$clr-blue: #0A294E; // Blue
+$clr-light-blue: #66C2FF; // Light Blue, text link
+$clr-dark-blue: #11294F; // Dark Blue
 
 //$bootstrap-sass-asset-helper: false !default;
 //
@@ -37,7 +38,7 @@ $clr-light-blue: #66c2ff; // Light Blue, text link
 //## Settings for some of the most global styles.
 //
 //** Background color for `<body>`.
-$body-bg:               #fff;
+$body-bg: $clr-blue;
 //** Global text color on `<body>`.
 //$text-color:            $gray-dark !default;
 //
@@ -53,7 +54,7 @@ $body-bg:               #fff;
 //
 //## Font, line-height, and color for body text, headings, and more.
 //
-//$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif: Arial, sans-serif;
 //$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 //$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -339,7 +340,7 @@ $body-bg:               #fff;
 //** Number of columns in the grid.
 //$grid-columns:              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-//$grid-gutter-width:         30px !default;
+$grid-gutter-width:         20px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 //$grid-float-breakpoint:     $screen-sm-min !default;
@@ -357,14 +358,14 @@ $body-bg:               #fff;
 //$container-sm:                 $container-tablet !default;
 //
 // Medium screen / desktop
-//$container-desktop:            (940px + $grid-gutter-width) !default;
+$container-desktop:            (978px + $grid-gutter-width);
 //** For `$screen-md-min` and up.
-//$container-md:                 $container-desktop !default;
+$container-md:                 $container-desktop;
 //
 // Large screen / wide desktop
-//$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+$container-large-desktop:      (1220px + $grid-gutter-width);
 //** For `$screen-lg-min` and up.
-//$container-lg:                 $container-large-desktop !default;
+$container-lg:                 $container-large-desktop;
 //
 //
 //== Navbar
