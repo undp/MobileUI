@@ -1,5 +1,5 @@
-# twbs-seed
-Boilerplate and custom bootstrap configuration to build faster, using Sass and Jade Template Engine.
+# UNDP.ORG
+Templates and custom bootstrap configuration to build faster, using Sass and Jade Template Engine.
 
 ## Commands
 
