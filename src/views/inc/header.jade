@@ -24,10 +24,17 @@ header.undp-header
               a(href='javascript:void(0);') Publications
             li
               a(href='javascript:void(0);') News Center
-            li
-              a(href='javascript:void(0);')
+            li.dropdown
+              a#dropdownMenuFunding.dropdown-toggle(href='javascript:void(0);', type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
                 span Funding
-                i.fa.fa-caret-down
+                i.fa.fa-caret-down.caret
+              ul.dropdown-menu.dropdown-funding(aria-labelledby='dropdownMenuFunding')
+                li
+                  a(href='javascript:void(0);') Top contributors
+                li
+                  a(href='javascript:void(0);') Funding channels
+                li
+                  a(href='javascript:void(0);') Partners
           h3.wrap-heading United Nations Development Programme
           ul.list-inline.list-sub-nav
             li
