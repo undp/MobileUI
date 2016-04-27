@@ -1,6 +1,27 @@
 .main-content{
   padding: 38px 0;
 }
+.list-otherLinks{
+
+  > li{
+    margin-bottom: 18px;
+
+    a{
+      font-size: 16px;
+      font-weight: bold;
+      color: $clr-light-blue;
+
+      .icon-sprite{
+        background: transparent url(../images/sprite-icons.png) no-repeat;
+      }
+
+      &:hover, &:focus{
+        text-decoration: none;
+        color: $clr-white;
+      }
+    }
+  }
+}
 
 .feature-box{
   position: relative;
