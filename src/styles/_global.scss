@@ -40,11 +40,50 @@ body {
     position: relative;
     margin-left: 186px;
 
+    @media (max-width: $screen-md-max){
+      margin-left: 140px;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      margin-left: 150px;
+    }
+
+    // Mobile only
+    @media (max-width: $screen-xs-max){
+      margin-left: 120px;
+      height: 88px;
+      @include flexbox();
+      @include flex-flow(row-reverse);
+    }
+
     .wrap-heading{
       font-size: 13px;
       color: $clr-white;
       margin: 0 0 20px;
       font-weight: normal;
+
+      @media (max-width: $screen-md-max){
+        position: relative;
+        top: 52px;
+        margin: 0;
+        font-size: 18px;
+      }
+
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        top: 43px;
+      }
+
+      // Mobile only
+      @media (max-width: $screen-xs-max){
+        margin-bottom: 0;
+        @include align-self(center);
+        top: 0;
+        font-size: 13px;
+      }
+    }
+
+    .menu-right-xs{
+      @include align-self(center);
     }
   }
 }
@@ -187,9 +226,14 @@ body {
       background-color: $clr-blue1;
       line-height: 25px;
       color: $clr-white;
+      @include opacity(0.6);
 
       svg{
         fill: $clr-white;
+      }
+
+      &:hover, &:focus{
+        @include opacity(1);
       }
 
       &.facebook{
@@ -218,6 +262,13 @@ body {
 .menubar{
   display: inline-block;
   margin-left: 28px;
+  position: relative;
+  bottom: 42px;
+
+  // Mobile only
+  @media (max-width: $screen-xs-max){
+    bottom: inherit;
+  }
 
   .icon-bar{
     display: block;
@@ -225,6 +276,10 @@ body {
     height: 3px;
     background-color: $clr-light-blue;
     margin-top: 4px;
+
+    &:last-child{
+      margin-bottom: 3px;
+    }
   }
 }
 
