@@ -5,6 +5,11 @@ html {
 
 body {
   margin-bottom: 100px;
+
+  // Mobile only
+  @media (max-width: $screen-xs-max){
+    margin-bottom: 200px;
+  }
 }
 
 .undp-header{
