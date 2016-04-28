@@ -16,6 +16,11 @@ body {
 
 .row-eq-height {
   @include flexbox();
+
+  // Mobile only
+  @media (max-width: $screen-xs-max){
+    display: block;
+  }
 }
 
 .undp-header{
@@ -234,7 +239,7 @@ body {
 
 .list-main-nav{
   padding-top: 8px;
-  margin-bottom: 22px;
+  margin: 0 -10px 22px;
 
   > li{
     padding: 0 10px;
