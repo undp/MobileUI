@@ -16,6 +16,18 @@
       var popDiv = $(this).attr('data-target');
       $(popDiv).toggleClass('hide');
     });
+    //off-canvas slide menu
+    $('[data-sidemenu]').click(function() {
+      var slideMenu = $('#slide-menu');
+      // alert($(popDiv).hasClass('open'))
+      if($(slideMenu).hasClass('open')){
+        $(slideMenu).removeClass('open');
+        $('body').removeClass('no-scroll');
+      }else{
+        $(slideMenu).addClass('open');
+        $('body').addClass('no-scroll');
+      }
+    });
 
   });
 })(window, document, jQuery);

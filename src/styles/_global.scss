@@ -197,6 +197,8 @@ body {
 
 .box-search{
   display: inline-block;
+  position: relative;
+  z-index: 10;
 
   .search-group{
     margin-bottom: 16px;
@@ -375,6 +377,7 @@ body {
   display: inline-block;
   margin-left: 28px;
   position: relative;
+  z-index: 10;
   bottom: 42px;
 
   // Mobile only
@@ -438,10 +441,16 @@ body {
   position: fixed;
   z-index: 9999;
   top: 0;
-  right: 0;
+  right: -350px;
   bottom: 0;
   width: 320px;
+  @include transition(.6s ease-in-out right);
 
-
-
+  &.open{
+    right: 0;
+    @include transition(.6s ease-in-out right);
+  }
+}
+.no-scroll{
+  overflow: hidden;
 }

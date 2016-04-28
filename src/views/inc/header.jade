@@ -6,7 +6,7 @@ header.undp-header
         .pull-right.menu-right-xs
           block search
             include ./../inc/search.jade
-          a.menubar.hidden-lg(href='javascript:void(0);')
+          a.menubar.hidden-lg(href='javascript:void(0);',data-sidemenu)
             span.icon-bar
             span.icon-bar
             span.icon-bar
@@ -18,7 +18,13 @@ header.undp-header
             include ./../inc/nav_main
         h3.wrap-heading.visible-md.visible-sm.visible-xs United Nations Development Programme
 .off-canvas#slide-menu
-  block mainnav
-    include ./../inc/nav_main
-  block topnav
-    include ./../inc/nav_top.jade
+  div.canvas-header
+    a.btn-close(href='javascript:void(0);',data-sidemenu) &times;
+    block search
+      include ./../inc/search.jade
+    h4 United Nations Development Programme
+  div.canvas-scroll
+    block mainnav
+      include ./../inc/nav_main
+    block topnav
+      include ./../inc/nav_top.jade
