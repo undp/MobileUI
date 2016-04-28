@@ -49,10 +49,30 @@
   }
 }
 
+.feature-wrap{
+  margin-bottom: 38px;
+
+  &:hover{
+    background: transparent url("../images/xmap-america-north.png") no-repeat top center;
+    background-size: cover;
+
+    .feature-box{
+      display: none;
+    }
+
+    .hover-content{
+      display: block;
+    }
+
+    .feature-txt-box{
+      display: block !important;
+    }
+  }
+}
+
 
 .feature-box{
   position: relative;
-  margin-bottom: 38px;
 
   @media (max-width: $screen-md-max){
     margin-bottom: 4px;
@@ -141,6 +161,10 @@
     text-transform: uppercase;
     display: block;
     margin-bottom: 5px;
+
+    @media (max-width: $screen-md-max){
+      font-size: 12px;
+    }
   }
 
   .article-heading{
@@ -175,6 +199,44 @@
     img{
       margin-bottom: 23px;
     }
+  }
+
+  &:hover{
+    background: transparent url("../images/xmap-america-north.png") no-repeat top center;
+    background-size: cover;
+
+    > img{
+      display: none;
+    }
+
+    .hover-content{
+      display: block;
+    }
+
+    .article-para{
+      display: block !important;
+    }
+  }
+}
+
+.hover-content{
+  display: none;
+
+  > span{
+    display: block;
+    color: $clr-light-blue;
+    font-size: 10px;
+
+    @media (max-width: $screen-md-max){
+      font-size: 12px;
+    }
+  }
+
+  > strong{
+    color: $clr-white;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 25px;
   }
 }
 
