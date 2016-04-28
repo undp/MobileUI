@@ -29,5 +29,8 @@
       }
     });
 
+    $('[data-popupmenu]').click(function(){
+      $('#contriesPop').addClass('hide');
+    });
   });
 })(window, document, jQuery);

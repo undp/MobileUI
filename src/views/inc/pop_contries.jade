@@ -1,8 +1,14 @@
 #contriesPop.countries-wrap.hide
+  a.btn-close(href='javascript:void(0);',data-popupmenu) &times;
   p.wrap-heading
     | Many of UNDP's relationships with countries and territories on the ground exceed 60 years.
     br
     | Find details on our successes and ongoing work.
+  .form-group.search-group.has-feedback.visible-xs
+    label.sr-only(for='SearchCountry') Search Country
+    input#SearchCountry.form-control(type='text', aria-describedby='inputSearch2', placeholder='Search for Country')
+    span.fa.fa-search.form-control-feedback(aria-hidden='true')
+    span#inputSearch2.sr-only (search)
   .row
     .col-countries
       ul.list-unstyled.list-countries
