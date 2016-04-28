@@ -52,8 +52,8 @@
 .feature-wrap{
   margin-bottom: 38px;
 
-  &:hover{
-    background: transparent url("../images/xmap-america-north.png") no-repeat top center;
+  &.hover{
+    background: #02346a url("../images/xmap-america-north.png") no-repeat top center;
     background-size: cover;
 
     .feature-box{
@@ -62,10 +62,16 @@
 
     .hover-content{
       display: block;
+      padding: 10px 10px 0 10px;
     }
 
     .feature-txt-box{
       display: block !important;
+      padding: 0 10px;
+      min-height: 268px;
+    }
+    .article-para p{
+      color: #FFF ;
     }
   }
 }
@@ -132,6 +138,7 @@
   margin-bottom: 38px;
   min-height: 290px;
 
+
   @media (max-width: $screen-md-max){
     min-height: 100%;
   }
@@ -155,22 +162,15 @@
     }
   }
 
-  .txt-article{
-    font-size: 10px;
-    color: $clr-light-blue;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 5px;
 
-    @media (max-width: $screen-md-max){
-      font-size: 12px;
-    }
-  }
 
   .article-heading{
+
     font-size: 18px;
+    font-weight: normal;
     color: $clr-white;
-    margin-bottom: 0;
+    letter-spacing: 0.04em;
+    margin: 0;
 
     @media (max-width: $screen-md-max){
       margin-bottom: 8px;
@@ -201,24 +201,50 @@
     }
   }
 
-  &:hover{
-    background: transparent url("../images/xmap-america-north.png") no-repeat top center;
+  &.hover{
+    padding: 10px;
+    background-color: #02346a;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 
     > img{
       display: none;
     }
 
+    .article-heading{
+      margin-bottom: 10px;
+    }
+
     .hover-content{
       display: block;
+
     }
 
     .article-para{
       display: block !important;
+      p{
+        color: #FFF;
+      }
+
     }
   }
 }
 
+.txt-article{
+  font-size: 10px;
+  color: $clr-light-blue;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+
+  @media (max-width: $screen-md-max){
+    font-size: 12px;
+  }
+}
 .hover-content{
   display: none;
 

@@ -1,21 +1,16 @@
 // Main
 (function(window, document, $) {
-  'use strict';
-
-  window.mod = {};
-
   $(function() {
-    // Carregando os modulos
-    window.mod.common = new window.mod.common();
+    console.log('scripts here')
+    $('[data-hover]')
+      .mouseout(function() {
+        $(this).removeClass('hover').css('background-image','none');
+      })
+      .mouseover(function() {
+        var bgImg = $(this).attr('data-map');
+        $(this).addClass('hover').css('background-image', 'url(' + bgImg + ')');
+      });
 
-    var bodyClasses = $('body').attr('class').split(' ');
-    $.each(bodyClasses, function(key, val) {
-      val = val.replace(/[-]/g, '');
-      if (window.mod[val] !== undefined) {
-        // console.log(key + ' => ' + val);
-        window.mod[val] = new window.mod[val]();
-      }
-    });
+
   });
-
 })(window, document, jQuery);
