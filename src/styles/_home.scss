@@ -1,7 +1,7 @@
 .main-content{
   padding: 38px 0;
 }
-.list-otherLinks{
+.list-left-nav{
 
   > li{
     margin-bottom: 18px;
@@ -10,18 +10,45 @@
       font-size: 16px;
       font-weight: bold;
       color: $clr-light-blue;
+      position: relative;
+      padding-left: 44px;
+      display: inline-block;
 
       .icon-sprite{
-        background: transparent url(../images/sprite-icons.png) no-repeat;
+        position: absolute;
+        left:0;
+        top:-6px;
       }
 
       &:hover, &:focus{
         text-decoration: none;
         color: $clr-white;
+        .icon-sprite{
+          background-position-x: -36px;
+        }
       }
     }
   }
 }
+
+.icon-sprite{
+  background: transparent url(../images/sprite-icons.png) no-repeat;
+  display: block;
+  width: 36px;
+  height: 36px;
+
+  &.icon-1{
+    background-position:0 0;
+  }
+  &.icon-2{
+    background-position:0 -36px;
+    top:0 !important;
+  }
+  &.icon-3{
+    background-position:0 -72px;
+  }
+}
+
 
 .feature-box{
   position: relative;
