@@ -106,10 +106,12 @@
 
 .article-box{
   margin-bottom: 38px;
+  min-height: 290px;
 
   // Mobile only
   @media (max-width: $screen-xs-max){
     margin-bottom: 32px;
+    min-height: 100%;
   }
 
   img{
