@@ -66,7 +66,7 @@ body {
 
     // Mobile only
     @media (max-width: $screen-xs-max){
-      margin-left: 120px;
+      margin-left: 102px;
       height: 88px;
       @include flexbox();
       @include flex-flow(row-reverse);
@@ -82,7 +82,7 @@ body {
         position: relative;
         top: 52px;
         margin: 0;
-        font-size: 18px;
+        font-size: 16px;
       }
 
       @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
@@ -423,7 +423,7 @@ body {
 
 .list-social-nav{
   text-align: center;
-  margin-bottom: 0;
+  margin: 0 -5px;
 
   > li{
 
