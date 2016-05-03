@@ -1,9 +1,9 @@
 //top navigation starts
 ul.list-top-nav
   li.dropdown-countries
-    a(href='javascript:void(0);', data-pop, data-target='#contriesPop')
+    a#MenuContries(href='javascript:void(0);', data-pop, data-target='#contriesPop')
       span UNDP around the world
-      i.fa.fa-caret-down.caret
+      i.icon-caret-down
   li
     a(href='javascript:void(0);') About us
   li
@@ -13,7 +13,7 @@ ul.list-top-nav
   li.dropdown
     a#dropdownMenuFunding.dropdown-toggle(href='javascript:void(0);', type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
       span Funding
-      i.fa.fa-caret-down.caret
+      i.icon-caret-down
     ul.dropdown-menu.dropdown-funding(aria-labelledby='dropdownMenuFunding')
       li
         a(href='javascript:void(0);') Top contributors

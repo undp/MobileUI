@@ -14,7 +14,17 @@
     //data-pop
     $('[data-pop]').click(function() {
       var popDiv = $(this).attr('data-target');
-      $(popDiv).toggleClass('hide');
+      //$(popDiv).toggleClass('hide');
+
+      if($(popDiv).hasClass('hide')){
+        $(popDiv).removeClass('hide');
+        $(this).find('i').addClass('icon-caret-up');
+        $(this).find('i').removeClass('icon-caret-down');
+      }else{
+        $(popDiv).addClass('hide');
+        $(this).find('i').removeClass('icon-caret-up');
+        $(this).find('i').addClass('icon-caret-down');
+      }
     });
     //off-canvas slide menu
     $('[data-sidemenu]').click(function() {
@@ -31,6 +41,8 @@
 
     $('[data-popupmenu]').click(function(){
       $('#contriesPop').addClass('hide');
+      $('#MenuContries i').removeClass('icon-caret-up');
+      $('#MenuContries i').addClass('icon-caret-down');
     });
   });
 })(window, document, jQuery);

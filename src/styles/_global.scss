@@ -142,7 +142,7 @@ body {
   .wrap-heading{
     font-size: 13px;
     color: $clr-gray1;
-    margin-bottom: 0;
+    margin-bottom: 5px;
 
     @media (max-width: $screen-xs-max){
       margin-bottom: 10px;
@@ -163,8 +163,9 @@ body {
   }
 
   .list-countries{
-    padding: 10px 0 12px;
+    padding: 5px 0;
     border-bottom: 1px solid $clr-blue2;
+    margin-bottom: 0;
 
     &:last-child{
       border-bottom: none;
@@ -177,6 +178,10 @@ body {
         font-size: 11px;
         line-height: 22px;
         display: inline-block;
+
+        @media (max-width: $screen-md-max){
+          line-height: 24px;
+        }
 
         &:hover, &:focus{
           color: $clr-white;
@@ -210,7 +215,7 @@ body {
       position: absolute;
       top: 12px;
       right: 10px;
-      font-size: 44px;
+      font-size: 36px;
       line-height: 20px;
       color: $clr-blue3;
       display: block;
@@ -245,11 +250,13 @@ body {
   > li{
 
     > a{
+      font-size: 11.5px;
       color: $clr-white;
       padding: 3px 15px;
 
       &:hover, &:focus{
         background-color: transparent;
+        color: $clr-white;
       }
     }
   }
@@ -269,6 +276,15 @@ body {
       height: 26px;
       padding-top: 4px;
       padding-bottom: 4px;
+      padding-right: 30px;
+    }
+
+    .form-control-feedback{
+      height: 26px;
+      line-height: 24px;
+      color: #999999;
+      font-size: 18px;
+      width: 26px;
     }
 
     // placeholder scss
@@ -308,13 +324,30 @@ body {
   > li{
     padding: 0 10px;
     display: inline-block;
-    a{
+
+    > a{
       font-size: 11.5px;
       color: $clr-light-blue;
 
       &:hover, &:focus{
         color: $clr-white;
         text-decoration: none;
+      }
+
+      i{
+        vertical-align: middle;
+        padding-left: 5px;
+      }
+    }
+
+    &.open{
+
+      #dropdownMenuFunding{
+        color: $clr-white;
+
+        .icon-caret-down:before{
+          content: "\f0d8";
+        }
       }
     }
   }
@@ -347,6 +380,7 @@ body {
 .list-language{
   padding-top: 8px;
   margin: 0 -8px 16px;
+  text-align: center;
 
   > li{
     position: relative;
@@ -528,7 +562,7 @@ body {
     position: absolute;
     top: 12px;
     right: 10px;
-    font-size: 44px;
+    font-size: 36px;
     line-height: 20px;
     color: $clr-blue3;
     z-index: 11;
@@ -587,6 +621,28 @@ body {
     border-bottom: none;
     margin-bottom: 0;
 
+    > li{
+
+      > a{
+
+        i{
+          vertical-align: middle;
+          padding-left: 5px;
+        }
+      }
+
+      &.open{
+
+        #dropdownMenuFunding{
+          color: $clr-white;
+
+          .icon-caret-down:before{
+            content: "\f0d8";
+          }
+        }
+      }
+    }
+
     .dropdown-funding{
       padding: 0;
       margin: 0;
@@ -594,9 +650,8 @@ body {
 
       > li{
 
-        a{
+        > a{
           padding: 10px 0;
-          color: $clr-light-blue;
 
           &:first-child{
             padding-top: 0;
