@@ -10,6 +10,14 @@ body {
   @media (max-width: $screen-xs-max){
     margin-bottom: 200px;
   }
+
+  &.undp{
+    background-color: $clr-blue;
+  }
+
+  &.undp-work{
+    background-color: $clr-white;
+  }
 }
 
 // row col equal height
@@ -499,6 +507,7 @@ body {
   min-height: 100px;
   border-top: 1px solid rgba(38, 95, 145, 0.5);
   padding: 28px 0 15px;
+  background-color: $clr-blue;
 
   .list-footer-nav{
     margin: 0 -7px 14px;
