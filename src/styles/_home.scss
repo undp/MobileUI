@@ -4,6 +4,14 @@
 
 .list-left-nav{
 
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    margin-bottom: 38px;
+  }
+
+  @media (max-width: $screen-xs-max){
+    margin-bottom: 38px;
+  }
+
   > li{
     margin-bottom: 18px;
 
@@ -73,7 +81,8 @@
     }
 
     .article-para p{
-      color: #FFF ;
+      color: #FFF;
+      font-size: 13px;
     }
   }
 }
@@ -230,6 +239,7 @@
       display: block !important;
       p{
         color: #FFF;
+        font-size: 13px;
       }
 
     }

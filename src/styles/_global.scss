@@ -76,8 +76,8 @@ body {
     @media (max-width: $screen-xs-max){
       margin-left: 102px;
       height: 88px;
-      @include flexbox();
-      @include flex-flow(row-reverse);
+      //@include flexbox();
+      //@include flex-flow(row-reverse);
     }
 
     .wrap-heading{
@@ -94,20 +94,34 @@ body {
       }
 
       @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-        top: 43px;
+        top: 40px;
+        width: 200px;
+        line-height: 22px;
       }
 
       // Mobile only
       @media (max-width: $screen-xs-max){
         margin-bottom: 0;
-        @include align-self(center);
-        top: 0;
+        //@include align-self(center);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        @include translate(0%, -50%);
         font-size: 13px;
+        width: 160px;
+        line-height: 18px;
       }
     }
 
     .menu-right-xs{
-      @include align-self(center);
+      //@include align-self(center);
+
+      @media (max-width: $screen-xs-max){
+        position: absolute;
+        top: 50%;
+        @include translate(0%, -50%);
+        right: 0;
+      }
 
       .box-search{
 
@@ -548,7 +562,7 @@ body {
   bottom: 0;
   width: 320px;
   @include transition(.6s ease-in-out right);
-  padding: 0 20px;
+  padding: 20px 20px 0;
   @include flexbox();
   @include flex-flow(column);
 
@@ -604,7 +618,7 @@ body {
 
 .canvas-scroll{
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   width: 100%;
   @include align-self(flex-end);
   @include flex-grow(1);
@@ -660,10 +674,10 @@ body {
       > li{
 
         > a{
-          padding: 10px 0;
+          padding: 20px 0;
 
           &:first-child{
-            padding-top: 0;
+            padding-top: 10px;
           }
 
           &:hover, &:focus{
