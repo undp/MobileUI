@@ -15,6 +15,8 @@
     $('[data-pop]').on('click mouseover',function() {
       var popDiv = $(this).attr('data-target');
       $(popDiv).removeClass('hide');
+      $(this).find('i').addClass('icon-caret-up');
+      $(this).find('i').removeClass('icon-caret-down');
 
       $(popDiv).on('mouseover', function(){
         $(popDiv).removeClass('hide');
@@ -22,6 +24,9 @@
 
       $(popDiv).on('mouseout', function(){
         $(popDiv).addClass('hide');
+        $(this).find('i').removeClass('icon-caret-up');
+        $(this).find('i').addClass('icon-caret-down');
+        console.log('caret');
       });
 
       //if($(popDiv).hasClass('hide')){
