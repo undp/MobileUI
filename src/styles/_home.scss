@@ -10,6 +10,7 @@
 
   @media (max-width: $screen-xs-max){
     margin-bottom: 38px;
+    width: 300px;
   }
 
   > li{
@@ -52,6 +53,10 @@
   &.icon-2{
     background-position:0 -36px;
     top:0 !important;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      top: -6px !important;
+    }
   }
   &.icon-3{
     background-position:0 -72px;
@@ -83,6 +88,19 @@
     .article-para p{
       color: #FFF;
       font-size: 13px;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      display: none;
+    }
+
+    /* For landscape layouts only */
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+      display: none;
+    }
+
+    @media (max-width: $screen-xs-max){
+      display: none;
     }
   }
 }
@@ -242,6 +260,19 @@
         font-size: 13px;
       }
 
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      display: none;
+    }
+
+    /* For landscape layouts only */
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+      display: none;
+    }
+
+    @media (max-width: $screen-xs-max){
+      display: none;
     }
   }
 }
