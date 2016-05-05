@@ -9,7 +9,7 @@ import runSequence from 'run-sequence';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-const dist = 'dist';
+const dist = 'www';
 const src = 'src';
 const tmp = '.tmp';
 const vendor = 'node_modules';
