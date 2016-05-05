@@ -12,20 +12,30 @@
         $(this).addClass('hover').css('background-image', 'url(' + bgImg + ')');
       });
     //data-pop
-    $('[data-pop]').click(function() {
+    $('[data-pop]').on('click mouseover',function() {
       var popDiv = $(this).attr('data-target');
-      //$(popDiv).toggleClass('hide');
+      $(popDiv).removeClass('hide');
 
-      if($(popDiv).hasClass('hide')){
+      $(popDiv).on('mouseover', function(){
         $(popDiv).removeClass('hide');
-        $(this).find('i').addClass('icon-caret-up');
-        $(this).find('i').removeClass('icon-caret-down');
-      }else{
+      });
+
+      $(popDiv).on('mouseout', function(){
         $(popDiv).addClass('hide');
-        $(this).find('i').removeClass('icon-caret-up');
-        $(this).find('i').addClass('icon-caret-down');
-      }
+      });
+
+      //if($(popDiv).hasClass('hide')){
+      //  $(popDiv).removeClass('hide');
+      //  $(this).find('i').addClass('icon-caret-up');
+      //  $(this).find('i').removeClass('icon-caret-down');
+      //}else{
+      //  $(popDiv).addClass('hide');
+      //  $(this).find('i').removeClass('icon-caret-up');
+      //  $(this).find('i').addClass('icon-caret-down');
+      //}
     });
+
+
     //off-canvas slide menu
     $('[data-sidemenu]').click(function() {
       var slideMenu = $('#slide-menu');

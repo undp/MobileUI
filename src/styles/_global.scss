@@ -206,7 +206,8 @@ body {
         display: inline-block;
 
         @media (max-width: $screen-md-max){
-          line-height: 24px;
+          line-height: 14px;
+          padding: 10px 0;
         }
 
         &:hover, &:focus{
@@ -256,7 +257,7 @@ body {
   .search-group{
 
     @media (max-width: $screen-xs-max){
-      margin-bottom: 0;
+      //margin-bottom: 0;
 
       .form-control{
         @include border-radius(0);
