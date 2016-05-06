@@ -182,8 +182,18 @@
       font-weight: normal;
     }
 
+    .select-box{
+      background-color: $clr-white;
+
+      > i{
+        color: $clr-blue4;
+      }
+    }
+
     .form-control{
       @include border-radius(0);
+      color: $clr-black;
+      font-size: 12.5px;
 
       &:focus, &:active{
         @include box-shadow(none);
@@ -312,5 +322,138 @@
       color: $clr-gray;
       margin-bottom: 12px;
     }
+  }
+}
+
+.nav-pagination{
+  text-align: center;
+  padding-top: 45px;
+  margin-bottom: 36px;
+}
+
+.undp-pagination{
+  margin: 0;
+  @include border-radius(0);
+
+  > li{
+
+    > a{
+      font-size: 13px;
+      color: $clr-blue4;
+      border: none;
+      padding: 0 8px;
+      line-height: 23px;
+      margin: 0 1px;
+
+      &:hover, &:focus{
+        color: $clr-blue4;
+      }
+    }
+
+    &.active{
+
+      a{
+        background-color: #eeeeee;
+        color: $clr-blue4;
+
+        &:hover, &:focus{
+          background-color: #eeeeee;
+          color: $clr-blue4;
+        }
+      }
+    }
+  }
+}
+
+.info-link-box{
+  background-color: #f2faff;
+  padding: 30px;
+}
+
+.info-wrap{
+  padding: 0 30px;
+
+  &:before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 4px;
+    bottom: 0;
+    border-right: 1px solid $clr-light-blue1;
+  }
+
+  > h4{
+    font-size: 17px;
+    font-weight: bold;
+    color: $clr-blue5;
+    margin: 0 0 12px;
+    line-height: 22px;
+  }
+
+   a{
+     font-size: 13px;
+     line-height: 20px;
+     text-decoration: none;
+     color: $clr-blue5;
+  }
+
+  &.work-wrap{
+    padding-left: 0;
+
+    > img{
+      width: 158px;
+      padding-top: 6px;
+    }
+  }
+
+  &.goal-wrap{
+    text-align: center;
+
+    > h4{
+      margin-bottom: 8px;
+    }
+  }
+
+  &.prespective-wrap{
+    padding-right: 0;
+
+    &:before{
+      border-right: none;
+    }
+  }
+}
+
+.nav-work{
+  margin-bottom: 0;
+
+  > li{
+
+    > a{
+      line-height: 24px;
+    }
+  }
+}
+
+.prespective-wrap{
+
+  .media{
+    padding-top: 26px;
+    margin: 0;
+  }
+
+  .media-object{
+    width: 140px;
+  }
+
+  .media-heading{
+    font-size: 13px;
+    color: $clr-blue5;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  .media-body{
+    font-size: 13px;
+    color: $clr-blue5;
   }
 }
