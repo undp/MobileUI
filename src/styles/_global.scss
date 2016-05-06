@@ -195,6 +195,10 @@ body {
     color: $clr-gray1;
     margin-bottom: 5px;
 
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      margin-bottom: 14px;
+    }
+
     @media (max-width: $screen-xs-max){
       margin-bottom: 10px;
     }
@@ -280,12 +284,37 @@ body {
   }
 
   .search-group{
+    margin-bottom: 7px;
 
-    @media (max-width: $screen-xs-max){
+    .form-control{
+      @include border-radius(0);
+      @include box-shadow(none);
+      border-color: transparent;
+      font-size: 17px;
+      color: $clr-gray;
+    }
 
-      .form-control{
-        @include border-radius(0);
-      }
+    // placeholder scss
+
+    .form-control::-webkit-input-placeholder {
+      font-style: italic;
+    }
+
+    .form-control:-moz-placeholder { /* Firefox 18- */
+      font-style: italic;
+    }
+
+    .form-control::-moz-placeholder {  /* Firefox 19+ */
+      font-style: italic;
+    }
+
+    .form-control:-ms-input-placeholder {
+      font-style: italic;
+    }
+
+    .form-control-feedback{
+      color: #999;
+      font-size: 22px;
     }
   }
 
@@ -308,9 +337,14 @@ body {
   background-color: $clr-dark-blue;
   border: none;
   left: 10px;
+  top: 18px;
   padding: 11px 0;
   min-width: 152px;
   @include border-radius(0);
+
+  @media (max-width: $screen-md-max){
+    top: 44px;
+  }
 
   > li{
 

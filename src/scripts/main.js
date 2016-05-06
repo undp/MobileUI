@@ -59,5 +59,13 @@
       $('#MenuContries i').removeClass('icon-caret-up');
       $('#MenuContries i').addClass('icon-caret-down');
     });
+
+    // Dropdown funding
+    $('.list-top-nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-funding').stop(true, true).fadeIn(100);
+    }, function() {
+      $(this).find('.dropdown-funding').stop(true, true).fadeOut(100);
+    });
+
   });
 })(window, document, jQuery);
