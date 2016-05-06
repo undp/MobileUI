@@ -328,8 +328,12 @@ body {
     line-height: 40px;
     z-index: 1;
     text-decoration: none;
-    display: inline-block;
     @include align-self(flex-end);
+    display: none;
+
+    @media (max-width: $screen-md-max){
+      display: inline-block;
+    }
   }
 }
 
