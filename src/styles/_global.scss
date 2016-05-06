@@ -655,7 +655,7 @@ body {
   bottom: 0;
   width: 320px;
   @include transition(.6s ease-in-out right);
-  padding: 20px 20px 0;
+  //padding: 20px 20px 0;
   @include flexbox();
   @include flex-flow(column);
 
@@ -673,6 +673,7 @@ body {
   height: 170px;
   @include align-self(flex-start);
   width: 100%;
+  padding: 20px 20px 0;
 
   .btn-close{
     position: absolute;
@@ -701,7 +702,7 @@ body {
   }
 
   h4{
-    margin: 0 0 15px;
+    margin: 0;
     color: $clr-gray1;
     font-size: 14.5px;
     border-bottom: 1px solid #21537f;
@@ -715,27 +716,37 @@ body {
   width: 100%;
   @include align-self(flex-end);
   @include flex-grow(1);
+  position: relative;
+  top: 5px;
 
   .list-main-nav, .list-top-nav{
     list-style-type: none;
     padding: 0;
-    margin: -12px 0 15px;
+    margin: 0 20px 0;
     border-bottom: 1px solid #21537f;
 
     > li{
-      padding: 12px 0;
+      margin: 0 -20px;
 
       > a{
+        display: block;
+        padding: 12px 20px;
         color: $clr-light-blue;
         font-size: 14.5px;
         text-decoration: none;
+      }
+
+      &.active{
+
+        > a{
+          background-color: $clr-blue2;
+        }
       }
     }
   }
 
   .list-top-nav{
     border-bottom: none;
-    margin-bottom: 0;
 
     > li{
 
