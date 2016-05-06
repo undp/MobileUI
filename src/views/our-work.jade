@@ -18,50 +18,11 @@ block content
         li.active
           a(href='javascript:void(0);') Our Work &raquo;
       .row
-        .col-sm-3
+        .col-md-3
           aside.aside-wrap.aside-link
-            ul.list-unstyled
-              li
-               a(href='javascript:void(0);') Overview
-              li
-                a(href='javascript:void(0);') Gender equality
-              li
-                a(href='javascript:void(0);') Crisis response
-              li
-                a(href='javascript:void(0);') Development impact
-              li
-                a(href='javascript:void(0);')
-                  i.icon-caret-right
-                  | Global Policy Centers
-              li.active
-                a(href='javascript:void(0);') Our Stories
-              li
-                a(href='javascript:void(0);')
-                  i.icon-caret-right
-                  | Funding
-              li
-                a(href='javascript:void(0);') Our Projects
-              li
-                a(href='javascript:void(0);') News
-              li
-                a(href='javascript:void(0);') Our Mission
-              li
-                a(href='javascript:void(0);')
-                  i.icon-caret-right
-                  | Our Leadership
-              li
-                a(href='javascript:void(0);') Transparency & Accountability
-              li
-                a(href='javascript:void(0);') Our Research & Publications
-              li
-                a(href='javascript:void(0);')
-                  i.icon-caret-right
-                  | Our Goodwill Ambassadors
-              li
-                a(href='javascript:void(0);')
-                  i.icon-caret-right
-                  | Get involved
-        .col-sm-6
+            block dropdown
+              include inc/work_dropdown
+        .col-md-6
           .stories-wrap
             h2
               | Our Stories
@@ -173,7 +134,7 @@ block content
                   h4.media-heading Empowering women boosts food security in rural Cuba
                   p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
 
-        .col-sm-3
+        .col-md-3
           aside.aside-wrap.aside-latest
             .latest-box.news-box
               h4 Latest news
@@ -259,7 +220,7 @@ block content
     .info-link-box
       .container-fluid
         .row-eq-height.clearfix
-          .col-sm-4
+          .col-md-4
             .info-wrap.work-wrap
               h4 Our Work &raquo;
               img.pull-right(src='images/undp-footer-logo.png', alt='UNDP Logo', class='img-responsive')
@@ -278,11 +239,11 @@ block content
                   a(href='javascript:void(0);') Latin America and the Caribbean
                 li
                   a(href='javascript:void(0);') Looking forward
-          .col-sm-4
+          .col-md-4
             .info-wrap.goal-wrap
              h4 Sustainable Development Goals &raquo;
              img(src='images/goals.png', alt='Sustainable Development Goals', class='img-responsive')
-          .col-sm-4
+          .col-md-4
             .info-wrap.prespective-wrap
               h4 Our Perspectives &raquo;
               a(href='javascript:void(0);') Transforming local communities amidst conflict
