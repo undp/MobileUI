@@ -12,21 +12,23 @@
         $(this).addClass('hover').css('background-image', 'url(' + bgImg + ')');
       });
     //data-pop
-    $('[data-pop]').on('click mouseover',function() {
+    $('[data-pop]').on('click mouseover',function(e) {
+      console.log('click', e.type)
       var popDiv = $(this).attr('data-target');
       $(popDiv).removeClass('hide');
       $(this).find('i').addClass('icon-caret-up');
       $(this).find('i').removeClass('icon-caret-down');
+      $(popDiv).off('mouseover mouseout');
 
       $(popDiv).on('mouseover', function(){
         $(popDiv).removeClass('hide');
+        console.log('mousehover')
       });
 
       $(popDiv).on('mouseout', function(){
         $(popDiv).addClass('hide');
         $(this).find('i').removeClass('icon-caret-up');
         $(this).find('i').addClass('icon-caret-down');
-        console.log('caret');
       });
 
       //if($(popDiv).hasClass('hide')){

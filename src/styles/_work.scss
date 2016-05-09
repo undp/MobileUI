@@ -263,7 +263,10 @@
 
   .media-object{
     width: 130px;
-    height: 130px;
+
+    @media (max-width: $screen-xs-max){
+      width: 80px;
+    }
   }
 
   .media-heading{
@@ -384,6 +387,11 @@
   text-align: center;
   padding-top: 45px;
   margin-bottom: 36px;
+
+  @media (max-width: $screen-xs-max){
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .undp-pagination{
@@ -430,7 +438,7 @@
   }
 
   .row-eq-height{
-    display: block;
+    @include flex-wrap(wrap);
   }
 }
 
@@ -499,10 +507,8 @@
     }
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
-      margin: 30px 0;
-      border-bottom: 1px solid $clr-light-blue1;
-      border-top: 1px solid $clr-light-blue1;
-      padding: 30px 0;
+      margin: 0;
+      padding: 0;
 
       img{
         margin: 0 auto;
@@ -514,6 +520,7 @@
       border-bottom: 1px solid $clr-light-blue1;
       border-top: 1px solid $clr-light-blue1;
       padding: 30px 0;
+      text-align: left;
 
       img{
         margin: 0 auto;
@@ -523,6 +530,10 @@
 
   &.prespective-wrap{
     padding-right: 0;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      padding: 40px 0 0;
+    }
 
     @media (max-width: $screen-xs-max){
       margin-bottom: 30px;

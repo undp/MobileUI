@@ -133,7 +133,22 @@ block content
                 .media-body
                   h4.media-heading Empowering women boosts food security in rural Cuba
                   p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
-
+          nav.nav-pagination
+            ul.pagination.undp-pagination
+              li
+                a(href='javascript:void(0);', aria-label='Previous')
+                  span(aria-hidden='true') &laquo; Previous
+              li.active
+                a(href='javascript:void(0);') 1
+              li
+                a(href='javascript:void(0);') 2
+              li
+                a(href='javascript:void(0);') 3
+              li
+                a(href='javascript:void(0);') 4
+              li
+                a(href='javascript:void(0);', aria-label='Next')
+                  span(aria-hidden='true') Next &raquo;
         .col-md-3
           aside.aside-wrap.aside-latest
             .latest-box.news-box
@@ -201,26 +216,10 @@ block content
                         path(d='M23.734 22.9a.79.79 0 0 1-.794.795H9.02a.79.79 0 0 1-.793-.794v-8.436h1.835c-.17.533-.26 1.12-.26 1.705 0 3.333 2.787 6.028 6.21 6.028 3.44 0 6.225-2.695 6.225-6.03 0-.585-.09-1.17-.26-1.704h1.757V22.9zm-3.698-6.94c0 2.15-1.796 3.894-4.023 3.894-2.214 0-4.01-1.745-4.01-3.893 0-2.148 1.796-3.892 4.01-3.892 2.227 0 4.023 1.745 4.023 3.893zm3.698-4.687a.9.9 0 0 1-.898.9H20.57a.9.9 0 0 1-.898-.9V9.125a.9.9 0 0 1 .898-.898h2.266a.9.9 0 0 1 .898.898v2.148zM26 8.565A2.58 2.58 0 0 0 23.435 6H8.565A2.58 2.58 0 0 0 6 8.565v14.87A2.58 2.58 0 0 0 8.565 26h14.87A2.58 2.58 0 0 0 26 23.435V8.565z', fill-rule='evenodd')
                   a(href='http://instagram.com/undp', target='_blank')
                     span Instagram
-      nav.nav-pagination
-        ul.pagination.undp-pagination
-          li
-            a(href='javascript:void(0);', aria-label='Previous')
-              span(aria-hidden='true') &laquo; Previous
-          li.active
-            a(href='javascript:void(0);') 1
-          li
-            a(href='javascript:void(0);') 2
-          li
-            a(href='javascript:void(0);') 3
-          li
-            a(href='javascript:void(0);') 4
-          li
-            a(href='javascript:void(0);', aria-label='Next')
-              span(aria-hidden='true') Next &raquo;
     .info-link-box
       .container-fluid
         .row-eq-height.clearfix
-          .col-md-4
+          .col-md-4.col-sm-6
             .info-wrap.work-wrap
               h4 Our Work &raquo;
               img.pull-right(src='images/undp-footer-logo.png', alt='UNDP Logo', class='img-responsive')
@@ -239,11 +238,11 @@ block content
                   a(href='javascript:void(0);') Latin America and the Caribbean
                 li
                   a(href='javascript:void(0);') Looking forward
-          .col-md-4
+          .col-md-4.col-sm-6
             .info-wrap.goal-wrap
              h4 Sustainable Development Goals &raquo;
              img(src='images/goals.png', alt='Sustainable Development Goals', class='img-responsive')
-          .col-md-4
+          .col-md-4.col-sm-9
             .info-wrap.prespective-wrap
               h4 Our Perspectives &raquo;
               a(href='javascript:void(0);') Transforming local communities amidst conflict
