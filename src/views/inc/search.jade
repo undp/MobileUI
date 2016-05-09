@@ -7,11 +7,11 @@
       a(href='javascript:void(0);') Español
     li
       a(href='javascript:void(0);') Français
-  .form-group.search-group.has-feedback
-    label.sr-only(for='inputSearch') Input with success
-    input#inputSearch.form-control(type='text', aria-describedby='inputSearch1', placeholder='Search')
-    span.icon-search.form-control-feedback(aria-hidden='true')
-    span#inputSearch1.sr-only (search)
+  form
+    .input-group.search-group
+      input.form-control(type='text', placeholder='Search')
+      span.input-group-btn
+        button.icon-search.btn.btn-search(type='submit')
   ul.list-inline.list-social-nav
     li
       a.icon-box.facebook(href='http://www.facebook.com/undp', target='_blank')
