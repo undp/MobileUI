@@ -21,6 +21,9 @@ block content
         .col-md-3
           aside.aside-wrap.aside-link
             block dropdown
+              button.navbar-toggle.box-toggle.collapsed(type='button', data-toggle='collapse', data-target='#aside-link')
+                | Our Stories
+                i.icon-caret-down.pull-right
               include inc/work_dropdown
         .col-md-6
           .stories-wrap
