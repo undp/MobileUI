@@ -12,37 +12,24 @@
         $(this).addClass('hover').css('background-image', 'url(' + bgImg + ')');
       });
     //data-pop
-    $('[data-pop]').on('click mouseover',function(e) {
-      console.log('click', e.type)
+    $('[data-pop]').on('mouseover',function(e) {
+      // console.log('click', e.type);
       var popDiv = $(this).attr('data-target');
       $(popDiv).removeClass('hide');
-      $(this).find('i').addClass('icon-caret-up');
-      $(this).find('i').removeClass('icon-caret-down');
-      $(popDiv).off('mouseover mouseout');
-
-      $(popDiv).on('mouseover', function(){
-        $(popDiv).removeClass('hide');
-        console.log('mousehover')
-      });
-
-      $(popDiv).on('mouseout', function(){
-        $(popDiv).addClass('hide');
-        $(this).find('i').removeClass('icon-caret-up');
-        $(this).find('i').addClass('icon-caret-down');
-      });
-
-      //if($(popDiv).hasClass('hide')){
-      //  $(popDiv).removeClass('hide');
-      //  $(this).find('i').addClass('icon-caret-up');
-      //  $(this).find('i').removeClass('icon-caret-down');
-      //}else{
-      //  $(popDiv).addClass('hide');
-      //  $(this).find('i').removeClass('icon-caret-up');
-      //  $(this).find('i').addClass('icon-caret-down');
-      //}
+      $(this).addClass('hover');
     });
 
+    $('[data-pop]').on('mouseout',function(e) {
+      var popDiv = $(this).attr('data-target');
+      $(popDiv).addClass('hide');
+      $(this).removeClass('hover');
+    });
 
+    $('[data-pop]').on('click',function(e) {
+      var popDiv = $(this).attr('data-target');
+      $(popDiv).toggleClass('hide');
+      $(this).toggleClass('hover');
+    });
     //off-canvas slide menu
     $('[data-sidemenu]').click(function() {
       var slideMenu = $('#slide-menu');

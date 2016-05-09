@@ -1,9 +1,11 @@
 //top navigation starts
 ul.list-top-nav
-  li.dropdown-countries
-    a#MenuContries(href='javascript:void(0);', data-pop, data-target='#contriesPop')
+  li.dropdown-countries( data-pop, data-target='#contriesPop')
+    a#MenuContries(href='javascript:void(0);')
       span UNDP around the world
-      i.icon-caret-down
+      i.icon-caret
+    block popups
+      include ./../inc/pop_contries
   li
     a(href='javascript:void(0);') About us
   li
