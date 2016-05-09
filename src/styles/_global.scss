@@ -167,7 +167,7 @@ body {
 
 .countries-wrap{
   position: absolute;
-  min-width: 950px;
+  min-width: 1054px;
   background-color: $clr-dark-blue;
   padding: 18px 23px 0;
   @include box-shadow(0px 0px 10px 0px rgba(0, 0, 0, 0.45));
@@ -179,15 +179,16 @@ body {
   @media (max-width: $screen-md-max){
     position: fixed;
     min-width: 100%;
-    width: auto;
-    left: 0;
-    right: 0;
     top: 0;
     bottom: 0;
+    min-height: 100%;
     margin: 0;
-    @include flexbox();
-    @include flex-flow(column);
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y:scroll;
+  }
+
+  @media (max-width: $screen-xs-max){
+    padding: 15px;
   }
 
   .wrap-heading{
@@ -201,26 +202,44 @@ body {
 
     @media (max-width: $screen-xs-max){
       margin-bottom: 10px;
+      padding-right: 20px;
     }
   }
 
-  .col-countries{
-    width: 20%;
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+  .countries-popup{
+    @include flexbox();
+    @include flex-direction(column);
+    @include flex-wrap(wrap);
+    height: 850px;
+    margin: 0 -10px;
+    @include flex(1 100%);
+
+    @media (max-width: $screen-md-max){
+      min-height: 1600px;
+    }
 
     @media (max-width: $screen-xs-max){
-      width: 50%;
+      min-height: 2960px;
+    }
+
+    &.no-border{
+      border-bottom: none;
     }
   }
 
   .list-countries{
+    width: 185px;
+    margin: 0 10px;
     padding: 5px 0;
     border-bottom: 1px solid $clr-blue2;
-    margin-bottom: 0;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      width: 165px;
+    }
+
+    @media (max-width: $screen-xs-max){
+      width: 135px;
+    }
 
     &:last-child{
       border-bottom: none;
@@ -230,7 +249,7 @@ body {
 
       > a{
         color: $clr-white;
-        font-size: 11px;
+        font-size: 12px;
         line-height: 22px;
         display: inline-block;
 
@@ -794,5 +813,14 @@ body {
         }
       }
     }
+  }
+}
+
+/* Countries Popup ui fixed scss */
+
+.countries-wrap{
+
+  &.hide{
+    //display: block !important;
   }
 }
