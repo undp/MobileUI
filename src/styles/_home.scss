@@ -191,8 +191,6 @@
     }
   }
 
-
-
   .article-heading{
     font-size: 16px;
     font-weight: normal;
@@ -274,6 +272,10 @@
     @media (max-width: $screen-xs-max){
       display: none;
     }
+  }
+
+  .link-more{
+    color: $clr-light-blue;
   }
 }
 
