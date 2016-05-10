@@ -1,6 +1,6 @@
 //top navigation starts
 ul.list-top-nav
-  li.dropdown-countries( data-pop, data-target='#contriesPop')
+  li.dropdown-countries(data-pop)
     a#MenuContries(href='javascript:void(0);')
       span UNDP around the world
       i.icon-caret
@@ -12,11 +12,11 @@ ul.list-top-nav
     a(href='javascript:void(0);') Publications
   li
     a(href='javascript:void(0);') News Center
-  li.dropdown
-    a#dropdownMenuFunding.dropdown-toggle(href='javascript:void(0);', type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+  li.dropdown-funding(data-popfunding, data-target='#dropdown-funding')
+    a#dropdownMenuFunding(href='javascript:void(0);')
       span Funding
-      i.icon-caret-down
-    ul.dropdown-menu.dropdown-funding(aria-labelledby='dropdownMenuFunding')
+      i.icon-caret
+    ul#dropdown-funding.funding-popup.hide
       li
         a(href='javascript:void(0);') Top contributors
       li

@@ -105,8 +105,6 @@ body {
     @media (max-width: $screen-xs-max){
       margin-left: 102px;
       height: 88px;
-      //@include flexbox();
-      //@include flex-flow(row-reverse);
     }
 
     .wrap-heading{
@@ -131,7 +129,6 @@ body {
       // Mobile only
       @media (max-width: $screen-xs-max){
         margin-bottom: 0;
-        //@include align-self(center);
         position: absolute;
         left: 0;
         top: 50%;
@@ -143,7 +140,6 @@ body {
     }
 
     .menu-right-xs{
-      //@include align-self(center);
 
       @media (max-width: $screen-xs-max){
         position: absolute;
@@ -357,14 +353,16 @@ body {
   }
 }
 
-.dropdown-funding{
+.funding-popup{
+  position: absolute;
   background-color: $clr-dark-blue;
   border: none;
   left: 10px;
-  top: 18px;
+  top: 26px;
   padding: 11px 0;
   min-width: 152px;
   @include border-radius(0);
+  z-index: 10000;
 
   @media (max-width: $screen-md-max){
     top: 44px;
@@ -376,6 +374,7 @@ body {
       font-size: 11.5px;
       color: $clr-white;
       padding: 3px 15px;
+      line-height: 24px;
 
       &:hover, &:focus{
         background-color: transparent;
@@ -468,15 +467,8 @@ body {
       }
     }
 
-    &.open{
-
-      #dropdownMenuFunding{
-        color: $clr-white;
-
-        .icon-caret-down:before{
-          content: "\f0d8";
-        }
-      }
+    &.dropdown-funding{
+      position: relative;
     }
   }
 }
@@ -684,9 +676,9 @@ body {
   bottom: 0;
   width: 320px;
   @include transition(.6s ease-in-out right);
-  //padding: 20px 20px 0;
   @include flexbox();
   @include flex-flow(column);
+
 
   &.open{
     right: 0;
@@ -786,22 +778,11 @@ body {
           padding-left: 5px;
         }
       }
-
-      &.open{
-
-        #dropdownMenuFunding{
-          color: $clr-white;
-
-          .icon-caret-down:before{
-            content: "\f0d8";
-          }
-        }
-      }
     }
 
     .dropdown-funding{
+      position: relative;
       padding: 0;
-      margin: 0;
       @include box-shadow(none);
 
       > li{
@@ -818,30 +799,31 @@ body {
           }
         }
       }
+
+      .funding-popup{
+        top: 30px;
+      }
     }
   }
 }
 
-/* Countries Popup ui fixed scss */
+/* Popup Menu caret icon hover effect scss */
 
-.countries-wrap{
+[data-pop], [data-popfunding]{
 
-  &.hide{
-    //display: block !important;
-  }
-}
-[data-pop]{
   > a{
     color: #66C2FF ;
     .icon-caret:before{
-      content: "\f0d8";
+      content: "\f0d7";
     }
   }
+
   &.hover{
+
     > a{
       color: #FFF !important;
       .icon-caret:before{
-        content: "\f0d7";
+        content: "\f0d8";
       }
     }
   }

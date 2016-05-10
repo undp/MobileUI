@@ -11,25 +11,57 @@
         var bgImg = $(this).attr('data-map');
         $(this).addClass('hover').css('background-image', 'url(' + bgImg + ')');
       });
-    //data-pop
-    $('[data-pop]').on('mouseover',function(e) {
-      // console.log('click', e.type);
-      var popDiv = $(this).attr('data-target');
-      $(popDiv).removeClass('hide');
-      $(this).addClass('hover');
-    });
 
-    $('[data-pop]').on('mouseout',function(e) {
-      var popDiv = $(this).attr('data-target');
-      $(popDiv).addClass('hide');
-      $(this).removeClass('hover');
-    });
+    //if ('ontouchstart' in document.documentElement) {
+    //  console.log('device');
+      $('[data-pop]').on('click touchstart',function(e) {
+        var popDiv = $(this).find('.smallpop');
+        if(e.type == 'touchstart'){
+          window.touchenabled = true;
+          console.log('click', e.type);
+          if($(popDiv).hasClass('hide')){
+            $(popDiv).removeClass('hide');
+            $(this).addClass('hover');
+          }else{
+            $(popDiv).addClass('hide');
+            $(this).removeClass('hover');
+          }
+        }
+        if(e.type == 'click'){
+          if(window.touchenabled == true){
+            return true;
+          }
+          $(popDiv).toggleClass('hide');
+          $(this).toggleClass('hover');
+          console.log($(popDiv).className);
+        }
 
-    $('[data-pop]').on('click',function(e) {
-      var popDiv = $(this).attr('data-target');
-      $(popDiv).toggleClass('hide');
-      $(this).toggleClass('hover');
-    });
+      });
+    //}else{
+    //  console.log('desktop');
+      //data-pop
+      $('[data-pop]').on('mouseover',function(e) {
+        if(window.touchenabled == true){
+          return true;
+        }
+        console.log('mouseover', e.type);
+        var popDiv = $(this).find('.smallpop');
+        $(popDiv).removeClass('hide');
+        $(this).addClass('hover');
+      });
+
+      $('[data-pop]').on('mouseout',function(e) {
+        if(window.touchenabled == true){
+          return true;
+        }
+        console.log('mouseout');
+        var popDiv = $(this).find('.smallpop');
+        $(popDiv).addClass('hide');
+        $(this).removeClass('hover');
+      });
+    //}
+
+
     //off-canvas slide menu
     $('[data-sidemenu]').click(function() {
       var slideMenu = $('#slide-menu');
@@ -43,17 +75,52 @@
       }
     });
 
-    $('[data-popupmenu]').click(function(){
-      $('#contriesPop').addClass('hide');
-      $('#MenuContries i').removeClass('icon-caret-up');
-      $('#MenuContries i').addClass('icon-caret-down');
+    //data-popfunding
+    $('[data-popfunding]').on('click touchstart',function(e) {
+      var popDiv = $(this).find('.funding-popup');
+      if(e.type == 'touchstart'){
+        window.touchenabled = true;
+        console.log('click', e.type);
+        if($(popDiv).hasClass('hide')){
+          $(popDiv).removeClass('hide');
+          $(this).addClass('hover');
+        }else{
+          $(popDiv).addClass('hide');
+          $(this).removeClass('hover');
+        }
+      }
+      if(e.type == 'click'){
+        if(window.touchenabled == true){
+          return true;
+        }
+        $(popDiv).toggleClass('hide');
+        $(this).toggleClass('hover');
+        console.log($(popDiv).className);
+      }
     });
 
-    // Dropdown funding
-    $('.list-top-nav li.dropdown').hover(function() {
-      $(this).find('.dropdown-funding').stop(true, true).fadeIn(100);
-    }, function() {
-      $(this).find('.dropdown-funding').stop(true, true).fadeOut(100);
+    $('[data-popfunding]').on('mouseover',function(e) {
+      if(window.touchenabled == true){
+        return true;
+      }
+      console.log('mouseover', e.type);
+      var popDiv = $(this).find('.funding-popup');
+      $(popDiv).removeClass('hide');
+      $(this).addClass('hover');
+    });
+
+    $('[data-popfunding]').on('mouseout',function(e) {
+      if(window.touchenabled == true){
+        return true;
+      }
+      console.log('mouseout');
+      var popDiv = $(this).find('.funding-popup');
+      $(popDiv).addClass('hide');
+      $(this).removeClass('hover');
+    });
+
+    $('[data-popupmenu]').click(function(){
+      $('#contriesPop').addClass('hide');
     });
 
   });

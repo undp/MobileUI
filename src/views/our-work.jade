@@ -27,11 +27,10 @@ block content
               include inc/work_dropdown
         .col-md-6
           .stories-wrap
-            h2
-              | Our Stories
-              a(href='javascript:void(0);')
-                | Subscribe
-                img(src='images/rss.png', alt='Subscribe')
+            h2 Our Stories
+            a.btn-subscribe(href='javascript:void(0);')
+              | Subscribe
+              img(src='images/rss.png', alt='Subscribe')
             .form-wrap
               form
                 .form-group
@@ -138,7 +137,7 @@ block content
                   p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
           nav.nav-pagination
             ul.pagination.undp-pagination
-              li
+              li.hide
                 a(href='javascript:void(0);', aria-label='Previous')
                   span(aria-hidden='true') &laquo; Previous
               li.active

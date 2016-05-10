@@ -222,21 +222,20 @@
     color: $clr-gray3;
     margin: 0 0 8px;
     letter-spacing: 1px;
+  }
 
-    a{
-      position: absolute;
-      font-size: 13px;
-      font-weight: normal;
-      color: $clr-gray;
-      bottom: 0;
-      right: 0;
-      letter-spacing: normal;
-      text-decoration: none;
+  .btn-subscribe{
+    font-size: 13px;
+    font-weight: normal;
+    color: $clr-gray;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    margin-bottom: 8px;
 
-      img{
-        width: 15px;
-        margin-left: 5px;
-      }
+    img{
+      width: 15px;
+      margin-left: 5px;
     }
   }
 
@@ -469,7 +468,6 @@
 
 .nav-pagination{
   text-align: center;
-  padding-top: 45px;
   margin-bottom: 36px;
 
   @media (max-width: $screen-xs-max){
@@ -494,6 +492,14 @@
 
       &:hover, &:focus{
         color: $clr-blue4;
+      }
+
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+        margin: 0 5px;
+      }
+
+      @media (max-width: $screen-xs-max){
+        margin: 0 5px;
       }
     }
 
@@ -652,6 +658,10 @@
 
 .prespective-wrap{
 
+  > a{
+    font-weight: bold;
+  }
+
   .media{
     padding-top: 26px;
     margin: 0;
@@ -666,6 +676,7 @@
     color: $clr-blue5;
     line-height: 18px;
     margin: 0;
+    font-weight: bold;
   }
 
   .media-body{
@@ -680,7 +691,7 @@
   bottom: 20px;
   width: 40px;
   height: 40px;
-  background-color: rgba(1, 55, 112, 0.40);
+  background-color: rgba(1, 55, 112, 0.60);
   color: $clr-white;
   font-size: 21px;
   text-align: center;
@@ -688,6 +699,10 @@
   z-index: 1;
   text-decoration: none;
   display: inline-block;
+
+  &:hover, &:focus{
+    text-decoration: none;
+  }
 }
 
 .box-toggle{
