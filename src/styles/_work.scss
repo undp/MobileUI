@@ -4,7 +4,6 @@
 
 .main-subnav{
   border-bottom: 1px solid $clr-light-blue1;
-  margin-bottom: 18px;
   /* Background Gradient */
   background: #def3ff; /* Old browsers */
   background: -moz-linear-gradient(top,  #ffffff 0%, #def3ff 100%); /* FF3.6-15 */
@@ -116,6 +115,7 @@
   @include border-radius(0);
   padding: 0;
   margin: 0 0 18px;
+  padding-top: 18px;
 
   > li{
 
@@ -214,6 +214,15 @@
 }
 
 .stories-wrap{
+  padding: 0 10px;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+    padding: 0;
+  }
+
+  @media (max-width: $screen-xs-max){
+    padding: 0;
+  }
 
   > h2{
     position: relative;
@@ -221,7 +230,6 @@
     font-weight: bold;
     color: $clr-gray3;
     margin: 0 0 8px;
-    letter-spacing: 1px;
   }
 
   .btn-subscribe{
@@ -761,5 +769,42 @@
         display: block !important;
       }
     }
+  }
+}
+
+.result-wrap{
+  padding: 0 10px;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+    padding: 0;
+  }
+
+  @media (max-width: $screen-xs-max){
+    padding: 0;
+  }
+
+  > h2{
+    position: relative;
+    font-size: 35px;
+    font-weight: bold;
+    color: $clr-gray3;
+    margin: 0 0 25px;
+  }
+
+  .development-result{
+
+    h3{
+      font-weight: bold;
+      color: $clr-gray3;
+      margin: 0 0 15px;
+    }
+
+    > img{
+      margin-bottom: 15px;
+    }
+  }
+
+  .result-list{
+    margin-bottom: 25px;
   }
 }
