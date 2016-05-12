@@ -2,6 +2,16 @@
   padding-top: 0;
 }
 
+.content-wrap{
+
+  > h2{
+    font-size: 35px;
+    font-weight: bold;
+    color: $clr-gray3;
+    margin: 0 0 8px;
+  }
+}
+
 .main-subnav{
   border-bottom: 1px solid $clr-light-blue1;
   /* Background Gradient */
@@ -220,14 +230,6 @@
 
   @media (max-width: $screen-xs-max){
     padding: 0;
-  }
-
-  > h2{
-    position: relative;
-    font-size: 35px;
-    font-weight: bold;
-    color: $clr-gray3;
-    margin: 0 0 8px;
   }
 
   .btn-subscribe{
@@ -799,10 +801,6 @@
   }
 
   > h2{
-    position: relative;
-    font-size: 35px;
-    font-weight: bold;
-    color: $clr-gray3;
     margin: 0 0 25px;
   }
 
@@ -828,76 +826,46 @@
 // Results at a Glance Page SCSS
 .publication-wrap{
 
-  > h2 {
+  > h2{
+    margin-bottom: 20px;
+  }
+
+  .search-group{
+    margin-bottom: 30px;
+  }
+}
+
+.report-wrap{
+  margin-bottom: 50px;
+
+  > h3{
     position: relative;
-    font-size: 35px;
+    font-size: 24px;
     font-weight: bold;
     color: #444444;
-    margin: 0 0 8px;
+    margin: 0 0 20px;
     letter-spacing: 1px;
   }
 
-  .publication-list-wrap{
-    margin-bottom: 50px;
+  ul{
 
-    > h3{
-      position: relative;
-      font-size: 24px;
-      font-weight: bold;
-      color: #444444;
-      margin: 0 0 20px;
-      letter-spacing: 1px;
-    }
+    li{
 
-    ul{
-      padding: 0;
-      list-style-type: none;
+      a{
+        text-decoration: none;
+        color: #666666;
 
-      li{
-
-        a{
-          text-decoration: none;
-          color: #666666;
-
-          img{
-            margin-bottom: 5px;
-          }
-
-          p{
-            margin-bottom: 0;
-          }
-
-          span{
-            color: #999;
-          }
+        img{
+          margin-bottom: 5px;
         }
-      }
-    }
-  }
 
-  .big-search-box{
-    position: relative;
-    margin-top: 20px;
-    margin-bottom: 30px;
+        p{
+          margin-bottom: 0;
+        }
 
-    .form-control{
-      @include border-radius(0);
-      @include box-shadow(none);
-    }
-
-    .icon-search{
-      @include border-radius(0);
-      position: absolute;
-      top:0;
-      right: 0;
-      padding: 3px 12px;
-      background: none;
-      font-size: 18px;
-      outline: none;
-
-      &:before, &:focus{
-        color: #999;
-        @include box-shadow(none);
+        span{
+          color: #999;
+        }
       }
     }
   }

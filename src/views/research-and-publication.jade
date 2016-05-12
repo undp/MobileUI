@@ -14,9 +14,7 @@ block content
     .container
       ul.list-inline.undp-breadcrumb
         li
-          a(href='javascript:void(0);') Home &raquo;
-        li.active
-          a(href='javascript:void(0);') About Us &raquo;
+          a(href='home.html') Home &raquo;
       .row
         .col-md-3
           aside.aside-wrap.aside-link
@@ -40,79 +38,87 @@ block content
                 a(href='javascript:void(0);') Evaluation
 
         .col-md-6
-          .publication-wrap
+          .content-wrap.publication-wrap
             h2 Research and Publication
-            .big-search-box
-              input.form-control(type='text', placeholder='Search')
-              button.icon-search.btn.btn-search(type='submit')
-            .publication-list-wrap
+            form
+              .input-group.search-group
+                input.form-control(type='text', placeholder='Search')
+                span.input-group-btn
+                  button.icon-search.btn.btn-search(type='submit')
+            .report-wrap
               h3 Featured Reports
-              ul.clearfix.row
-                li.col-sm-4.col-xs-6
-                  a(href='#')
-                   img.img-responsive(src='images/dummy-img.jpg', alt='')
-                   p Citizen Engagement in Public Service Delivery
-                   span.date 22 Feb 2016
+              .row
+                .col-sm-4
+                  .report-box
+                    a(href='#')
+                     img.img-responsive(src='images/dummy-img.jpg', alt='')
+                     p Citizen Engagement in Public Service Delivery
+                     span.date 22 Feb 2016
 
-                li.col-sm-4.col-xs-6
-                  a(href='#')
-                    img.img-responsive(src='images/dummy-img.jpg', alt='')
-                    p Newsletter: IOM-UNDP Programme on Mainstreaming Migration into National Development Strategie
-                    span.date 19 Feb 2016
+                .col-sm-4
+                  .report-box
+                    a(href='#')
+                      img.img-responsive(src='images/dummy-img.jpg', alt='')
+                      p Newsletter: IOM-UNDP Programme on Mainstreaming Migration into National Development Strategie
+                      span.date 19 Feb 2016
 
-                li.col-sm-4.col-xs-6
-                  a(href='#')
-                    img.img-responsive(src='images/dummy-img.jpg', alt='')
-                    p Guidance Note - A Development Approach to Migration and Displacemen
-                    span.date 12 Feb 2016
+                .col-sm-4
+                  .report-box
+                    a(href='#')
+                      img.img-responsive(src='images/dummy-img.jpg', alt='')
+                      p Guidance Note - A Development Approach to Migration and Displacemen
+                      span.date 12 Feb 2016
               a.link-view(href='javascript:void(0)') View more &raquo;
 
             .publication-list-wrap
               h3 Millennium Development Goals Reports
-              ul.clearfix.row
-                li.col-sm-4.col-xs-6
-                  a(href='#')
-                    img.img-responsive(src='images/dummy-img.jpg', alt='')
-                    p MDG Progress Reports - Africa
-                    span.date 28 Sep 2015
+              .row
+                .col-sm-4
+                  .report-box
+                    a(href='#')
+                      img.img-responsive(src='images/dummy-img.jpg', alt='')
+                      p MDG Progress Reports - Africa
+                      span.date 28 Sep 2015
 
-                li.col-sm-4.col-xs-6
-                  a(href='#')
-                    img.img-responsive(src='images/dummy-img.jpg', alt='')
-                    p MDG Gap Task Force Report
-                    span.date 18 Sep 2015
+                .col-sm-4
+                  .report-box
+                    a(href='#')
+                      img.img-responsive(src='images/dummy-img.jpg', alt='')
+                      p MDG Gap Task Force Report
+                      span.date 18 Sep 2015
 
-                li.col-sm-4.col-xs-6
-                  a(href='#')
-                    img.img-responsive(src='images/dummy-img.jpg', alt='')
-                    p The Millennium Development Goals Report 2015
-                    span.date 12 Jul 2015
+                .col-sm-4
+                  .report-box
+                    a(href='#')
+                      img.img-responsive(src='images/dummy-img.jpg', alt='')
+                      p The Millennium Development Goals Report 2015
+                      span.date 12 Jul 2015
               a.link-view(href='javascript:void(0)') View More MDG Reports &raquo;
 
             .publication-list-wrap
               h3 Fast facts & Results
-              ul.clearfix.row
-                li.col-sm-4.col-xs-6
-                  a(href='#')
-                    img.img-responsive(src='images/dummy-img.jpg', alt='')
-                    p Fast Facts: Youth as Partners for the Implementation of the SDGs
-                    span.date 01 Feb 2016
+              .row
+                .col-sm-4
+                  .report-box
+                    a(href='#')
+                      img.img-responsive(src='images/dummy-img.jpg', alt='')
+                      p Fast Facts: Youth as Partners for the Implementation of the SDGs
+                      span.date 01 Feb 2016
 
-                li.col-sm-4.col-xs-6
-                  a(href='#')
-                    img.img-responsive(src='images/dummy-img.jpg', alt='')
-                    p Fast Facts: Youth and Climate Change
-                    span.date 26 Nov 2016
+                .col-sm-4
+                  .report-box
+                    a(href='#')
+                      img.img-responsive(src='images/dummy-img.jpg', alt='')
+                      p Fast Facts: Youth and Climate Change
+                      span.date 26 Nov 2016
 
-                li.col-sm-4.col-xs-6
-                  a(href='#')
-                    img.img-responsive(src='images/dummy-img.jpg', alt='')
-                    p Fast Facts: Youth and Peacebuilding
-                    span.date 27 Aug 2016
+                .col-sm-4
+                  .report-box
+                    a(href='#')
+                      img.img-responsive(src='images/dummy-img.jpg', alt='')
+                      p Fast Facts: Youth and Peacebuilding
+                      span.date 27 Aug 2016
               a.link-view(href='javascript:void(0)') View more fast facts & results &raquo;
-
-
-
 
         .col-md-3
           aside.aside-wrap.aside-latest

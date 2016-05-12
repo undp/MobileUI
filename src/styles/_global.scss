@@ -302,11 +302,17 @@ body {
     margin-bottom: 7px;
 
     .form-control{
-      @include border-radius(0);
-      @include box-shadow(none);
       border-color: transparent;
       font-size: 17px;
       color: $clr-gray;
+      height: 34px;
+    }
+
+    .btn-search{
+      height: 34px;
+      border-color: transparent;
+      font-size: 22px;
+      padding: 0 5px;
     }
 
     // placeholder scss
@@ -429,50 +435,15 @@ body {
     margin-bottom: 16px;
 
     .form-control{
-      @include border-radius(0);
-      border: none;
       height: 26px;
-      padding-top: 4px;
-      padding-bottom: 4px;
-      padding-right: 30px;
+      font-size: 14px;
+      border-color: transparent;
     }
 
     .btn-search{
       height: 26px;
       padding: 0 6px;
-      background-color: $clr-white;
-      @include border-radius(0);
-      font-size: 18px;
-      line-height: 24px;
-      color: #999999;
-      outline: none;
-      @include box-shadow(none);
-    }
-
-    // placeholder scss
-
-    .form-control::-webkit-input-placeholder {
-      font-size: 13px;
-      font-style: italic;
-      color: $clr-gray;
-    }
-
-    .form-control:-moz-placeholder { /* Firefox 18- */
-      font-size: 13px;
-      font-style: italic;
-      color: $clr-gray;
-    }
-
-    .form-control::-moz-placeholder {  /* Firefox 19+ */
-      font-size: 13px;
-      font-style: italic;
-      color: $clr-gray;
-    }
-
-    .form-control:-ms-input-placeholder {
-      font-size: 13px;
-      font-style: italic;
-      color: $clr-gray;
+      border-color: transparent;
     }
   }
 }
@@ -862,3 +833,59 @@ body {
   }
 }
 
+/* Search Box SCSS */
+
+.search-group{
+
+  .form-control{
+    @include border-radius(0);
+    height: 40px;
+    padding: 5px 10px;
+    @include box-shadow(none);
+    border-right: none;
+    border-color: $clr-gray1;
+    font-size: 16px;
+  }
+
+  .btn-search{
+    height: 40px;
+    padding: 0 10px;
+    background-color: $clr-white;
+    @include border-radius(0);
+    font-size: 18px;
+    line-height: 24px;
+    color: #999999;
+    outline: none;
+    @include box-shadow(none);
+    border-width: 1px;
+    border-style: solid;
+    border-color: $clr-gray1;
+    border-left: none;
+
+    &:hover, &:focus, &:active{
+      outline: none;
+    }
+  }
+
+  // placeholder scss
+
+  .form-control::-webkit-input-placeholder {
+    font-style: italic;
+    color: $clr-gray;
+  }
+
+  .form-control:-moz-placeholder { /* Firefox 18- */
+    font-style: italic;
+    color: $clr-gray;
+  }
+
+  .form-control::-moz-placeholder {  /* Firefox 19+ */
+    font-style: italic;
+    color: $clr-gray;
+  }
+
+  .form-control:-ms-input-placeholder {
+    font-style: italic;
+    color: $clr-gray;
+  }
+}
