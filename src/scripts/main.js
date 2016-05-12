@@ -123,5 +123,17 @@
       $('#contriesPop').addClass('hide');
     });
 
+    var activePath = location.pathname;
+    switch(activePath){
+      case '/our-work.html':
+        $('.list-main-nav').find('.our-work').addClass('active');
+        break;
+      case '/sustainable-development-goals.html':
+        $('.list-main-nav').find('.development-goals').addClass('active');
+        break;
+      case '/blog.html':
+        $('.list-main-nav').find('.blog').addClass('active');
+        break;
+    }
   });
 })(window, document, jQuery);

@@ -528,7 +528,7 @@
 
 .info-link-box{
   background-color: #f2faff;
-  padding: 30px;
+  padding: 30px 0;
 
   @media (max-width: $screen-xs-max){
     padding: 0;
@@ -587,6 +587,10 @@
   &.work-wrap{
     padding-left: 0;
 
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      padding: 0;
+    }
+
     @media (max-width: $screen-xs-max){
       padding: 25px 0 0;
     }
@@ -604,13 +608,18 @@
       margin-bottom: 8px;
     }
 
+    img{
+      margin: 0 auto;
+    }
+
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
       margin: 0;
       padding: 0;
+    }
 
-      img{
-        margin: 0 auto;
-      }
+    /* For landscape layouts only */
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+      padding: 0;
     }
 
     @media (max-width: $screen-xs-max){
@@ -647,19 +656,11 @@
   margin-bottom: 0;
 
   > li{
-
-    /* For landscape layouts only */
-    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-      padding: 5px 0;
-    }
+    padding: 7px 0;
 
     > a{
-      line-height: 24px;
-
-      /* For landscape layouts only */
-      @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-        line-height: normal;
-      }
+      display: block;
+      line-height: 18px;
     }
   }
 }
@@ -720,7 +721,7 @@
   margin: 0;
   width: 100%;
   @include border-radius(0);
-  color: $clr-light-blue;
+  color: $clr-white;
   text-align: left;
   font-size: 18px;
   line-height: 20px;
@@ -739,6 +740,7 @@
   }
 
   &.collapsed{
+    color: $clr-light-blue;
 
     .icon-caret-down:before{
       content: "\f0d7";
