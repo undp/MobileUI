@@ -7,7 +7,7 @@ body {
   margin-bottom: 100px;
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    margin-bottom: 160px;
+    margin-bottom: 155px;
   }
 
   // Mobile only
@@ -560,16 +560,14 @@ body {
     a{
       font-size: 11px;
       color: $clr-light-blue;
-
-      &:hover, &:focus{
-        text-decoration: none;
-      }
     }
 
     &.active{
 
       a{
+        cursor: default;
         color: $clr-gray;
+        text-decoration: none;
       }
     }
 
