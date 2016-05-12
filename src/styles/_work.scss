@@ -836,37 +836,33 @@
 }
 
 .report-wrap{
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 
   > h3{
-    position: relative;
     font-size: 24px;
-    font-weight: bold;
-    color: #444444;
-    margin: 0 0 20px;
-    letter-spacing: 1px;
+    color: $clr-gray3;
+    margin: 0 0 25px;
+  }
+}
+
+.report-box{
+  margin-bottom: 20px;
+
+  > img{
+    margin: 0 auto 10px;
+    width: 100%;
   }
 
-  ul{
+  p{
+    margin-bottom: 3px;
+    line-height: 18px;
 
-    li{
-
-      a{
-        text-decoration: none;
-        color: #666666;
-
-        img{
-          margin-bottom: 5px;
-        }
-
-        p{
-          margin-bottom: 0;
-        }
-
-        span{
-          color: #999;
-        }
-      }
+    a{
+      color: $clr-blue4;
     }
+  }
+
+  span{
+    color: $clr-gray;
   }
 }
