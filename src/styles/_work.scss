@@ -866,3 +866,42 @@
     color: $clr-gray;
   }
 }
+
+.report-latest{
+
+  .latest-box{
+
+    .media-body{
+
+      > a{
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      img{
+        margin-bottom: 15px;
+
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+          margin: 0 auto 15px;
+        }
+
+        @media (max-width: $screen-xs-max){
+          margin: 0 auto 15px;
+        }
+      }
+    }
+
+    .media-right{
+
+      > a{
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+    }
+
+    .link-view{
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+  }
+}
