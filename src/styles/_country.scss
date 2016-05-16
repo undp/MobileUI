@@ -1,0 +1,144 @@
+.latest-box{
+  .anniversary-box{
+    margin-bottom: 20px;
+    text-align: center;
+    img{
+      display: inline-block;
+    }
+  }
+  .response-box{
+    margin-bottom: 20px;
+    img{
+      margin-bottom:15px;
+    }
+  }
+  .donors-wrap{
+    margin-bottom: 20px;
+  }
+  .joint-projects{
+    a{
+      display: block;
+      margin-bottom: 20px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    @media (max-width: $screen-sm-max){
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  .smart-energy-wrap{
+    h4 {
+      font-size: 17px;
+      font-weight: bold;
+      color: #444444;
+      margin: 15px 0 12px;
+    }
+    @media (max-width: $screen-sm-max){
+      padding-top: 20px;
+      //padding-bottom:20px;
+    }
+  }
+}
+.speakers-corner-box{
+
+  .phase-map{
+    display: inline-block;
+    margin-bottom: 20px;
+
+    b{
+      display: block;
+      padding-top: 6px;
+    }
+  }
+  @media (max-width: $screen-sm-max){
+    padding-top: 20px;
+    padding-bottom:20px;
+  }
+}
+.content-wrap.view-list-wrap{
+
+  .col-sm-4, .col-xs-12, .col-sm-8{
+    margin-bottom: 20px;
+  }
+
+  .img-wrap{
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .text-wrap.small{
+    height: 70px;
+    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max){
+      height: 92px;
+    }
+
+    @media (max-width: $screen-xs-max){
+      height: auto;
+    }
+  }
+
+  .text-wrap{
+    height: 130px;
+    background-color: #434c54;
+    position: relative;
+    padding: 15px 15px 20px;
+    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max){
+      height: 140px;
+    }
+
+    @media (max-width: $screen-xs-max){
+      height: auto;
+    }
+
+    P{
+      color: #FFFFFF;
+      margin-bottom: 0;
+    }
+
+    .default-link{
+      color: #FFFFFF;
+      font-size: 11px;
+      position: absolute;
+      right:15px;
+      bottom: 5px;
+    }
+  }
+}
+.undp-header {
+  .box-right {
+    .bosnia-heading {
+      font-size: 13px;
+      color: #FFFFFF;
+      margin: 0 0 20px;
+      font-weight: normal;
+      .header-small-img{
+        width: 72px;
+        height: 36px;
+        display: inline-block;
+        margin-left: 20px;
+      }
+      span{
+        font-weight: bold;
+        font-size: 20px;
+        display: inline-block;
+        margin-left: 20px;
+      }
+      @media (max-width: $screen-md-max){
+        margin: 20px 0;
+        float: left;
+        padding-right: 25px;
+        padding-left: 25px;
+        .header-small-img, span{
+          display: block;
+          margin-left: 0;
+          margin-bottom: 5px;
+
+        }
+      }
+    }
+  }
+}
