@@ -941,6 +941,13 @@
     margin-bottom: 12px;
   }
 
+  p{
+
+    .default-link{
+      color: $clr-blue4;
+    }
+  }
+
   .txt-highlighted{
     font-style: italic;
     font-weight: bold;
