@@ -261,7 +261,7 @@ body {
       }
 
       span{
-        font-size: 11px;
+        font-size: 12px;
         line-height: 22px;
         color: $clr-gray1;
       }
@@ -531,6 +531,11 @@ body {
     a{
       font-size: 11px;
       color: $clr-light-blue;
+
+      &:hover, &:focus{
+        color: $clr-white;
+        text-decoration: none;
+      }
     }
 
     &.active{
