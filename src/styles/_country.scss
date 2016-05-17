@@ -83,7 +83,7 @@
 
   .text-wrap{
     height: 130px;
-    background-color: #434c54;
+    background-color: #002245;
     position: relative;
     padding: 15px 15px 20px;
     @media (min-width: $screen-sm-min) and (max-width: $screen-md-max){
@@ -100,8 +100,7 @@
     }
 
     .default-link{
-      color: #FFFFFF;
-      font-size: 11px;
+      color: #66c2ff;
       position: absolute;
       right:15px;
       bottom: 5px;
@@ -113,19 +112,19 @@
     .bosnia-heading {
       font-size: 13px;
       color: #FFFFFF;
-      margin: 0 0 20px;
+      margin: -9px 0 13px;
       font-weight: normal;
       .header-small-img{
         width: 72px;
-        height: 36px;
+        height: 28px;
         display: inline-block;
-        margin-left: 20px;
+        margin-left: 5px;
       }
       span{
         font-weight: bold;
-        font-size: 20px;
+        font-size: 25px;
         display: inline-block;
-        margin-left: 20px;
+        margin-left: 10px;
       }
       @media (max-width: $screen-md-max){
         margin: 20px 0;
@@ -140,5 +139,86 @@
         }
       }
     }
+  }
+}
+@media (max-width: $screen-md-max){
+  .padding-none{
+    padding: 0 !important;
+  }
+}
+@media (max-width: 767px){
+  .info-wrap.work-wrap {
+    padding: 25px 0 0 !important;
+  }
+  .info-wrap.goal-wrap{
+    padding: 30px 0 !important;
+  }
+}
+.footer-bosnia-wrap{
+  background-image: url("../images/map-bg.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  @media (max-width: $screen-md-max){
+    background-size: contain;
+  }
+  &:before{
+    display: none;
+  }
+  .stats-country{
+    list-style-type: none;
+    padding: 0;
+    height: 185px;
+    margin: 0;
+    @media (max-width: $screen-xs-max){
+      width: 300px;
+      margin: 0 auto;
+    }
+    li{
+      height: 50px;
+      margin-bottom: 20px;
+      width: 93px;
+      float: left;
+      .header-small-img{
+        width: 72px;
+        height: 36px;
+        display: inline-block;
+      }
+    }
+    span{
+      display: block;
+      text-align: center;
+    }
+    .title{
+      font-size: 11px;
+      color: #888;
+    }
+    .amount{
+      font-size: 20px;
+      color: #555;
+      font-weight: bold;
+      line-height: 100%;
+    }
+    .val{
+      font-size: 11px;
+      font-weight: bold;
+      color: #888;
+    }
+  }
+}
+.undp-footer{
+  .list-social-nav{
+    margin: 20px 0;
+    li{
+      float: left;
+      color: #666666;
+      a{
+        margin-left: 10px;
+      }
+    }
+  }
+  .turn-high{
+    color: #66c2ff;
+    display: inline-block;
+    margin-left: 15px;
   }
 }
