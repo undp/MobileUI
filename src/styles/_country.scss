@@ -222,3 +222,222 @@
     margin-left: 15px;
   }
 }
+
+.undp-header.bosnia-herzegovina-header{
+  background: #5a90da;
+  .box-logo{
+    background-image: url("../images/default-img.png");
+    width: 115px;
+    height: 95px;
+    margin-top: 15px;
+    @media (max-width: $screen-xs-max){
+      margin-bottom: 15px;
+    }
+  }
+  .box-right {
+    margin-left: 150px;
+    @media (max-width: $screen-xs-max){
+      margin-left: 130px;
+    }
+  }
+  .list-language{
+    text-align: left;
+    margin: 0 -8px 10px;
+    li.active{
+      a{
+        color: #0b387c;
+      }
+    }
+    li{
+      a{
+        color: #5d5d5d;
+        &:hover{
+          color: #0b387c;
+        }
+      }
+    }
+  }
+  .bosnia-heading{
+    font-size: 32px;
+    margin: 0 0 5px;
+    span {
+      display: inline-block;
+      margin-right: 10px;
+      margin-left: 0;
+      font-size: 32px;
+      font-weight: normal;
+      @media (max-width: $screen-md-max){
+        display: block;
+        margin: 0;
+        font-size: 20px;
+      }
+      @media (max-width: $screen-xs-max){
+        font-size: 16px;
+      }
+    }
+    @media (max-width: $screen-md-max){
+      padding: 30px 0 0;
+    }
+    @media (max-width: $screen-sm-max){
+      font-size: 26px;
+    }
+    @media (max-width: $screen-xs-max){
+      font-size: 22px;
+    }
+  }
+
+  .pos-top{
+    .list-main-nav{
+      >li{
+        border: none;
+        a{
+          color: #0b387c;
+        }
+      }
+    }
+  }
+  .box-search{
+    padding-top: 20px;
+    a{
+      display: inline-block;
+      text-align: center;
+    }
+    @media (max-width: $screen-md-max){
+      text-align: center;
+    }
+  }
+}
+.box-search{
+  .header-small-img{
+    width: 102px;
+  }
+}
+.content-wrap.country-page-wrap{
+  p{
+    font-size: 12px;
+  }
+  .big-img-wrap{
+    margin-bottom: 44px;
+    span, a{
+      display: block;
+    }
+    span{
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+    a{
+      margin: 12px 0 12px;
+      font-size: 12px;
+    }
+  }
+  .news-list-wrap{
+    h1{
+      margin: 0 0 15px;
+      font-size: 24px;
+      font-family: Arial;
+      font-weight: bold;
+    }
+    .news-wrap{
+      margin-bottom: 25px;
+      a{
+        display: block;
+        &:hover{
+          text-decoration: none;
+        }
+        img{
+          margin-bottom: 11px;
+        }
+        .text-content{
+          display: block;
+          padding-right: 66px;
+          @media (max-width: $screen-md-max){
+            padding-right: 0;
+          }
+        }
+        h2{
+          font-family: Arial;
+          font-weight: bold;
+          margin: 0 0 11px;
+          font-size: 16px;
+          line-height: 22px;
+          color: #5a90da;
+        }
+        p{
+          color: #333333;
+        }
+        .date{
+          color: #999999;
+          display: block;
+          font-size: 10px;
+          margin-top: -10px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+.country-footer{
+  min-height: 100px;
+  .list-footer-nav{
+    margin: 0;
+    li{
+      color: #666666;
+      border-left: 1px solid #666666;
+      line-height: 12px;
+      font-size: 11px;
+      margin: 0;
+      &:first-child{
+        border-left: none;
+        padding-left: 0;
+      }
+      @media (max-width: $screen-xs-max){
+        font-size: 10px;
+        padding: 0 3px;
+      }
+      a{
+        color: #66c2ff;
+        font-size: 11px;
+        >span{
+          color: #666666 !important;
+          display: inline-block;
+          margin-right: 5px;
+        }
+        @media (max-width: $screen-xs-max){
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px){
+  .perspective-box {
+    .media-perspective {
+      margin: 15px 0 15px;
+    }
+  }
+}
+.sponsors-wrap{
+  background-color: #f2faff;
+  padding: 20px 0;
+  .sponsors-list{
+    height: 210px;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+    text-align: center;
+    li{
+      padding: 0 10px;
+      margin: 0;
+      display: inline-block;
+      @media (max-width: $screen-xs-max){
+        display: block;
+      }
+    }
+  }
+}

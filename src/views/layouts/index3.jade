@@ -19,54 +19,46 @@ html(class="no-js", lang="en")
     //[if (lt IE 9) & (!IEMobile)]> <p class="browsehappy">Você está usando um <strong>navegador antigo</strong>. Por favor <a href="http://browsehappy.com/">atualize o seu navegador</a> para uma boa experiência.</p> <![endif]
     //header starts
     block header
-      header.undp-header
+      header.undp-header.bosnia-herzegovina-header
         .container
           a.box-logo.pull-left(href='/')
           .box-right.clearfix
             .pull-right.menu-right-xs
               block search
-                include ./../inc/search.jade
+                include ./../inc/search1.jade
               a.menubar.hidden-lg(href='javascript:void(0);',data-sidemenu)
                 span.icon-bar
                 span.icon-bar
                 span.icon-bar
             .pull-left.hidden-md.hidden-sm.hidden-xs.pos-top
-              block topnav
-                //top navigation starts
-                ul.list-top-nav
-                  li.dropdown-countries(data-pop)
-                    a#MenuContries(href='javascript:void(0);')
-                      span UNDP around the world
-                      i.icon-caret
-                    block popups
-                      include ./../inc/pop_contries
-                  li
-                    a(href='javascript:void(0);') Operations
-                  li
-                    a(href='research-and-publication.html') Research and publications
-                  li
-                    a(href='javascript:void(0);') News Center
+              ul.list-inline.list-language
+                li.active
+                  a(href='javascript:void(0);') BHS
+                li
+                  a(href='javascript:void(0);') English
+              h3.bosnia-heading
+                span United Nations in
+                |Bosnia and Herzegovina
 
-                //top navigation ends
-
-              h3.bosnia-heading UNDP in
-                span Bosnia and Herzegovina
-                a(href='javascript:void(0);')
-                  img.header-small-img(src='images/Flag_of_Bosnia_and_Herzegovina.svg', alt='Country Flag')
               block mainnav
                 //main navigation starts
                 ul.list-main-nav
                   li.development-goals
-                    a(href='sustainable-development-goals.html') Sustainable Development Goals
+                    a(href='javascript:void(0);') Our Work
                   li.about-bosnia
-                    a(href='javascript:void(0);') About Bosnia and Herzegovina
+                    a(href='javascript:void(0);') UN Agencies
                   li.our-work
-                    a(href='our-work.html') Our Work
+                    a(href='javascript:void(0);') SDGs
+                  li.about-bosnia
+                    a(href='javascript:void(0);') News
+                  li.our-work
+                    a(href='javascript:void(0);') Floods Recovery
+                  li.our-work
+                    a(href='javascript:void(0);') Our Stories
                 //main navigation ends
-            h3.bosnia-heading.visible-md.visible-sm.visible-xs UNDP in
-              span Bosnia and Herzegovina
-              a(href='javascript:void(0);')
-                img.header-small-img(src='images/default-img.png', alt='')
+            h3.bosnia-heading.visible-md.visible-sm.visible-xs.col-md-8.col-sm-6.col-xs-10
+              span United Nations in
+              | Bosnia and Herzegovina
     //header ends
     //content starts
     block content
@@ -74,7 +66,7 @@ html(class="no-js", lang="en")
     //content ends
     //footer starts
     block footer
-      include ./../inc/footer1.jade
+      include ./../inc/footer2.jade
     //footer ends
     block slidemenu
       include ./../inc/slide_menu
