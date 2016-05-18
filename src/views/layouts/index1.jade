@@ -1,5 +1,6 @@
 doctype html
 html(class="no-js", lang="en")
+  block vars
   head
     block head
       meta(charset="utf-8")
@@ -10,7 +11,7 @@ html(class="no-js", lang="en")
       meta(name='theme-color', content='#006BB6')
       meta(name='msapplication-TileColor', content='#006BB6')
       meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
-      title UNDP - United Nations Development Programme
+      title #{page} | UNDP - United Nations Development Programme
       link(rel='stylesheet', href="styles/main.css")
       link(rel='apple-touch-icon', href='/apple-touch-icon.png')
       link(rel='icon', href='/favicon.ico')
