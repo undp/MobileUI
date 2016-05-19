@@ -22,6 +22,9 @@
       &:last-child{
         margin-bottom: 0;
       }
+      @media (min-width: $screen-sm-min) and (max-width: $screen-md-max){
+        height: 76px;
+      }
     }
     @media (max-width: $screen-sm-max){
       padding-top: 20px;
@@ -59,6 +62,32 @@
 }
 .content-wrap.view-list-wrap{
 
+  .list-content-wrap:hover .overlay-wrap{
+    display: block;
+  }
+  .list-content-wrap{
+    position: relative;
+    cursor: pointer;
+  }
+  .overlay-wrap{
+    background-color: #292929;
+    padding: 28px 15px;
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    h3{
+      font-size: 17px;
+      margin: 0 0 15px;
+      color: #66c2ff;
+      font-weight:bold;
+    }
+    p{
+      color: #b4b4b4;
+    }
+  }
   .col-sm-4, .col-xs-12, .col-sm-8{
     margin-bottom: 20px;
   }
@@ -104,6 +133,7 @@
       position: absolute;
       right:15px;
       bottom: 5px;
+      z-index: 1;
     }
   }
 }
@@ -141,10 +171,11 @@
     }
   }
 }
+.padding-none{
+  padding: 0 !important;
+}
 @media (max-width: $screen-md-max){
-  .padding-none{
-    padding: 0 !important;
-  }
+
 }
 @media (max-width: 767px){
   .info-wrap.work-wrap {
@@ -170,7 +201,7 @@
     height: 185px;
     margin: 0;
     @media (max-width: $screen-xs-max){
-      width: 300px;
+      width: 280px;
       margin: 0 auto;
     }
     li{
@@ -226,7 +257,8 @@
 .undp-header.bosnia-herzegovina-header{
   background: #5a90da;
   .box-logo{
-    background-image: url("../images/default-img.png");
+    background-image: url("../images/unbh-logo.jpg");
+    background-repeat: no-repeat;
     width: 115px;
     height: 95px;
     margin-top: 15px;
@@ -237,7 +269,7 @@
   .box-right {
     margin-left: 150px;
     @media (max-width: $screen-xs-max){
-      margin-left: 130px;
+      margin-left: 100px;
     }
   }
   .list-language{
@@ -409,7 +441,7 @@
     }
   }
 }
-@media (max-width: 767px){
+@media (max-width:  $screen-sm-max){
   .perspective-box {
     .media-perspective {
       margin: 15px 0 15px;
@@ -417,7 +449,7 @@
   }
 }
 .sponsors-wrap{
-  background-color: #f2faff;
+  //background-color: #f2faff;
   padding: 20px 0;
   .sponsors-list{
     height: 210px;
