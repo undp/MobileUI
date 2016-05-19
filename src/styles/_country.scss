@@ -1,3 +1,7 @@
+.undp-country{
+  margin-bottom: 146px;
+}
+
 .latest-box{
   .anniversary-box{
     margin-bottom: 20px;
@@ -67,7 +71,6 @@
   }
   .list-content-wrap{
     position: relative;
-    cursor: pointer;
   }
   .overlay-wrap{
     background-color: #292929;
@@ -185,10 +188,8 @@
     padding: 30px 0 !important;
   }
 }
-.footer-bosnia-wrap{
-  background-image: url("../images/map-bg.png");
-  background-repeat: no-repeat;
-  background-position: right center;
+.footer-country-wrap{
+  background: transparent url("../images/country-map.png") no-repeat center;
   @media (max-width: $screen-md-max){
     background-size: contain;
   }
@@ -254,10 +255,10 @@
   }
 }
 
-.undp-header.bosnia-herzegovina-header{
+.undp-header.country-header{
   background: #5a90da;
   .box-logo{
-    background-image: url("../images/unbh-logo.jpg");
+    background-image: url("../images/un-logo.jpg");
     background-repeat: no-repeat;
     width: 115px;
     height: 95px;
