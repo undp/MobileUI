@@ -142,7 +142,7 @@
 }
 .undp-header {
   .box-right {
-    .bosnia-heading {
+    .country-heading {
       font-size: 13px;
       color: #FFFFFF;
       margin: -9px 0 13px;
@@ -152,6 +152,7 @@
         height: 28px;
         display: inline-block;
         margin-left: 5px;
+        margin-top: -9px;
       }
       span{
         font-weight: bold;
@@ -263,6 +264,7 @@
     width: 115px;
     height: 95px;
     margin-top: 15px;
+    background-size: cover;
     @media (max-width: $screen-xs-max){
       margin-bottom: 15px;
     }
@@ -278,19 +280,19 @@
     margin: 0 -8px 10px;
     li.active{
       a{
-        color: #0b387c;
+        color: #FFFFFF;
       }
     }
     li{
       a{
-        color: #5d5d5d;
+        color: #0b387c;
         &:hover{
-          color: #0b387c;
+          color: #FFFFFF;
         }
       }
     }
   }
-  .bosnia-heading{
+  .country-heading{
     font-size: 32px;
     margin: 0 0 5px;
     span {
@@ -323,14 +325,23 @@
     .list-main-nav{
       >li{
         border: none;
+        padding: 0;
+        margin: 0 5px -1px;
         a{
           color: #0b387c;
+          padding: 5px 5px;
+          display: inline-block;
+          &:hover {
+            background-color: #76a3e1;
+            color: #fff;
+          }
         }
       }
     }
   }
   .box-search{
     padding-top: 20px;
+    text-align: center;
     a{
       display: inline-block;
       text-align: center;
@@ -382,10 +393,12 @@
         }
         .text-content{
           display: block;
-          padding-right: 66px;
-          @media (max-width: $screen-md-max){
-            padding-right: 0;
-          }
+          font-family: Arial;
+          font-weight: bold;
+          margin: 0 0 11px;
+          font-size: 16px;
+          line-height: 22px;
+          color: #5a90da;
         }
         h2{
           font-family: Arial;
@@ -404,6 +417,23 @@
           font-size: 10px;
           margin-top: -10px;
           text-transform: uppercase;
+        }
+      }
+    }
+    .nav-pagination{
+      .pagination.undp-pagination{
+        li.active{
+          a{
+            color: #0055aa;
+          }
+        }
+        li{
+          a{
+            color: #999999;
+            &:hover, &:focus{
+              color: #0055aa;
+            }
+          }
         }
       }
     }

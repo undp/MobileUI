@@ -309,7 +309,7 @@
     font-size: 16px;
     margin-bottom: 16px;
     color: $clr-blue4;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 18px;
   }
 
@@ -373,9 +373,10 @@
   }
 
   .link-view{
-    display: block;
+    display: inline-block;
     font-size: 13px;
     margin-bottom: 20px;
+    color: $clr-blue4;
   }
 
   &.news-box{
@@ -439,7 +440,7 @@
         margin-bottom: 15px;
 
         a{
-          text-decoration: none;
+          color: $clr-blue4;
         }
 
         .icon-box{
@@ -451,7 +452,6 @@
           vertical-align: middle;
           padding-left: 8px;
           font-size: 13px;
-          color: $clr-gray;
         }
       }
     }
