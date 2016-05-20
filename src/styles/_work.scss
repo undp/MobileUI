@@ -224,6 +224,34 @@
   .box-collapse{
       padding: 0;
   }
+
+  .research-links{
+
+    > li{
+
+      &.active{
+
+        a{
+          background-color: transparent;
+          border-color: transparent;
+          color: $clr-gray;
+          position: relative;
+
+          &:before{
+            content: '»';
+            position: absolute;
+            left: 25px;
+            font-size: 15px;
+            line-height: 18px;
+          }
+        }
+
+        &:before{
+          border: none;
+        }
+      }
+    }
+  }
 }
 
 .stories-wrap{
@@ -579,7 +607,7 @@
     a{
       font-size: 17px;
       font-weight: bold;
-      color: $clr-blue5;
+      color: $clr-blue4;
       line-height: 22px;
 
       @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
@@ -591,7 +619,7 @@
    a{
      font-size: 13px;
      line-height: 20px;
-     color: $clr-blue5;
+     color: $clr-blue4;
   }
 
   &.work-wrap{

@@ -1,5 +1,6 @@
 extends ./layouts/index1
-
+block vars
+  -var page='Research and Publication'
 block content
   .main-content.main-content-work
     .main-subnav
@@ -22,10 +23,10 @@ block content
             button.navbar-toggle.box-toggle.collapsed(type='button', data-toggle='collapse', data-target='#aside-link')
               | Related links
               i.icon-caret-down.pull-right
-            ul#aside-link.list-unstyled.collapse.navbar-collapse.box-collapse
+            ul#aside-link.list-unstyled.collapse.navbar-collapse.box-collapse.research-links
               li
                 a(href='javascript:void(0);') Human Development Reports
-              li
+              li.active
                 a(href='javascript:void(0);') Millennium Development Goals
               li
                 a(href='javascript:void(0);') Sustainable Development Goals

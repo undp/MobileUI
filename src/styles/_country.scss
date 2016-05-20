@@ -159,18 +159,20 @@
         font-size: 25px;
         display: inline-block;
         margin-left: 10px;
+
+        /* For landscape layouts only */
+        @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+          display:  inline-block;
+          margin: 0;
+          padding-top: 5px;
+        }
       }
+
       @media (max-width: $screen-md-max){
-        margin: 20px 0;
+        margin: 38px 0;
         float: left;
         padding-right: 25px;
         padding-left: 25px;
-        .header-small-img, span{
-          display: block;
-          margin-left: 0;
-          margin-bottom: 5px;
-
-        }
       }
     }
   }
@@ -301,11 +303,12 @@
       margin-left: 0;
       font-size: 32px;
       font-weight: normal;
-      @media (max-width: $screen-md-max){
-        display: block;
-        margin: 0;
-        font-size: 20px;
-      }
+      //@media (max-width: $screen-md-max){
+      //  display: block;
+      //  margin: 0;
+      //  font-size: 20px;
+      //}
+
       @media (max-width: $screen-xs-max){
         font-size: 16px;
       }
@@ -501,6 +504,40 @@
       @media (max-width: $screen-xs-max){
         display: block;
       }
+    }
+  }
+}
+
+.country-off-canvas{
+
+  .canvas-header{
+    height: 220px;
+
+    .country-heading{
+      font-size: 13px;
+      color: #FFFFFF;
+
+      span{
+        display: block;
+        font-size: 18px;
+        padding-top: 8px;
+      }
+
+      a{
+        display: inline-block;
+        padding-left: 10px;
+
+        img{
+          width: 70px;
+        }
+      }
+    }
+  }
+
+  .canvas-scroll{
+
+    .list-main-nav{
+      border-top: 1px solid #21537f;
     }
   }
 }
