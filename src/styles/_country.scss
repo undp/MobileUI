@@ -81,6 +81,14 @@
     right: 0;
     top:0;
     bottom: 0;
+    
+    @media (max-width: $screen-md-max) {
+      position: relative;
+      display: block;
+      background-color: #fff;
+      padding: 28px 0 0 0;
+    }
+    
     h3{
       font-size: 17px;
       margin: 0 0 15px;
@@ -118,14 +126,17 @@
     background-color: #002245;
     position: relative;
     padding: 15px 15px 20px;
+
     @media (min-width: $screen-sm-min) and (max-width: $screen-md-max){
       height: 140px;
     }
-
     @media (max-width: $screen-xs-max){
       height: auto;
+      display: none;
     }
-
+    @media (min-width: $screen-xs-min) and (max-width: $screen-md-max){
+      display: none;
+    }
     P{
       color: #FFFFFF;
       margin-bottom: 0;
@@ -378,6 +389,9 @@
     }
   }
   .news-list-wrap{
+    a {
+      color: #5a90da!important;
+    }
     h1{
       margin: 0 0 15px;
       font-size: 24px;
@@ -415,11 +429,12 @@
           color: #333333;
         }
         .date{
-          color: #999999;
+          color: grey;
           display: block;
           font-size: 10px;
           margin-top: -10px;
           text-transform: uppercase;
+          font-weight: bold;
         }
       }
     }

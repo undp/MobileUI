@@ -65,6 +65,11 @@
 
 .feature-wrap{
   margin-bottom: 38px;
+  min-height: 338px;
+
+  @media  (max-width: $screen-md-max) {
+    min-height: initial;
+  }
 
   &.hover{
     background: #02346a url("../images/xmap-america-north.png") no-repeat top center;
@@ -82,7 +87,7 @@
     .feature-txt-box{
       display: block !important;
       padding: 0 10px;
-      min-height: 258px;
+      /*min-height: 258px;*/
     }
 
     .article-para {

@@ -28,7 +28,14 @@ body {
 
 .row-eq-height {
   @include flexbox();
+  > div {
+    @include flexbox();
+    @include flex-direction(column);
 
+    > div {
+      @include flex-grow(1);
+    }
+  }
   // Mobile only
   @media (max-width: $screen-xs-max){
     display: block;
