@@ -1,0 +1,66 @@
+extends ./layouts/index1.jade
+block vars
+  -var page='Video'
+block content
+  .main-content
+    .container
+      .row
+        .col-md-12
+          div.video-gallery.response-box
+            h1 Video Gallery
+            div brightcove plugin goes here
+          .news-list-wrap.video-list-wrap
+            h3 Latest
+            .row.clearfix
+              .col-lg-6.col-md-6.col-sm-12.col-xs-12.news-wrap.video-list-item
+                img.img-responsive(src='images/video-default.png', alt='')
+                div.text-content
+                  h4 Video title is shown here if available
+                  p Poaching and trafficking pose a direct threat to sustainable development efforts in Africa and elsewhere.
+              .col-lg-6.col-md-6.col-sm-12.col-xs-12.news-wrap.video-list-item
+                img.img-responsive(src='images/video-default.png', alt='')
+                div.text-content
+                  h4 Video title
+                  p UNDP’s cash-for-work programmes are helping remove the debris and creating short term jobs that put money in the pockets of those who need it the most.
+                  p A day ahead of his arrival in Nepal, Jo Scheuer, Director for Climate Change and Disaster Risk Reduction for UNDP, describes what is needed most when a catastrophe strikes.
+    //footer starts
+    .info-link-box
+      .container
+        .row-eq-height.clearfix
+          .col-md-4.col-sm-4
+            .info-wrap.work-wrap
+              h4
+                a(href='javascript:void(0);') Our Work &raquo;
+              img.pull-right(src='images/undp-footer-logo.png', alt='UNDP Logo', class='img-responsive')
+              ul.list-unstyled.nav-work
+                li
+                  a(href='javascript:void(0);') History
+                li
+                  a(href='javascript:void(0);') Africa
+                li
+                  a(href='javascript:void(0);') Arab States
+                li
+                  a(href='javascript:void(0);') Asia and the Pacific
+                li
+                  a(href='javascript:void(0);') Europe and Central Asia
+                li
+                  a(href='javascript:void(0);') Latin America and the Caribbean
+                li
+                  a(href='javascript:void(0);') Looking forward
+          .col-md-4.col-sm-4
+            .info-wrap.goal-wrap
+              h4
+                a(href='javascript:void(0);') Sustainable Development Goals &raquo;
+              img(src='images/goals.png', alt='Sustainable Development Goals', class='img-responsive')
+          .col-md-4.col-sm-4
+            .info-wrap.prespective-wrap
+              h4
+                a(href='javascript:void(0);') Our Perspectives &raquo;
+              a(href='javascript:void(0);') Transforming local communities amidst conflict
+              .media
+                .media-body
+                  h4.media-heading 03 Mar 2016
+                  p Looking back 50 years, the concept of development has shifted.
+                .media-right
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/img-prespective.png', alt='Perspectives')

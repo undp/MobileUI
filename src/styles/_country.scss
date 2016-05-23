@@ -390,7 +390,7 @@
   }
   .news-list-wrap{
     a {
-      color: #5a90da!important;
+      color: #5a90da;
     }
     h1{
       margin: 0 0 15px;
@@ -447,7 +447,7 @@
         }
         li{
           a{
-            color: #999999;
+            /*color: #999999;*/
             &:hover, &:focus{
               color: #0055aa;
             }
