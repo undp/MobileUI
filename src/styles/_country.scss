@@ -567,5 +567,21 @@
     a {
       color: #5a90da!important;
     }
+    .flex-wrap {
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+    }
+  }
+  .news-wrap {
+    > img, a {
+      margin-bottom: 11px;
+    }
+    a {
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline!important;
+      }
+    }
   }
 }
