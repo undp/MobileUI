@@ -86,7 +86,7 @@
       position: relative;
       display: block;
       background-color: #fff;
-      padding: 28px 0 0 0;
+      padding: 15px 0 0 0;
     }
     
     h3{
@@ -154,22 +154,31 @@
 .undp-header {
   .box-right {
     .country-heading {
+      position: relative;
       font-size: 13px;
       color: #FFFFFF;
       margin: -9px 0 13px;
       font-weight: normal;
+      padding-right: 72px;
+      padding-left: 25px;
+
+      a {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        z-index: 1;
+      }
       .header-small-img{
         width: 72px;
         height: 28px;
-        display: inline-block;
+        /*display: inline-block;
         margin-left: 5px;
-        margin-top: -9px;
+        margin-top: -9px;*/
       }
       span{
         font-weight: bold;
         font-size: 25px;
-        display: inline-block;
-        margin-left: 10px;
+        display: block;
 
         /* For landscape layouts only */
         @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
@@ -182,8 +191,8 @@
       @media (max-width: $screen-md-max){
         margin: 38px 0;
         float: left;
-        padding-right: 25px;
-        padding-left: 25px;
+        /*padding-right: 25px;*/
+        padding-left: 0;
       }
     }
   }
@@ -389,9 +398,6 @@
     }
   }
   .news-list-wrap{
-    a {
-      color: #5a90da;
-    }
     h1{
       margin: 0 0 15px;
       font-size: 24px;
@@ -553,6 +559,13 @@
 
     .list-main-nav{
       border-top: 1px solid #21537f;
+    }
+  }
+}
+.country-main-content {
+  .news-list-wrap {
+    a {
+      color: #5a90da!important;
     }
   }
 }
