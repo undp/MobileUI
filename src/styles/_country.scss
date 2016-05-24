@@ -81,14 +81,7 @@
     right: 0;
     top:0;
     bottom: 0;
-    
-    @media (max-width: $screen-md-max) {
-      position: relative;
-      display: block;
-      background-color: #fff;
-      padding: 15px 0 0 0;
-    }
-    
+
     h3{
       font-size: 17px;
       margin: 0 0 15px;
@@ -130,13 +123,7 @@
     @media (min-width: $screen-sm-min) and (max-width: $screen-md-max){
       height: 140px;
     }
-    @media (max-width: $screen-xs-max){
-      height: auto;
-      display: none;
-    }
-    @media (min-width: $screen-xs-min) and (max-width: $screen-md-max){
-      display: none;
-    }
+
     P{
       color: #FFFFFF;
       margin-bottom: 0;
@@ -621,15 +608,16 @@
     }
   }
 }
+
+.flex-row-wrap {
+  @include flexbox();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+}
 .country-main-content {
   .news-list-wrap {
     a {
       color: #5a90da!important;
-    }
-    .flex-wrap {
-      @include flexbox();
-      @include flex-direction(row);
-      @include flex-wrap(wrap);
     }
   }
   .news-wrap {
@@ -640,6 +628,46 @@
       &:hover {
         cursor: pointer;
         text-decoration: underline!important;
+      }
+    }
+  }
+}
+.country-hm-main-content {
+  .view-list-wrap {
+    .text-wrap {
+      @media (max-width: $screen-md-max){
+        background-color: #fff;
+        height: auto;
+        padding: 10px 0;
+        color: #333333;
+      }
+      a.default-link {
+        @media (max-width: $screen-md-max) {
+          color: #0055aa;
+        }
+      }
+      P{
+        @media (max-width: $screen-md-max){
+          color: #000;
+        }
+      }
+    }
+    .overlay-wrap {
+      @media (max-width: $screen-md-max) {
+        position: relative;
+        display: block;
+        background-color: #fff;
+        padding: 15px 0 0 0;
+      }
+      h3 {
+        @media (max-width: $screen-md-max) {
+          color: #333;
+        }
+      }
+      p {
+        @media (max-width: $screen-md-max) {
+          color: #333;
+        }
       }
     }
   }
