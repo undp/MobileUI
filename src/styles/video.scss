@@ -10,6 +10,9 @@
   @media (max-width: $screen-md-max) {
     margin-bottom: 0;
   }
+  h3 {
+    font-weight: bold;
+  }
 }
 .video-list-item {
   @media (max-width: $screen-md-max) {
@@ -23,6 +26,7 @@
   }
   .text-content {
     > h4 {
+      font-size: 16px;
       font-weight: 600;
       margin-bottom: 10px;
     }
