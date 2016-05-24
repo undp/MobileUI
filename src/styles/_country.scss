@@ -154,31 +154,26 @@
 .undp-header {
   .box-right {
     .country-heading {
-      position: relative;
-      font-size: 13px;
       color: #FFFFFF;
       margin: -9px 0 13px;
       font-weight: normal;
-      padding-right: 72px;
-      padding-left: 25px;
 
-      a {
-        position: absolute;
-        right: 0;
-        top: 20px;
-        z-index: 1;
+      small {
+        color: #FFFFFF;
+        font-size: 13px;
       }
       .header-small-img{
-        width: 72px;
+        /*width: 72px;*/
         height: 28px;
-        /*display: inline-block;
+        display: inline-block;
         margin-left: 5px;
-        margin-top: -9px;*/
+        margin-top: -9px;
       }
       span{
         font-weight: bold;
         font-size: 25px;
-        display: block;
+        display: inline-block;
+        margin-left: 10px;
 
         /* For landscape layouts only */
         @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
@@ -186,14 +181,78 @@
           margin: 0;
           padding-top: 5px;
         }
+
       }
 
-      @media (max-width: $screen-md-max){
+    &.mobile {
+      @media (max-width: $screen-md-max) {
+        position: relative;
         margin: 38px 0;
         float: left;
-        /*padding-right: 25px;*/
-        padding-left: 0;
+        padding-left: 25px;
       }
+      @media (max-width: $screen-sm-max) {
+        margin-top: 25px;
+        margin-bottom: 0;
+      }
+      @media (max-width: $screen-xs-max) {
+        margin-top: 15px;
+        width: 85%;
+      }
+      @media (max-width: $screen-xs-min) {
+        margin-top: 5px;
+      }
+      small {
+        @media (max-width: $screen-md-max) {
+          display: block;
+        }
+      }
+      small.one {
+        @media (max-width: $screen-md-max) {
+          display: none;
+        }
+        @media (max-width: $screen-sm-max) {
+          display: block;
+        }
+      }
+      small.two {
+        @media (max-width: $screen-md-max) {
+          display: block;
+        }
+        @media (max-width: $screen-sm-max) {
+          display: none;
+        }
+      }
+      span {
+        @media (max-width: $screen-md-max) {
+          margin-left: 0;
+        }
+        @media (max-width: $screen-sm-max) {
+          display: block;
+          font-size: 20px;
+          margin-bottom: 5px;
+          padding-top: 5px;
+        }
+        @media (max-width: $screen-xs-max) {
+          font-size: 16px;
+          margin-bottom: 0;
+          padding-top: 3px;
+        }
+      }
+      a {
+        @media (max-width: $screen-sm-max) {
+          display: block;
+          img {
+            margin: 0;
+          }
+        }
+      }
+      .header-small-img {
+        @media (max-width: $screen-sm-max) {
+          height: 23px;
+        }
+      }
+    }
     }
   }
 }
@@ -539,7 +598,7 @@
       color: #FFFFFF;
 
       span{
-        display: block;
+        display: inline-block;
         font-size: 18px;
         padding-top: 8px;
       }
