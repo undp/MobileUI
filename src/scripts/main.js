@@ -2,13 +2,14 @@
 (function(window, document, $) {
   $(function() {
     // console.log('scripts here');
+    //
+    //if ('addEventListener' in document) {
+    //  document.addEventListener('DOMContentLoaded', function() {
+    //    FastClick.attach(document.body);
+    //  }, false);
+    //}
 
-    if ('addEventListener' in document) {
-      document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body);
-      }, false);
-    }
-
+    //card flip
     $('[data-hover]')
       .mouseout(function() {
         $(this).removeClass('hover').css('background-image','none');
@@ -20,7 +21,9 @@
 
     //if ('ontouchstart' in document.documentElement) {
     //  console.log('device');
+    /*
       $('[data-pop]').on('click touchstart',function(e) {
+        console.log('target', $(e.target).parent());
         var popDiv = $(this).find('.smallpop');
         if(e.type == 'touchstart'){
           window.touchenabled = true;
@@ -42,10 +45,12 @@
           console.log($(popDiv).className);
         }
 
-      });
+      });*/
+
     //}else{
     //  console.log('desktop');
-      //data-pop
+    //  data-pop
+    /*
       $('[data-pop]').on('mouseover',function(e) {
         if(window.touchenabled == true){
           return true;
@@ -64,8 +69,35 @@
         var popDiv = $(this).find('.smallpop');
         $(popDiv).addClass('hide');
         $(this).removeClass('hover');
-      });
+      });*/
     //}
+
+    // for desktop in header event
+    $('header .dropdown-countries').hover(function (){
+      //alert('hhhh');
+      var popDiv = $(this).parent().find('.smallpop');
+      $(popDiv).toggleClass('hide');
+    });
+
+    // for touch device in slide menu event
+    $('.off-canvas [data-pop] > a').on('click', function (){
+      //alert('hhhh');
+      var popDiv = $(this).parent().find('.smallpop');
+      $(popDiv).toggleClass('hide');
+    });
+
+    //close countries popup button
+    $('a[data-popupmenu]').on('click', function(){
+      //console.log(event.target.id);
+      $(this).parent('#contriesPop').addClass('hide');
+    });
+
+
+
+
+
+
+
 
 
     //off-canvas slide menu
@@ -125,8 +157,5 @@
       $(this).removeClass('hover');
     });
 
-    $('[data-popupmenu]').click(function(){
-      $('#contriesPop').addClass('hide');
-    });
   });
 })(window, document, jQuery);

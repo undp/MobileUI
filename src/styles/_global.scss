@@ -177,6 +177,7 @@ body {
   z-index: 10000;
   margin-top: 0;
   top: 32px;
+  -webkit-transform: translateZ(0);
   right: 0;
 
   @media (max-width: $screen-md-max){
@@ -698,8 +699,8 @@ body {
   @include transition(.6s ease-in-out right);
   //@include flexbox();
   //@include flex-flow(column);
-  overflow-x: hidden;
-  overflow-y: auto;
+  //overflow-x: hidden;
+  //overflow-y: auto;
 
 
   &.open{
