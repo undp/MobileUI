@@ -570,9 +570,9 @@
     padding-top: 0;
     //margin-bottom: -5px;
   }
-  @media (max-width: $screen-xs-max) and (orientation: portrait){
-    padding-bottom: 70px;
-  }
+  //@media (max-width: $screen-xs-max) and (orientation: portrait){
+  //  padding-bottom: 70px;
+  //}
 
   .row-eq-height{
     @include flex-wrap(wrap);

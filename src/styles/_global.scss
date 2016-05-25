@@ -4,16 +4,16 @@ html {
 }
 
 body {
-  margin-bottom: 100px;
-
-  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    margin-bottom: 155px;
-  }
-
-  // Mobile only
-  @media (max-width: $screen-xs-max){
-    margin-bottom: 200px;
-  }
+  //margin-bottom: 100px;
+  //
+  //@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  //  margin-bottom: 155px;
+  //}
+  //
+  //// Mobile only
+  //@media (max-width: $screen-xs-max){
+  //  margin-bottom: 200px;
+  //}
 
   &.undp{
     background-color: $clr-blue;
@@ -649,7 +649,7 @@ body {
 }
 
 .undp-footer{
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   min-height: 100px;
