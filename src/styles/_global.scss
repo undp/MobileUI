@@ -380,7 +380,7 @@ body {
   padding: 5px 0;
   min-width: 152px;
   @include border-radius(0);
-  z-index: 10000;
+  z-index: 9;
 
   @media (max-width: $screen-md-max){
     top: 44px;
@@ -762,6 +762,7 @@ body {
   position: relative;
   top: 5px;
 
+
   .list-main-nav, .list-top-nav{
     list-style-type: none;
     padding: 0;
@@ -915,6 +916,15 @@ body {
         color: #444!important;
         opacity:0.7;
       }
+    }
+  }
+}
+
+#slide-menu {
+  .canvas-scroll {
+    @media (max-width: $screen-md-max) {
+      height: 75%;
+      overflow-y: scroll;
     }
   }
 }
