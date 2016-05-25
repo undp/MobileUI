@@ -3,6 +3,12 @@
   $(function() {
     // console.log('scripts here');
 
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+      }, false);
+    }
+
     $('[data-hover]')
       .mouseout(function() {
         $(this).removeClass('hover').css('background-image','none');

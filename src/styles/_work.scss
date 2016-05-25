@@ -199,24 +199,24 @@
           }
         }
 
-        //&:before{
-        //  content: '';
-        //  position: absolute;
-        //  right: -8px;
-        //  border-top: 8px solid transparent;
-        //  border-left: 8px solid $clr-gray2;
-        //  border-bottom: 8px solid transparent;
-        //  top: 50%;
-        //  margin-top: -8px;
-        //
-        //  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
-        //    display: none;
-        //  }
-        //
-        //  @media (max-width: $screen-xs-max){
-        //    display: none;
-        //  }
-        //}
+        &:before{
+          content: '';
+          position: absolute;
+          right: -8px;
+          border-top: 8px solid transparent;
+          border-left: 8px solid $clr-gray2;
+          border-bottom: 8px solid transparent;
+          top: 50%;
+          margin-top: -8px;
+
+          @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+            display: none;
+          }
+
+          @media (max-width: $screen-xs-max){
+            display: none;
+          }
+        }
       }
     }
   }
