@@ -19,6 +19,9 @@
         $(this).addClass('hover').css('background-image', 'url(' + bgImg + ')');
       });
 
+    //scroll tabs
+    tabSet = $('.main-subnav-tabset').scrollTabs();
+    
     //if ('ontouchstart' in document.documentElement) {
     //  console.log('device');
     /*
