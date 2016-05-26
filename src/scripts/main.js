@@ -22,7 +22,7 @@
     //scroll tabs
     //tabSet = $('.main-subnav-tabset').scrollTabs();
 
-    $('.horizon-swiper').horizonSwiper();
+
     
     //if ('ontouchstart' in document.documentElement) {
     //  console.log('device');
@@ -161,6 +161,8 @@
       $(popDiv).addClass('hide');
       $(this).removeClass('hover');
     });
+
+    $('.horizon-swiper').horizonSwiper();
 
   });
 })(window, document, jQuery);

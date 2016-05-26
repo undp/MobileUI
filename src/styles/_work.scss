@@ -597,6 +597,7 @@
     top: 4px;
     bottom: 0;
     border-right: 1px solid $clr-light-blue1;
+    height: 100%;
 
     @media (max-width: $screen-xs-max){
       border-right: none;
@@ -1281,7 +1282,7 @@
 
 //scrollable tabs
 .main-subnav {
-  overflow-y: hidden;
+  //overflow-y: hidden;
   height: 57px;
 
   .container {
@@ -1397,5 +1398,27 @@
       }
     }
 
+  }
+}
+
+.three {
+  border: 1px solid red;
+}
+.two {
+  border: 1px solid blue;
+}
+.one {
+  border: 1px solid green;
+}
+
+.info-link-box {
+  .row-eq-height {
+    border: 1px solid black;
+    @include flexbox();
+    @include flex-direction(row!important);
+
+    > div {
+      @include flex-grow(1!important);
+    }
   }
 }

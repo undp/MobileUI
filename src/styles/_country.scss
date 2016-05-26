@@ -359,7 +359,7 @@
   //}
   .box-right {
     margin-left: 150px;
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-xs-max) and (orientation: portrait) {
       margin-left: 100px;
     }
   }
@@ -367,8 +367,8 @@
     text-align: left;
     margin: 0 -8px 10px;
     li.active {
-      a {
-        color: #FFFFFF;
+      a,a:hover,a:focus,a:active {
+        color: #666;
       }
     }
     li {
@@ -397,6 +397,7 @@
 
       @media (max-width: $screen-xs-max) {
         font-size: 16px;
+        display: block;
       }
     }
     @media (max-width: $screen-md-max) {
@@ -405,8 +406,12 @@
     @media (max-width: $screen-sm-max) {
       font-size: 26px;
     }
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-xs-max) and (orientation: portrait) {
       font-size: 22px;
+      padding-top: 24px;
+    }
+    @media (max-width: $screen-xs-max) and (orientation: landscape) {
+      padding-top: 36px;
     }
   }
 
@@ -755,7 +760,10 @@ h4.for-country {
         color: #333;
       }
       a {
-        color: #fff;
+        color: #0b387c;
+        &:hover,a:active,a:focus {
+          color: #fff;
+        }
         span {
           color: #333 !important;
         }
@@ -788,19 +796,39 @@ h4.for-country {
   }
 }
 
-.country-header {
-  .list-language {
-    a {
-      color: #0b387c;
-      &:hover,&:active,&:focus {
-        color: #fff;
-      }
-    }
-    li.active {
-      a,&:hover,&:active,&:focus {
-        color: #666666;
-        cursor: default;
-      }
+.undp-header.country-header {
+  .box-logo {
+    @media (max-width: $screen-xs-max) and (orientation: portrait) {
+      width: 90px;
+      height: 76px;
     }
   }
+  .icon-bar {
+    background-color: #0b387c;
+  }
+  .box-right {
+    @media (max-width: $screen-xs-max) and (orientation: portrait) {
+      height: 100%;
+      position: relative;
+    }
+
+    .menu-right-xs {
+      @media (max-width: $screen-xs-max) and (orientation: landscape) {
+        top: 58%;
+        transform: none;
+      }
+      @media (max-width: $screen-xs-max) and (orientation: portrait) {
+        top: 40%;
+        transform: none;
+      }
+      .menubar {
+        @media (max-width: $screen-xs-max) and (orientation: portrait) {
+          //bottom: 15px;
+        }
+
+      }
+    }
+
+  }
+
 }
