@@ -963,7 +963,7 @@
     }
 
     .link-view{
-      text-transform: uppercase;
+      //text-transform: uppercase;
       font-size: 11px;
       color: $clr-blue4;
     }
@@ -1283,15 +1283,19 @@
 .main-subnav {
   overflow-y: hidden;
   height: 57px;
-  //@media (max-width: $screen-sm-max) {
-  //  height: 40px;
-  //}
+
+  .container {
+    @media (max-width: $screen-xs-max) {
+      padding: 0;
+    }
+  }
+
   ul.horizon-swiper  {
     margin: 0;
     background: transparent;
     overflow: hidden;
     &.arrows {
-      padding: 0 37px;
+      padding: 0 30px;
     }
     .horizon-prev,.horizon-next {
       width: 30px;
@@ -1303,29 +1307,27 @@
     }
     .horizon-inner {
       height: 57px;
-      //max-height: 57px!important;
       overflow-x: hidden;
       padding: 0;
 
       > li.horizon-item{
         position: relative;
-        //margin-left: -5px;
         padding: 0;
         line-height: 57px;
-        @media (max-width: $screen-md-max) {
-          max-width: 27%;
-          min-width: 20%;
-          white-space: normal;
-          height: 57px;
-          line-height: 20px;
-        }
-        @media (max-width: $screen-sm-max) {
-          max-width: 38%;
-          min-width: 28%;
-        }
-        @media (max-width: $screen-xs-max) and (orientation: portrait){
-          max-width: 80%;
-        }
+        //@media (max-width: $screen-md-max) {
+        //  max-width: 27%;
+        //  min-width: 20%;
+        //  white-space: normal;
+        //  height: 57px;
+        //  line-height: 20px;
+        //}
+        //@media (max-width: $screen-sm-max) {
+        //  max-width: 38%;
+        //  min-width: 28%;
+        //}
+        //@media (max-width: $screen-xs-max) and (orientation: portrait){
+        //  max-width: 80%;
+        //}
         > a {
           display: block;
           line-height: 57px;
@@ -1334,16 +1336,15 @@
           font-weight: bold;
           color: $clr-blue4;
           text-decoration: none;
-          @media (max-width: $screen-md-max) {
-            white-space: normal;
-            line-height: 20px;
-            text-align: left;
-            padding: 8px 20px;
-          }
-          @media (max-width: $screen-sm-max) {
-            font-size: 12px;
-            //line-height: 40px;
-            //padding: 0 10px;
+          //@media (max-width: $screen-md-max) {
+          //  white-space: normal;
+          //  line-height: 20px;
+          //  text-align: left;
+          //  padding: 8px 20px;
+          //}
+          @media (max-width: $screen-xs-max) {
+            font-size: 14px;
+            padding: 0 10px;
           }
         }
         &:before{
@@ -1395,26 +1396,6 @@
         }
       }
     }
-    .scroll_tab_left_button,
-    .scroll_tab_right_button {
-      height: 57px;
-      background-color: transparent;
-      //@media (max-width: $screen-sm-max) {
-      //  height: 40px;
-      //}
-      &:before {
-        line-height: 57px;
-        color: #0A294E;
-        //@media (max-width: $screen-sm-max) {
-        //  line-height: 40px;
-        //}
-      }
-      &.scroll_tab_left_button_disabled,
-      &.scroll_tab_right_button_disabled {
-        &:before {
-          opacity: .5;
-        }
-      }
-    }
+
   }
 }

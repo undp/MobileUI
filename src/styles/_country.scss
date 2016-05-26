@@ -663,12 +663,25 @@
 .country-hm-main-content {
   .view-list-wrap {
     .text-wrap {
-      @media (max-width: $screen-md-max) {
-        background-color: #fff;
-        height: auto;
-        padding: 10px 0;
-        color: #333;
-      }
+        a:first-child {
+          //font-size: 17px;
+          //margin: 0 0 15px;
+          color: #fff;
+          //font-weight: bold;
+          //cursor: pointer;
+          //margin-bottom: 10px;
+          //display: block;
+        }
+        @media (max-width: $screen-md-max) {
+          display: none;
+        }
+
+      //@media (max-width: $screen-md-max) {
+      //  background-color: #fff;
+      //  height: auto;
+      //  padding: 10px 0;
+      //  color: #333;
+      //}
       a.default-link {
         @media (max-width: $screen-md-max) {
           color: #0055aa;
@@ -687,11 +700,21 @@
       }
     }
     .overlay-wrap {
+      .default-link {
+        display: none;
+        @media (max-width: $screen-md-max) {
+          font-size: 14px;
+          display: block;
+          text-align: right;
+          font-weight: normal;
+        }
+      }
       @media (max-width: $screen-md-max) {
         position: relative;
         display: block;
         background-color: #fff;
         padding: 0;
+        padding-top: 10px;
       }
       a {
         @media (max-width: $screen-md-max) {
@@ -756,5 +779,10 @@ h4.for-country {
       background-color: transparent;
       list-style: none;
     }
+  }
+}
+.country-hm-main-content {
+  .list-content-wrap {
+
   }
 }
