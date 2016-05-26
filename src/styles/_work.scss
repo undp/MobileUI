@@ -565,7 +565,6 @@
 .info-link-box{
   background-color: #f2faff;
   padding: 30px 0;
-
   @media (max-width: $screen-xs-max){
     padding-top: 0;
     //margin-bottom: -5px;
@@ -575,7 +574,7 @@
   //}
 
   .row-eq-height{
-    @include flex-wrap(wrap);
+    //@include flex-wrap(wrap);
   }
 }
 
@@ -1287,24 +1286,46 @@
   //@media (max-width: $screen-sm-max) {
   //  height: 40px;
   //}
-  ul.main-subnav-tabset  {
-    margin: 0 5px;
-    @media (max-width: $screen-sm-max) {
-      margin: 0;
+  ul.horizon-swiper  {
+    margin: 0;
+    background: transparent;
+    overflow: hidden;
+    &.arrows {
+      padding: 0 37px;
     }
-    .scroll_tab_inner {
+    .horizon-prev,.horizon-next {
+      width: 30px;
+      left: 0;
+    }
+    .horizon-next {
+      left: auto;
+      right: 0;
+    }
+    .horizon-inner {
       height: 57px;
-      //@media (max-width: $screen-sm-max) {
-      //  height: 40px;
-      //}
-      > li{
+      //max-height: 57px!important;
+      overflow-x: hidden;
+      padding: 0;
+
+      > li.horizon-item{
         position: relative;
         //margin-left: -5px;
         padding: 0;
         line-height: 57px;
-        //@media (max-width: $screen-sm-max) {
-        //  width: 30%;
-        //}
+        @media (max-width: $screen-md-max) {
+          max-width: 27%;
+          min-width: 20%;
+          white-space: normal;
+          height: 57px;
+          line-height: 20px;
+        }
+        @media (max-width: $screen-sm-max) {
+          max-width: 38%;
+          min-width: 28%;
+        }
+        @media (max-width: $screen-xs-max) and (orientation: portrait){
+          max-width: 80%;
+        }
         > a {
           display: block;
           line-height: 57px;
@@ -1313,13 +1334,16 @@
           font-weight: bold;
           color: $clr-blue4;
           text-decoration: none;
-          //@media (max-width: $screen-md-max) {
-          //  font-size: 15px;
-          //}
+          @media (max-width: $screen-md-max) {
+            white-space: normal;
+            line-height: 20px;
+            text-align: left;
+            padding: 8px 20px;
+          }
           @media (max-width: $screen-sm-max) {
             font-size: 12px;
             //line-height: 40px;
-            padding: 0 10px;
+            //padding: 0 10px;
           }
         }
         &:before{

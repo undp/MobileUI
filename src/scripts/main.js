@@ -20,7 +20,9 @@
       });
 
     //scroll tabs
-    tabSet = $('.main-subnav-tabset').scrollTabs();
+    //tabSet = $('.main-subnav-tabset').scrollTabs();
+
+    $('.horizon-swiper').horizonSwiper();
     
     //if ('ontouchstart' in document.documentElement) {
     //  console.log('device');
