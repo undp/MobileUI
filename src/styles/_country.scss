@@ -663,7 +663,6 @@
   }
 }
 
-
 .country-hm-main-content {
   .aside-wrap {
     a:hover,a:focus,a:active {
@@ -742,7 +741,7 @@ h4.for-country {
   display: none;
 }
 .country-pg {
-    .menu-right-xs {
+  .menu-right-xs {
       .list-language {
         display: none;
       }
@@ -778,7 +777,7 @@ h4.for-country {
     }
     .for-country {
       display: block;
-      color: #666!important;
+      color: #BBBBBB!important;
     }
     .list-language {
       li.active {
@@ -797,6 +796,16 @@ h4.for-country {
     #contriesPop {
       .btn-close {
         color: #fff!important;
+      }
+    }
+
+    .list-main-nav {
+      li {
+        &.active a, a:active, a:focus {
+          background-image: none;
+          background-color: #76a3e1;
+          color: #fff;
+        }
       }
     }
   }
@@ -836,5 +845,4 @@ h4.for-country {
     }
 
   }
-
 }

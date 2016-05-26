@@ -1401,24 +1401,26 @@
   }
 }
 
-.three {
-  border: 1px solid red;
-}
-.two {
-  border: 1px solid blue;
-}
-.one {
-  border: 1px solid green;
-}
+//.three {
+//  border: 1px solid red;
+//}
+//.two {
+//  border: 1px solid blue;
+//}
+//.one {
+//  border: 1px solid green;
+//}
 
 .info-link-box {
   .row-eq-height {
-    border: 1px solid black;
     @include flexbox();
     @include flex-direction(row!important);
-
+    @include flex-wrap(nowrap!important);
+    margin-left: -10px;
+    margin-right: -10px;
     > div {
-      @include flex-grow(1!important);
+      float: none!important;
+      @include flex-grow(1);
     }
   }
 }
