@@ -798,7 +798,9 @@ h4.for-country {
         color: #fff!important;
       }
     }
-
+    .list-top-nav {
+      display: none;
+    }
     .list-main-nav {
       li {
         &.active a, a:active, a:focus {

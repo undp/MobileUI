@@ -1414,12 +1414,20 @@
 .info-link-box {
   .row-eq-height {
     @include flexbox();
-    @include flex-direction(row!important);
-    @include flex-wrap(nowrap!important);
+    display: -webkit-flex;
+    @include flex-direction(row);
+    -webkit-flex-direction: row;
+    @include flex-wrap(nowrap);
     margin-left: -10px;
     margin-right: -10px;
+
+    @media (max-width: $screen-xs-max) {
+      @include flex-direction(column);
+      -webkit-flex-direction: column;
+    }
+
     > div {
-      float: none!important;
+      float: none;
       @include flex-grow(1);
     }
   }
