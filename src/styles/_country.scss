@@ -660,7 +660,13 @@
   }
 }
 
+
 .country-hm-main-content {
+  .aside-wrap {
+    a:hover,a:focus,a:active {
+      color: #0055aa;
+    }
+  }
   .view-list-wrap {
     .text-wrap {
         a:first-child {
@@ -781,8 +787,20 @@ h4.for-country {
     }
   }
 }
-.country-hm-main-content {
-  .list-content-wrap {
 
+.country-header {
+  .list-language {
+    a {
+      color: #0b387c;
+      &:hover,&:active,&:focus {
+        color: #fff;
+      }
+    }
+    li.active {
+      a,&:hover,&:active,&:focus {
+        color: #666666;
+        cursor: default;
+      }
+    }
   }
 }
