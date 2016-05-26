@@ -389,11 +389,9 @@
       margin-left: 0;
       font-size: 32px;
       font-weight: normal;
-      //@media (max-width: $screen-md-max){
-      //  display: block;
-      //  margin: 0;
-      //  font-size: 20px;
-      //}
+      @media (max-width: $screen-sm-max) {
+        font-size: 26px;
+      }
 
       @media (max-width: $screen-xs-max) {
         font-size: 16px;
@@ -716,7 +714,6 @@
         @media (max-width: $screen-md-max) {
           font-size: 14px;
           display: block;
-          text-align: right;
           font-weight: normal;
         }
       }
@@ -781,6 +778,7 @@ h4.for-country {
     }
     .for-country {
       display: block;
+      color: #666!important;
     }
     .list-language {
       li.active {
@@ -792,6 +790,14 @@ h4.for-country {
     .funding-popup {
       background-color: transparent;
       list-style: none;
+    }
+    .btn-close {
+      color: #0b387c!important;
+    }
+    #contriesPop {
+      .btn-close {
+        color: #fff!important;
+      }
     }
   }
 }
