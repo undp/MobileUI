@@ -933,3 +933,14 @@ body {
     }
   }
 }
+
+#MenuContries {
+  &:hover {
+    color: #fff;
+    i {
+      &:before {
+        content: "\f0d8";
+      }
+    }
+  }
+}
