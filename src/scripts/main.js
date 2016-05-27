@@ -162,7 +162,29 @@
       $(this).removeClass('hover');
     });
 
+    //aside link list second level ul
+    $('.aside-link > li ul').addClass('sub-level').hide();
+    $('.aside-link li').on('click',
+      function() {
+        //console.log('hover over');
+
+        if ($(this).hasClass('has-child')) {
+          $(this).find('ul').hide();
+          $(this).removeClass('has-child');
+        }else {
+          $(this).find('ul').show();
+          $(this).addClass('has-child');
+        }
+
+        // $(this).find('ul').toggle();
+        // $(this).toggleClass('has-child');
+        event.stopPropagation();
+      });
+
+    //horizontal tab links
     $('.horizon-swiper').horizonSwiper();
+
+
 
   });
 })(window, document, jQuery);

@@ -173,17 +173,15 @@
         line-height: 19px;
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
-
         > i{
           padding-right: 5px;
           margin-left: -9px;
         }
-
-        &:hover, &:focus{
-          background-color: $clr-gray2;
-          text-decoration: none;
-          color: $clr-white;
-        }
+      }
+      &:hover > a, &:focus >a {
+        background-color: $clr-gray2;
+        text-decoration: none;
+        color: $clr-white;
       }
 
       &.active{
@@ -215,6 +213,29 @@
 
           @media (max-width: $screen-xs-max){
             display: none;
+          }
+        }
+      }
+
+      &.has-child {
+        i {
+          margin-left: -12px;
+          @include translate(0, 20);
+          &:before {
+            content: "\f0d7";
+          }
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      display: none;
+      padding: 0;
+      li {
+        a {
+          padding: 5px 10px 5px 50px;
+          &:hover, &:focus, &:active {
+            background-color: #9ebeda;
           }
         }
       }
