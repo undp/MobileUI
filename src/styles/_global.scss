@@ -212,8 +212,16 @@ body {
 
   .countries-popup{
     @include flexbox();
+    display: -webkit-box;
+    display: -ms-flexbox;
     @include flex-direction(column);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     @include flex-wrap(wrap);
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     height: 850px;
     margin: 0 -10px;
     @include flex(1 100%);

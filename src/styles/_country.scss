@@ -640,8 +640,15 @@
 
 .flex-row-wrap {
   @include flexbox();
+  display: -webkit-box;
+  display: -ms-flexbox;
   @include flex-direction(row);
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   @include flex-wrap(wrap);
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .country-main-content {
