@@ -163,23 +163,24 @@
     });
 
     //aside link list second level ul
-    $('.aside-link > li ul').addClass('sub-level').hide();
-    $('.aside-link li').on('click',
-      function() {
-        //console.log('hover over');
+    // $('.aside-link > li ul').addClass('sub-level').hide();
 
-        if ($(this).hasClass('has-child')) {
-          $(this).find('ul').hide();
-          $(this).removeClass('has-child');
-        }else {
-          $(this).find('ul').show();
-          $(this).addClass('has-child');
-        }
+    // $('.aside-link li').on('click', function() {
+    //     if ($(this).hasClass('has-child')) {
+    //       //$(this).find('ul').hide();
+    //       $(this).removeClass('has-child');
+    //     }else {
+    //       //$(this).find('ul').show();
+    //       $(this).addClass('has-child');
+    //       //event.stopPropagation();
+    //     }
+    //     //return false;
+    //
+    //   });
 
-        // $(this).find('ul').toggle();
-        // $(this).toggleClass('has-child');
-        event.stopPropagation();
-      });
+    // $(document).on('click','.collapse.in', function(event){
+    //   event.stopPropagation();
+    // });
 
     //horizontal tab links
     $('.horizon-swiper').horizonSwiper();
