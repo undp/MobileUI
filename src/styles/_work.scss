@@ -178,6 +178,17 @@
           padding-right: 5px;
           margin-left: -9px;
         }
+
+        .badge {
+          float: right;
+          padding: 0;
+          width: 25px;
+          line-height: 25px;
+          text-align: center;
+          @include border-radius(50%);
+          background-color: $clr-gray;
+          color: #fff;
+        }
       }
       &:hover > a, &:focus >a {
         background-color: $clr-gray2;
@@ -196,6 +207,7 @@
           i{
             color: $clr-white;
           }
+
         }
 
         &:before{
@@ -215,6 +227,12 @@
           @media (max-width: $screen-xs-max){
             display: none;
           }
+        }
+      }
+      &.active,&:hover {
+        .badge {
+          background-color: #fff;
+          color: $clr-gray;
         }
       }
 
