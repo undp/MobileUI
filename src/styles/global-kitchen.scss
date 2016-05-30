@@ -1,0 +1,31 @@
+.global-kitchen {
+  .list-footer-nav {
+    display: none;
+  }
+  .kitchen-content {
+    padding: 50px 0;
+  }
+  header {
+    .list-main-nav {
+      margin-left: 0;
+    }
+    .wrap-heading {
+      margin: 30px 0 2px 0!important;
+    }
+    h2 {
+      color: #fff;
+      margin-top: 0;
+      font-size: 25px;
+    }
+  }
+  .tab-pane {
+    > h1 {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+  }
+  .dark-blue-bg {
+    background-color: $clr-blue;
+    padding: 10px;
+  }
+}

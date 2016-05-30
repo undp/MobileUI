@@ -1,0 +1,86 @@
+extends ./layouts/global-kitchen.jade
+
+block content
+    .container.kitchen-content
+        .row
+            .col-lg-3.col-md-3.col-sm-3
+                include ./inc/global-kitchen-slide-menu
+            .col-lg-9.col-md-9.col-sm-9.col-xs-12
+                div.tab-content
+                    div(role="tabpanel" id="home").tab-pane.active
+                        //buttons
+                        h1 Buttons
+                        .row
+                            .col-md-4.col-sm-4.col-xs-12
+                                h4 Dark-blue background
+                            .col-md-8.col-sm-8.col-xs-12
+                                .dark-blue-bg
+                                    button(type="button").btn.btn-default Default
+                                    button(type="button").btn.btn-outline Other
+                                    //btn dropdown
+                                    .btn-group
+                                        button(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").btn.btn-default.dropdown-toggle Default
+                                            span.caret
+                                        ul.dropdown-menu
+                                            li
+                                                a(href="javascript:void(0);") Action
+                                            li
+                                                a(href="javascript:void(0);") Action
+                                            li
+                                                a(href="javascript:void(0);") Action 2
+                                            li
+                                                a(href="javascript:void(0);") Action 3
+                                    //btn dropdown
+                                    button(type="button").btn.btn-link If link is a heading
+                                    button(type="button").btn.btn-link Regular link
+                        .row
+                            .col-md-5.col-sm-5.col-xs-12
+                                h4 light-blue right panel / white background
+                            .col-md-7.col-sm-7.col-xs-12
+                                button(type="button").btn.btn-default Default
+                                button(type="button").btn.btn-primary Primary
+
+                        .row
+                            .col-md-3.col-sm-3.col-xs-12
+                                h4 Social icons
+                            .col-md-9.col-sm-9.col-xs-12 btns
+
+                        .row
+                            .col-md-3.col-sm-3.col-xs-12
+                                h4 Floating buttons
+                            .col-md-9.col-sm-9.col-xs-12 btns
+
+
+                    div(role="tabpanel" id="typo").tab-pane
+                        //typography
+                        h1 Typography
+                        .row
+                            .col-lg-4.col-md-4.col-sm-4.col-xs-12
+                                h1 Heading 1
+                                h2 Heading 2
+                                h3 Heading 3
+                                h4 Heading 4
+                                h5 Heading 5
+                                h6 Heading 6
+
+                            .col-lg-4.col-md-4.col-sm-4.col-xs-12
+                                h5 Body text
+                                p lorem ipsum
+                                p The following snippet of text is..
+                                    strong rendered as bold text.
+                                p The following snippet of text is..
+                                    em rendered as italicized text.
+                            .col-lg-4.col-md-4.col-sm-4.col-xs-12
+                                h5 Emphasis Classes
+                                span 10 Jul 2016
+
+                    div(role="tabpanel" id="tables").tab-pane tables
+                        //tables
+
+                    div(role="tabpanel" id="formelements").tab-pane forms
+
+                    div(role="tabpanel" id="navs").tab-pane navs
+
+                    div(role="tabpanel" id="containers").tab-pane containers
+
+                    div(role="tabpanel" id="dialogs").tab-pane dialogs

@@ -1,0 +1,22 @@
+header.undp-header
+  .container
+    a.box-logo.pull-left(href='/')
+    .box-right.clearfix
+      .pull-right.menu-right-xs
+        block search
+        //  include ./../inc/search.jade
+        a.menubar.hidden-lg(href='javascript:void(0);',data-sidemenu)
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+      .pull-left.hidden-md.hidden-sm.hidden-xs.pos-top
+        block topnav
+          //include ./../inc/nav_top.jade
+        h3.wrap-heading United Nations Development Programme
+        h2 Visual style guidelines
+        block mainnav
+          ul.list-main-nav
+            li.active
+              a(href="javascript:void(0);") Global
+            li
+              a(href="javascript:void(0);") UN Country Specific

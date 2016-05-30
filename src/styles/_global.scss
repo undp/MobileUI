@@ -19,7 +19,7 @@ body {
     background-color: $clr-blue;
   }
 
-  &.undp-work{
+  &.undp-work,&.global-kitchen{
     background-color: $clr-white;
   }
 }
@@ -951,4 +951,14 @@ body {
       }
     }
   }
+}
+
+//global kitchen sink
+//global buttons
+.btn {
+  @include border-radius(0);
+}
+.btn-default {
+  background-color: $clr-blue2;
+  color: #fff;
 }
