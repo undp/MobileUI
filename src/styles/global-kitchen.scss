@@ -28,4 +28,21 @@
     background-color: $clr-blue;
     padding: 10px;
   }
+
+  //tab content
+  #navs {
+    .dark-blue-bg {
+      padding-bottom: 0;
+    }
+    .list-main-nav {
+      margin-top: 20px;
+    }
+    .undp-breadcrumb {
+      margin-bottom: 0;
+    }
+    .nav-pagination {
+      text-align: left;
+    }
+  }
+
 }

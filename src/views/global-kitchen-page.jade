@@ -3,9 +3,9 @@ extends ./layouts/global-kitchen.jade
 block content
     .container.kitchen-content
         .row
-            .col-lg-3.col-md-3.col-sm-3
+            .col-md-3.col-sm-3
                 include ./inc/global-kitchen-slide-menu
-            .col-lg-9.col-md-9.col-sm-9.col-xs-12
+            .col-md-9.col-sm-9.col-xs-12
                 div.tab-content
                     div(role="tabpanel" id="home").tab-pane.active
                         //buttons
@@ -55,7 +55,7 @@ block content
                         //typography
                         h1 Typography
                         .row
-                            .col-lg-4.col-md-4.col-sm-4.col-xs-12
+                            .col-md-4.col-sm-4.col-xs-12
                                 h1 Heading 1
                                 h2 Heading 2
                                 h3 Heading 3
@@ -63,23 +63,200 @@ block content
                                 h5 Heading 5
                                 h6 Heading 6
 
-                            .col-lg-4.col-md-4.col-sm-4.col-xs-12
+                            .col-md-4.col-sm-4.col-xs-12
                                 h5 Body text
                                 p lorem ipsum
                                 p The following snippet of text is..
                                     strong rendered as bold text.
                                 p The following snippet of text is..
                                     em rendered as italicized text.
-                            .col-lg-4.col-md-4.col-sm-4.col-xs-12
+                            .col-md-4.col-sm-4.col-xs-12
                                 h5 Emphasis Classes
                                 span 10 Jul 2016
 
-                    div(role="tabpanel" id="tables").tab-pane tables
+                    div(role="tabpanel" id="tables").tab-pane
                         //tables
+                        h1 Tables
+                        table.table.table-striped
+                            thead
+                                tr
+                                    th #
+                                    th column heading
+                                    th column heading
+                                    th column heading
+                                    th column heading
+                                    th column heading
+                            tbody
+                                tr
+                                    td #
+                                    td column content
+                                    td column content
+                                    td column content
+                                    td column content
+                                    td column content
+                                tr
+                                    td #
+                                    td column content
+                                    td column content
+                                    td column content
+                                    td column content
+                                    td column content
+                                tr
+                                    td #
+                                    td column content
+                                    td column content
+                                    td column content
+                                    td column content
+                                    td column content
+                                tr
+                                    td #
+                                    td column content
+                                    td column content
+                                    td column content
+                                    td column content
+                                    td column content
 
-                    div(role="tabpanel" id="formelements").tab-pane forms
+                    div(role="tabpanel" id="formelements").tab-pane
+                        h1 Form elements
+                        form
+                            .row
+                                .col-md-4.col-xs-12
+                                    .form-group
+                                        label(for="example1").control-label Label
+                                        input.form-control(type="text" id="example1" placeholder="Data not yet entered")
+                                    .form-group
+                                        label(for="example2").control-label Label
+                                        input.form-control(type="text" id="example2" value="Data entered" placeholder="Data not yet entered")
+                                    .form-group
+                                        label(for="example3").control-label Label
+                                        select.form-control.c-select(id="example3")
+                                            option Select
+                                            option Select 2
+                                    .form-group
+                                        label(for="example4").control-label Label
+                                        select.form-control.c-select(id="example4")
+                                            option Select
+                                            option Select 2
+                                .col-md-4.col-xs-12
+                                    .form-group.has-warning
+                                        label(for="example5").control-label Input warning
+                                        input.form-control(type="text" value="Data entered" id="example5" placeholder="Data not yet entered")
+                                    .form-group.has-error
+                                        label(for="example6").control-label Input error
+                                        input.form-control(type="text" value="Data entered" id="example6" placeholder="Data not yet entered")
+                                    .form-group.has-success
+                                        label(for="example7").control-label Input success
+                                        input.form-control(type="text" value="Data entered" id="example7" placeholder="Data not yet entered")
+                                    .form-group.has-success
+                                        label(for="example8").control-label Small input
+                                        input.form-control.small(type="text" id="example8" placeholder="Data not yet entered")
 
-                    div(role="tabpanel" id="navs").tab-pane navs
+                                .col-md-4.col-xs-12
+                                    div.dark-blue-bg
+                                        div.radio.inverse
+                                            label
+                                                input(type="radio" name="optionsRadios" value)
+                                                | Radio not selected
+                                        div.radio.inverse
+                                            label
+                                                input(type="radio" name="optionsRadios" checked value)
+                                                | Radio selected
+                                        div.checkbox.inverse
+                                            label
+                                                input(type="checkbox" value)
+                                                | Checkbox not selected
+                                        div.checkbox.inverse
+                                            label
+                                                input(type="checkbox" checked value)
+                                                | Checkbox selected
+                                    div
+                                        div.radio
+                                            label
+                                                input(type="radio" name="optionsRadios1" value)
+                                                | Radio not selected
+                                        div.radio
+                                            label
+                                                input(type="radio" name="optionsRadios1" checked value)
+                                                | Radio selected
+                                        div.checkbox
+                                            label
+                                                input(type="checkbox" value)
+                                                | Checkbox not selected
+                                        div.checkbox
+                                            label
+                                                input(type="checkbox" checked value)
+                                                | Checkbox selected
+
+                    div(role="tabpanel" id="navs").tab-pane
+                        h1 Navs
+                        .row
+                            .col-md-8.col-sm-8.col-xs-12
+                                h4 Tabs
+                                .dark-blue-bg
+                                    ul.list-main-nav
+                                        li.active
+                                            a(href="javascript:void(0);") Home
+                                        li
+                                            a(href="javascript:void(0);") Tab Name
+                                        li.disabled
+                                            a(href="javascript:void(0);") Tab Name
+                                        li.dropdown
+                                            a(href="javascript:void(0):" data-toggle="dropdown" aria-expanded="true").dropdown-toggle Tab Name
+                                                span.caret
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href="javascript:void(0);") Action
+                                                li
+                                                    a(href="javascript:void(0);") Action
+                                        li.dropdown.disabled
+                                            a(href="javascript:void(0):" data-toggle="dropdown" aria-expanded="true") Tab Name
+                                                span.caret
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href="javascript:void(0);") Action
+                                                li
+                                                    a(href="javascript:void(0);") Action
+                            .col-md-4.col-sm-4.col-xs-12
+                                h4 Breadcrumb
+                                ul.list-inline.undp-breadcrumb
+                                    li
+                                        a(href="javascript:void(0);") Home
+                                            span  &raquo;
+                                ul.list-inline.undp-breadcrumb
+                                    li
+                                        a(href="javascript:void(0);") Home
+                                            span  &raquo;
+                                    li
+                                        a(href="javascript:void(0);") Inner page
+                                            span  &raquo;
+                            .col-md-4.col-sm-4.col-xs-12
+                                h4 Pagination
+                                nav.nav-pagination
+                                    ul.pagination.undp-pagination
+                                        li
+                                            a(href='javascript:void(0);', aria-label='Previous')
+                                                span(aria-hidden='true') &laquo; Previous
+                                        li.active
+                                            a(href='javascript:void(0);') 1
+                                        li
+                                            a(href='javascript:void(0);') 2
+                                        li
+                                            a(href='javascript:void(0);') 3
+                                        li
+                                            a(href='javascript:void(0);') 4
+                                        li
+                                            a(href='javascript:void(0);', aria-label='Next')
+                                                span(aria-hidden='true') Next &raquo;
+                            .col-md-4.col-sm-4.col-xs-12
+                                h4 Pager
+                                nav.nav-pagination
+                                    ul.pagination.undp-pagination
+                                        li
+                                            a(href='javascript:void(0);', aria-label='Previous')
+                                                span(aria-hidden='true') &laquo; Previous
+                                        li
+                                            a(href='javascript:void(0);', aria-label='Next')
+                                                span(aria-hidden='true') Next &raquo;
 
                     div(role="tabpanel" id="containers").tab-pane containers
 
