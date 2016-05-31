@@ -827,6 +827,13 @@
     vertical-align: middle;
     padding-top: 2px;
 
+    @media (max-width: $screen-sm-max) {
+      position: absolute;
+      right: 10px;
+      top: 25%;
+    }
+
+
     &.icon-caret-down:before{
       content: "\f0d8";
     }
@@ -937,7 +944,7 @@
   margin-bottom: 20px;
 
   @media (max-width: $screen-xs-max){
-    height: 245px;
+    //height: 245px;
   }
 
   > img{

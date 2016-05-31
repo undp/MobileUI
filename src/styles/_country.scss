@@ -188,16 +188,23 @@
           float: left;
           padding-left: 25px;
         }
-        @media (max-width: $screen-sm-max) {
+
+        @media (max-width: $screen-sm-max) and (orientation: landscape) {
           margin-top: 25px;
+          width: auto;
           margin-bottom: 0;
         }
-        @media (max-width: $screen-xs-max) {
-          margin-top: 15px;
-          width: 85%;
+        @media (max-width: $screen-sm-max) and (orientation: portrait) {
+          margin-top: 30px;
+          margin-bottom: 0;
+          padding-left: 10px;
         }
         @media (max-width: $screen-xs-min) {
-          margin-top: 5px;
+          //width: 70%;
+          padding-left: 10px;
+        }
+        @media (max-width: $screen-xs-min) and (orientation: portrait) {
+          margin-top: 16px;
         }
         small {
           @media (max-width: $screen-md-max) {
@@ -224,21 +231,32 @@
           @media (max-width: $screen-md-max) {
             margin-left: 0;
           }
-          @media (max-width: $screen-sm-max) {
+          @media (max-width: $screen-sm-max) and (orientation: landscape){
+            display: inline-block;
+          }
+          @media (max-width: $screen-sm-max) and (orientation: portrait) {
             display: block;
             font-size: 20px;
             margin-bottom: 5px;
             padding-top: 5px;
           }
           @media (max-width: $screen-xs-max) {
-            font-size: 16px;
+            //display: block;
+            font-size: 14px;
             margin-bottom: 0;
             padding-top: 3px;
           }
+          @media (max-width: $screen-xs-max) and (orientation: portrait) {
+            display: block;
+            font-size: 12px;
+          }
         }
         a {
-          @media (max-width: $screen-sm-max) {
-            display: block;
+          @media (max-width: $screen-sm-max) and (orientation: landscape){
+            display: inline-block;
+          }
+          @media (max-width: $screen-sm-max) and (orientation: portrait) {
+            //display: block;
             img {
               margin: 0;
             }
@@ -258,9 +276,6 @@
   padding: 0 !important;
 }
 
-@media (max-width: $screen-md-max) {
-
-}
 
 @media (max-width: 767px) {
   .info-wrap.work-wrap {
@@ -485,6 +500,7 @@
       }
       img {
         margin-bottom: 11px;
+        width: 100%;
       }
       .text-content {
         display: block;
@@ -744,7 +760,7 @@
   }
 }
 
-h4.for-country {
+.for-country {
   display: none;
 }
 .country-pg {
@@ -761,8 +777,10 @@ h4.for-country {
     .list-footer-nav {
       li {
         color: #333;
+        font-size: 12px;
       }
       a {
+        font-size: 12px;
         color: #0b387c;
         &:hover,a:active,a:focus {
           color: #fff;
@@ -779,7 +797,7 @@ h4.for-country {
     a, h4 {
       color: #fff !important;
     }
-    h4 {
+    h4,.header-small-img {
       display: none;
     }
     .for-country {
@@ -787,6 +805,26 @@ h4.for-country {
       color: #BBBBBB!important;
       border-bottom-color: #666;
     }
+    .country-heading {
+      font-size: 13px;
+      color: #e8e8e8!important;
+      margin-top: 30px;
+      .header-small-img {
+        display: inline-block;
+      }
+      span {
+        display: block;
+        font-size: 18px;
+        padding-top: 8px;
+      }
+      a {
+        img {
+          width: 60px;
+          margin-left: 10px;
+        }
+      }
+    }
+
     .list-language {
       li {
         a {
@@ -818,6 +856,7 @@ h4.for-country {
       display: none;
     }
     .list-main-nav {
+      border-top: 1px solid #21537f;
       border-bottom: none;
       li {
         a {
