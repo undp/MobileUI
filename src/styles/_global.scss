@@ -961,7 +961,19 @@ body {
       height: 75%;
       overflow-y: scroll;
     }
+    .list-main-nav,.list-top-nav {
+        margin: 0;
+      li {
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: block;
+      }
+    }
+
   }
+
+
 }
 
 #MenuContries {
@@ -979,10 +991,19 @@ body {
 //global buttons
 .btn {
   @include border-radius(0);
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 40px;
 }
 .btn-default {
-  background-color: $clr-blue2;
+  background-color: $clr-blue4;
   color: #fff;
+  border-color: $clr-blue4;
+
+  &.btn-outline {
+    background-color: transparent;
+  }
 }
 
 //tables
