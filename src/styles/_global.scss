@@ -243,7 +243,7 @@ body {
     width: 185px;
     margin: 0 10px;
     padding: 5px 0;
-    border-bottom: 1px solid $clr-blue2;
+    //border-bottom: 1px solid $clr-blue2;
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
       width: 165px;
@@ -280,6 +280,7 @@ body {
         font-size: 12px;
         line-height: 22px;
         color: $clr-gray1;
+        font-weight: bold;
       }
 
       &.txt-lg{
@@ -962,13 +963,17 @@ body {
       overflow-y: scroll;
     }
     .list-main-nav,.list-top-nav {
-        margin: 0;
+        //margin: 0;
       li {
         border: none;
         padding: 0;
-        margin: 0;
+        //margin: 0;
         display: block;
       }
+    }
+
+    .btn-top {
+      z-index: 10001;
     }
 
   }
