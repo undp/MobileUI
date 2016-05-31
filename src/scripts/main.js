@@ -89,12 +89,16 @@
       //alert('hhhh');
       var popDiv = $(this).parent().find('.smallpop');
       $(popDiv).toggleClass('hide');
+
+      $('.off-canvas.open').css('overflow-y','visible');
+
     });
 
     //close countries popup button
     $('a[data-popupmenu]').on('click', function(){
       //console.log(event.target.id);
       $(this).parent('#contriesPop').addClass('hide');
+      $('.off-canvas.open').removeAttr('style');
     });
 
 

@@ -956,14 +956,15 @@ body {
   }
 }
 
-#slide-menu {
+.off-canvas#slide-menu {
+  overflow-y: scroll;
   .canvas-scroll {
     @media (max-width: $screen-md-max) {
-      height: 75%;
-      overflow-y: scroll;
+      //height: 75%;
+      //overflow-y: scroll;
     }
     .list-main-nav,.list-top-nav {
-        //margin: 0;
+      //margin: 0;
       li {
         border: none;
         padding: 0;
@@ -971,11 +972,12 @@ body {
         display: block;
       }
     }
-
     .btn-top {
       z-index: 10001;
     }
+    .countries-popup {
 
+    }
   }
 
 
