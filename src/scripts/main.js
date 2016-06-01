@@ -103,9 +103,14 @@
 
 
 
-
-
-
+    $('.btn-top').on('click', function () {
+      //alert('hi');
+      var popposition = $('#top').position().top;
+      //$("#contriesPop").animate({scrollTop: 0});
+      window.scrollTo(0);
+      //return false;
+      //alert('hi2');
+    });
 
 
 
@@ -186,10 +191,46 @@
     //   event.stopPropagation();
     // });
 
-    //horizontal tab links
-    $('.horizon-swiper').horizonSwiper();
-
-
+//scrollable tabs
+    $('.slick-tabs').slick({
+      //setting-name: setting-value
+      slidesToShow: 3,
+      infinite: false,
+      swipeToSlide: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 667,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 568,
+          settings: {
+            slidesToShow: 2
+          }
+        }
+        // ,
+        // {
+        //   breakpoint: 568,
+        //   settings: {
+        //     slidesToShow: 3
+        //   }
+        // },
+        // {
+        //   breakpoint: 480,
+        //   settings: {
+        //     slidesToShow: 3
+        //   }
+        // }
+      ]
+  });
 
   });
 })(window, document, jQuery);
