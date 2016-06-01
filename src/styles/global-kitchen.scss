@@ -53,4 +53,14 @@
   .form-group {
     margin-bottom: 30px;
   }
+
+  .modal {
+    display: block;
+    position: relative;
+    .modal-dialog {
+      width: 100%;
+    }
+
+  }
+
 }

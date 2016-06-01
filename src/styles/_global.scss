@@ -1275,3 +1275,23 @@ input,.form-control,select,textarea {
   @include border-radius(0);
   background-color: $clr-light-blue2;
 }
+
+//modal {
+.modal {
+  .modal-content {
+    @include border-radius(0);
+  }
+  .modal-header {
+    background-color: $clr-light-blue2;
+    padding: 9px 15px;
+    .modal-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: $clr-gray;
+    }
+  }
+  .modal-footer {
+    border: none;
+  }
+
+}
