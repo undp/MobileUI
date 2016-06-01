@@ -1295,3 +1295,50 @@ input,.form-control,select,textarea {
   }
 
 }
+
+//popover
+.popover {
+  @include border-radius(0);
+  .popover-content {
+    background-color: $clr-light-blue2;
+  }
+  &.top > .arrow:after {
+    border-top-color: $clr-light-blue2;
+  }
+  &.left > .arrow:after {
+    border-left-color: $clr-light-blue2;
+  }
+  &.right > .arrow:after {
+    border-right-color: $clr-light-blue2;
+  }
+  &.bottom > .arrow:after {
+    border-bottom-color: $clr-light-blue2;
+  }
+}
+
+//tooltip
+.tooltip {
+  background-color: $clr-blue;
+  .tooltip-inner {
+    padding: 15px;
+    color: $clr-white;
+  }
+
+  font-size: 13px;
+  &.fade.in {
+    display: block;
+  }
+  &.left .tooltip-arrow {
+
+  }
+  &.top .tooltip-arrow {
+
+  }
+  &.bottom .tooltip-arrow {
+
+  }
+  &.right .tooltip-arrow {
+
+  }
+
+}

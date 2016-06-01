@@ -9,6 +9,10 @@
     //  }, false);
     //}
 
+    $('[data-toggle="popover"]').popover();
+
+    $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
+
     //card flip
     $('[data-hover]')
       .mouseout(function() {
