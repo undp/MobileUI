@@ -1,0 +1,69 @@
+h1 Form elements
+form
+    .row
+        .col-md-4.col-xs-12
+            .form-group
+                label(for="example1").control-label Label
+                input.form-control(type="text" id="example1" placeholder="Data not yet entered")
+            .form-group
+                label(for="example2").control-label Label
+                input.form-control(type="text" id="example2" value="Data entered" placeholder="Data not yet entered")
+            .form-group
+                label(for="example3").control-label Label
+                select.form-control.c-select(id="example3")
+                    option Select
+                    option Select 2
+            .form-group
+                label(for="example4").control-label Label
+                select.form-control.c-select(id="example4")
+                    option Select
+                    option Select 2
+        .col-md-4.col-xs-12
+            .form-group.has-warning
+                label(for="example5").control-label Input warning
+                input.form-control(type="text" value="Data entered" id="example5" placeholder="Data not yet entered")
+            .form-group.has-error
+                label(for="example6").control-label Input error
+                input.form-control(type="text" value="Data entered" id="example6" placeholder="Data not yet entered")
+            .form-group.has-success
+                label(for="example7").control-label Input success
+                input.form-control(type="text" value="Data entered" id="example7" placeholder="Data not yet entered")
+            .form-group.small
+                label(for="example8").control-label Small input
+                input.form-control.small(type="text" id="example8" placeholder="Data not yet entered")
+
+        .col-md-4.col-xs-12
+            div.dark-blue-bg
+                div.radio.inverse
+                    label
+                        input(type="radio" name="optionsRadios" value)
+                        | Radio not selected
+                div.radio.inverse
+                    label
+                        input(type="radio" name="optionsRadios" checked value)
+                        | Radio selected
+                div.checkbox.inverse
+                    label
+                        input(type="checkbox" value)
+                        | Checkbox not selected
+                div.checkbox.inverse
+                    label
+                        input(type="checkbox" checked value)
+                        | Checkbox selected
+            div
+                div.radio
+                    label
+                        input(type="radio" name="optionsRadios1" value)
+                        | Radio not selected
+                div.radio
+                    label
+                        input(type="radio" name="optionsRadios1" checked value)
+                        | Radio selected
+                div.checkbox
+                    label
+                        input(type="checkbox" value)
+                        | Checkbox not selected
+                div.checkbox
+                    label
+                        input(type="checkbox" checked value)
+                        | Checkbox selected
