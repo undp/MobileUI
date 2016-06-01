@@ -11,7 +11,8 @@
 
     $('[data-toggle="popover"]').popover();
 
-    $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
+    $('[data-toggle="tooltip"]').tooltip();
+    //$('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
 
     //card flip
     $('[data-hover]')
