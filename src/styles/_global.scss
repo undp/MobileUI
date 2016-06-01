@@ -996,6 +996,36 @@ body {
 }
 
 //global kitchen sink
+//headings
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+    color: $clr-gray4;
+    font-weight: bold!important;
+  }
+h1 {
+  font-size: 35px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 13px;
+}
+h6 {
+  font-size: 11px;
+}
+
+.emphasis {
+  color: $clr-gray;
+  font-weight: bold;
+}
+
+
 //global buttons
 .btn {
   @include border-radius(0);
@@ -1008,18 +1038,59 @@ body {
   background-color: $clr-blue4;
   color: #fff;
   border-color: $clr-blue4;
+  .caret {
+    margin-left: 10px;
+  }
+  &.btn-inverse {
+    background-color: $clr-light-blue;
+    color: $clr-blue;
+    border-color: $clr-light-blue;
+  }
 
   &.btn-outline {
     background-color: transparent;
+    color: $clr-blue4;
+
+    &.btn-inverse {
+      color: $clr-light-blue;
+      border-color: $clr-light-blue;
+    }
+
   }
+
+}
+.btn-link {
+  color: $clr-blue4;
+
+  &.btn-bold {
+    font-weight: bold;
+  }
+
+  &.btn-inverse {
+    color: $clr-light-blue
+  }
+
 }
 
 //tables
 .table {
   thead {
-    th {
+    tr > th {
       background-color: $clr-blue4;
       color: #fff;
+      font-size: 13px!important;
+    }
+
+  }
+  tbody {
+    tr > td {
+      font-size: 13px!important;
+    }
+  }
+  .checkbox {
+    margin: 0;
+    label {
+      vertical-align: middle;
     }
   }
 }
@@ -1027,7 +1098,49 @@ body {
 //form elements {
 input,.form-control,select,textarea {
   @include border-radius(0!important);
+  color: $clr-gray;
 }
+.form-group {
+  label {
+    font-weight: normal;
+    font-size: 13px;
+  }
+
+  &.small {
+    input {
+      height: 27px;
+    }
+  }
+
+  &.has-warning {
+    label {
+      color: $brand-warning!important;
+    }
+    .form-control {
+      border-color: $brand-warning!important;
+    }
+  }
+  &.has-error {
+    label {
+      color: $brand-danger!important;
+    }
+    .form-control {
+      border-color: $brand-danger!important;
+    }
+  }
+  &.has-success {
+    label {
+      color: $brand-success!important;
+    }
+    .form-control {
+      border-color: $brand-success!important;
+    }
+  }
+
+}
+
+
+
 .radio,.checkbox {
   &.inverse {
     label {
@@ -1110,6 +1223,8 @@ input,.form-control,select,textarea {
   }
 }
 
+
+//panels
 .panel {
   @include border-radius(0);
   &.panel-default {
@@ -1125,7 +1240,6 @@ input,.form-control,select,textarea {
     }
   }
 }
-
 .well {
   @include border-radius(0);
   background-color: $clr-light-blue2;
