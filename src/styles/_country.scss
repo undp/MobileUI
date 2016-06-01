@@ -206,6 +206,9 @@
         @media (max-width: $screen-xs-min) and (orientation: portrait) {
           margin-top: 16px;
         }
+        @media (min-width: 321px) and (max-width: 450px) and (orientation: portrait) {
+          margin-top: 24px;
+        }
         small {
           @media (max-width: $screen-md-max) {
             display: block;
@@ -250,6 +253,10 @@
             display: block;
             font-size: 12px;
           }
+          @media (min-width: 321px) and (max-width: 450px) and (orientation: portrait) {
+            display: inline;
+            font-size: 12px;
+          }
         }
         a {
           @media (max-width: $screen-sm-max) and (orientation: landscape){
@@ -257,10 +264,14 @@
           }
           @media (max-width: $screen-sm-max) and (orientation: portrait) {
             //display: block;
-            img {
-              margin: 0;
-            }
+            //img {
+            //  margin: 0;
+            //}
           }
+          @media (min-width: 321px) and (max-width: 450px) and (orientation: portrait) {
+            margin-left: 5px;
+          }
+
         }
         .header-small-img {
           @media (max-width: $screen-sm-max) {
