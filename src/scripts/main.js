@@ -103,14 +103,6 @@
 
 
 
-    $('.btn-top').on('click', function () {
-      //alert('hi');
-      var popposition = $('#top').position().top;
-      //$("#contriesPop").animate({scrollTop: 0});
-      window.scrollTo(0);
-      //return false;
-      //alert('hi2');
-    });
 
 
 
@@ -187,14 +179,20 @@
     //
     //   });
 
-    // $(document).on('click','.collapse.in', function(event){
-    //   event.stopPropagation();
-    // });
+//countries popup mobile go to top btn
+    $('.btn-top').on('click', function () {
+      alert('hi');
+      var popposition = $(this).position().top;
+      //$(this).parent().addClass('ww');
+      //$("#contriesPop").animate({scrollTop: popposition});
+      $('#contriesPop').animate({scrollTop: popposition});
+      //return false;
+    });
 
 //scrollable tabs
     $('.slick-tabs').slick({
       //setting-name: setting-value
-      slidesToShow: 3,
+      slidesToShow: 4,
       infinite: false,
       swipeToSlide: true,
       responsive: [
@@ -216,19 +214,6 @@
             slidesToShow: 2
           }
         }
-        // ,
-        // {
-        //   breakpoint: 568,
-        //   settings: {
-        //     slidesToShow: 3
-        //   }
-        // },
-        // {
-        //   breakpoint: 480,
-        //   settings: {
-        //     slidesToShow: 3
-        //   }
-        // }
       ]
   });
 

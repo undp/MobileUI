@@ -1327,7 +1327,7 @@
 
 //scrollable tabs
 .main-subnav {
-  //overflow-y: hidden;
+  overflow-y: hidden;
   height: 57px;
 
   .container {
@@ -1335,8 +1335,7 @@
       padding: 0;
     }
   }
-}
-//slick plugin
+  //slick plugin
   ul.slick-tabs {
     height: 57px;
     max-height: 57px;
@@ -1370,10 +1369,10 @@
       position: relative;
       line-height: 57px;
       a {
-        display: block;
-        line-height: 57px;
+        display: table;
+        line-height: 110%;
         padding: 0 20px;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: bold;
         color: #0055aa;
         text-decoration: none;
@@ -1383,25 +1382,27 @@
           border: none;
         }
         span {
+          display: table-cell;
           vertical-align: middle;
         }
         @media (max-width: $screen-sm-max) {
           //font-size: 15px;
-          padding: 11px 10px;
+          padding: 0 10px;
           line-height: 110%;
         }
 
         @media (max-width: $screen-xs-max) {
           font-size: 12px;
-          padding: 14px 10px;
+          //padding: 14px 10px;
         }
         @media (max-width: $screen-xs-max) and (orientation: landscape) {
           font-size: 14px;
-          padding: 5px 10px;
-        }@media (max-width: 320px) {
-        font-size: 12px;
-        padding: 8px 10px;
-      }
+          //padding: 5px 10px;
+        }
+        @media (max-width: 320px) {
+          font-size: 12px;
+          //padding: 8px 10px;
+        }
       }
       &:before{
         position: absolute;
@@ -1449,8 +1450,10 @@
           }
         }
       }
+    }
   }
 }
+
 
 
 .info-link-box {
