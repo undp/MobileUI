@@ -182,12 +182,15 @@
         .badge {
           float: right;
           padding: 0;
-          width: 25px;
-          line-height: 25px;
+          width: 27px;
+          margin-top: -5px;
+          line-height: 27px;
           text-align: center;
           @include border-radius(50%);
           background-color: $clr-gray;
           color: #fff;
+          font-size: 13px;
+          font-weight: bold;
         }
       }
       &:hover > a, &:focus >a {

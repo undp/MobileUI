@@ -1025,6 +1025,12 @@ h6 {
   font-weight: bold;
 }
 
+p {
+  small {
+    font-size: 11px;
+  }
+}
+
 
 //global buttons
 .btn {
@@ -1239,6 +1245,31 @@ input,.form-control,select,textarea {
       background-color: $clr-blue;
     }
   }
+  .panel-heading,.panel-footer {
+    font-weight: bold;
+  }
+  &.panel-warning {
+   border-color: $brand-warning;
+    .panel-heading {
+      background-color: $brand-warning;
+      color: $clr-white;
+    }
+  }
+  &.panel-danger {
+    border-color: $brand-danger;
+    .panel-heading {
+      background-color: $brand-danger;
+      color: $clr-white;
+    }
+  }
+  &.panel-success {
+    border-color: $brand-success;
+    .panel-heading {
+      background-color: $brand-success;
+      color: $clr-white;
+    }
+  }
+
 }
 .well {
   @include border-radius(0);
