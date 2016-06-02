@@ -359,23 +359,27 @@ body {
       font-size: 22px;
     }
   }
+}
 
-  .btn-top{
-    display: none;
+.btn-top{
+  display: none;
 
-    @media (max-width: $screen-md-max){
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      background-color: $clr-blue2;
+  @media (max-width: $screen-md-max){
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: $clr-blue2;
+    color: $clr-white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    z-index: 1;
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    &:hover,&:focus,&:active {
       color: $clr-white;
-      font-size: 24px;
-      text-align: center;
-      line-height: 40px;
-      z-index: 1;
       text-decoration: none;
-      position: absolute;
-      right: 20px;
     }
   }
 }
