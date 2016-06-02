@@ -1129,6 +1129,9 @@ input,.form-control,select,textarea {
   @include border-radius(0!important);
   color: $clr-gray;
 }
+input,.form-control,.select {
+  height: 40px;
+}
 .form-group {
   label {
     font-weight: normal;
@@ -1170,15 +1173,6 @@ input,.form-control,select,textarea {
 
 
 
-.radio,.checkbox {
-  &.inverse {
-    label {
-      color: #fff;
-    }
-
-  }
-}
-
 .c-select {
   display: inline-block;
   max-width: 100%;
@@ -1219,37 +1213,142 @@ input,.form-control,select,textarea {
 }
 
 // Checkboxes
-//
-// Tweak just a few things for checkboxes.
+// Custom Checkbox scss
+[type="checkbox"],[type="radio"] {
+  visibility: hidden;
+  display: none;
+}
 
-.c-checkbox {
-  .c-indicator {
-    border-radius: .25rem;
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label,
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 18px;
+  color: $clr-blue4;
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled], &:disabled {
+    cursor: not-allowed;
+    opacity: 0.50;
   }
+}
+[type="checkbox"]:checked + label,
+[type="radio"]:checked + label {
+  color: $clr-black;
+}
+[type="checkbox"]:disabled + label:before,
+[type="radio"]:disabled + label:before{
+  opacity: 0.5;
+}
+[type="checkbox"] + label:before,
+[type="radio"] + label:before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  left: 0;
+  //@include border-radius(3px);
+  //background-color: #fff;
+}
 
-  input:checked ~ .c-indicator {
-    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
-  }
+//[type="radio"] + label:before {
+//  @include border-radius(50%);
+//}
 
-  input:indeterminate ~ .c-indicator {
-    background-color: #0074d9;
-    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0wLDN2Mmg4VjNIMHoiLz4NCjwvc3ZnPg0K);
-    @include box-shadow(none);
+[type="checkbox"]:not(:checked) + label:before{
+  font-family: 'UNDPicons';
+  content: "\e903";
+}
+
+[type="checkbox"]:checked + label:after,
+[type="checkbox"]:checked + label:before {
+  font-family: 'UNDPicons';
+  content: "\e905";
+}
+
+[type="radio"]:not(:checked) + label:before{
+  //background-color: white;
+  //border: 2px solid $clr-blue4;
+  font-family: 'UNDPicons';
+  content: "\e902";
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:checked + label:before {
+  //border: 1px solid $clr-gray4;
+  //background-color: $clr-black;
+  font-family: 'UNDPicons';
+  content: "\e904";
+}
+
+[type="checkbox"] + label:after,
+[type="radio"] + label:after {
+  //font-family: 'UNDPicons';
+  position: absolute;
+  font-size: 18px;
+  color: $clr-black;
+  transition: all .2s ease;
+  left: 0;
+  top: 0;
+  line-height: 18px;
+}
+[type="radio"] + label:after {
+  text-align: center;
+  width: 18px;
+}
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="radio"]:not(:checked) + label:after{
+  opacity: 0;
+  transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after,
+[type="radio"]:checked + label:after{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.radio,.checkbox {
+  &.inverse {
+    label {
+      color: #fff;
+    }
+
+    [type="checkbox"]:checked + label,
+    [type="checkbox"]:checked + label:before,
+    [type="radio"]:checked + label,
+    [type="radio"]:checked + label:before {
+      color: $clr-white;
+    }
+    [type="checkbox"]:not(:checked) + label,
+    [type="checkbox"]:not(:checked) + label:before,
+    [type="radio"]:not(:checked) + label,
+    [type="radio"]:not(:checked) + label:before {
+      color: $clr-light-blue;
+    }
+    [type="checkbox"]:checked + label:after,
+    [type="radio"]:checked + label:after {
+      color: $clr-white;
+    }
+
+
   }
 }
 
-// Radios
-//
-// Tweak just a few things for radios.
-
-.c-radio {
-  .c-indicator {
-    border-radius: 50%;
-  }
-
-  input:checked ~ .c-indicator {
-    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
-  }
+/*bootstrap custom selectbox*/
+.c-select {
+  background: #fff url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4IiB2aWV3Qm94PSIwIDAgMTAgNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy44LjIgKDI5NzUzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5TbGljZSAxPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IjE0NjQ4ODE5NzZfYXJyb3ctZHJvcC1kb3duIiBmaWxsPSIjMDA1NUFBIj4KICAgICAgICAgICAgPGcgaWQ9IlBhZ2UtMSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iQ29yZSI+CiAgICAgICAgICAgICAgICAgICAgPGcgaWQ9ImFycm93LWRyb3AtZG93biIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDAuNTAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTaGFwZSIgcG9pbnRzPSIwIDAgNSA1IDEwIDAiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==') no-repeat right 0.75rem center;
+  position: relative;
+  background-size: 10px;
+  height: 40px;
+  @include border-radius(3px);
+  /*padding-left: 0.375rem;*/
 }
 
 
