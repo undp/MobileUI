@@ -779,10 +779,11 @@ body {
   h4{
     margin: 0;
     color: $clr-gray1;
-    font-size: 14.5px;
+    font-size: 14px;
     border-bottom: 1px solid #21537f;
     padding-bottom: 10px;
     text-align: left;
+    font-weight: normal!important;
   }
 }
 
@@ -976,24 +977,22 @@ body {
       z-index: 10001;
       cursor: pointer;
     }
-    .countries-popup {
-
-    }
   }
-
-
 }
-
-#MenuContries {
+//desktop countries hover
+.dropdown-countries {
   &:hover {
-    color: #fff;
-    i {
-      &:before {
-        content: "\f0d8";
-      }
+    #MenuContries {
+        color: #fff;
+        i {
+          &:before {
+            content: "\f0d8";
+          }
+        }
     }
   }
 }
+
 
 //global kitchen sink
 //headings

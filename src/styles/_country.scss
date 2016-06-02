@@ -246,7 +246,7 @@
           @media (max-width: $screen-xs-max) {
             //display: block;
             font-size: 14px;
-            margin-bottom: 0;
+            //margin-bottom: 0;
             padding-top: 3px;
           }
           @media (max-width: $screen-xs-max) and (orientation: portrait) {
@@ -272,10 +272,14 @@
             margin-left: 5px;
           }
 
+
         }
         .header-small-img {
           @media (max-width: $screen-sm-max) {
             height: 23px;
+          }
+          @media (max-width: 320px) and (orientation: portrait) {
+            margin: 0;
           }
         }
       }
@@ -642,7 +646,7 @@
 
       span {
         display: inline-block;
-        font-size: 18px;
+        font-size: 17px;
         padding-top: 8px;
       }
 
