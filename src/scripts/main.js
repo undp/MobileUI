@@ -185,14 +185,12 @@
     //   });
 
 //countries popup mobile go to top btn
-    $('.btn-top').on('click', function () {
-      alert('hi');
-      var popposition = $(this).position().top;
-      //$(this).parent().addClass('ww');
-      //$("#contriesPop").animate({scrollTop: popposition});
-      $('#contriesPop').animate({scrollTop: popposition});
-      //return false;
+    $('.btn-top').click(function (e) {
+      e.preventDefault();
+      $(this).parent().scrollTop(0);
     });
+
+
 
 //scrollable tabs
     $('.slick-tabs').slick({
@@ -222,5 +220,6 @@
       ]
   });
 
+    
   });
 })(window, document, jQuery);
