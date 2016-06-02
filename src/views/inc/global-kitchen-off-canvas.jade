@@ -1,0 +1,15 @@
+.off-canvas#slide-menu
+  div.canvas-header
+    a.btn-close(href='javascript:void(0);',data-sidemenu) &times;
+    .heading
+      h4.country-heading United Nations Development Programme
+      h2 Visual style guidelines
+  div.canvas-scroll
+    block mainnav
+      ul.list-main-nav
+        li.active
+          a(href="javascript:void(0);") Global
+        li
+          a(href="javascript:void(0);") UN Country Specific
+    block asidemenu
+      include global-kitchen-aside-menu

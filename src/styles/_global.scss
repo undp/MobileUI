@@ -1299,6 +1299,9 @@ input,.form-control,select,textarea {
 
 //modal {
 .modal {
+  .modal-dialog {
+    margin: 0;
+  }
   .modal-content {
     @include border-radius(0);
   }
@@ -1314,7 +1317,6 @@ input,.form-control,select,textarea {
   .modal-footer {
     border: none;
   }
-
 }
 
 //popover

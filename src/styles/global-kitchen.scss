@@ -1,9 +1,13 @@
 .global-kitchen {
+  .btn {
+    display: inline-block;
+  }
   .list-footer-nav {
     display: none;
   }
   .kitchen-content {
-    padding: 50px 0;
+    padding-top: 30px;
+    padding-bottom: 150px;
   }
   header {
     .list-main-nav {
@@ -62,5 +66,42 @@
     display: block;
     left: 0;
     position: relative;
+  }
+
+  .undp-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  [data-toggle="popover"],[data-toggle="tooltip"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .off-canvas {
+    .canvas-header {
+      height: auto;
+    }
+    .heading {
+      padding-top: 20px;
+      h4 {
+        border: none;
+      }
+      h2 {
+        color: $clr-white;
+        margin-top: 0;
+      }
+    }
+    .list-main-nav {
+      border: none;
+    }
+    .aside-link {
+      margin-top: 30px;
+      li {
+        a {
+          padding: 8px 20px;
+        }
+      }
+    }
   }
 }

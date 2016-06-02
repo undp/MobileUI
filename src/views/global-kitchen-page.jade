@@ -3,11 +3,11 @@ extends ./layouts/global-kitchen.jade
 block content
     .container.kitchen-content
         .row
-            .col-md-3.col-sm-12.col-xs-12
-                include ./inc/global-kitchen-slide-menu
+            .col-md-3.col-sm-12.col-xs-12.visible-lg.visible-md
+                include ./inc/global-kitchen-aside-menu
             .col-md-9.col-sm-12.col-xs-12
                 div.tab-content
-                    div(role="tabpanel" id="home").tab-pane.active
+                    div(role="tabpanel" id="buttons").tab-pane.active
                         include ./inc/global-kitchen-buttons
 
                     div(role="tabpanel" id="typo").tab-pane

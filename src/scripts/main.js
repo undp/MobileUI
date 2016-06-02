@@ -191,6 +191,12 @@
     });
 
 
+    //global kitchen mobile slide menu
+    $('.off-canvas #aside-link a').on('click',function () {
+        $('#slide-menu').removeClass('open');
+        $('body').removeClass('no-scroll');
+    });
+
 
 //scrollable tabs
     $('.slick-tabs').slick({
@@ -220,6 +226,6 @@
       ]
   });
 
-    
+
   });
 })(window, document, jQuery);
