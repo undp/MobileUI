@@ -23,13 +23,32 @@ h1 Buttons
             //btn dropdown
             a(href="javascript:void(0);").btn.btn-link.btn-inverse.btn-bold If link is a heading
             a(href="javascript:void(0);").btn.btn-link.btn-inverse Regular link
+            div &nbsp;
+            //grayed buttons
+            button(type="button").btn.btn-default.btn-grayed Default
+            button(type="button").btn.btn-default.btn-outline.btn-grayed Other
+            //btn dropdown
+            .btn-group
+                button(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").btn.btn-default.btn-grayed.dropdown-toggle Default
+                    span.caret
+                ul.dropdown-menu
+                    li
+                        a(href="javascript:void(0);") Action
+                    li
+                        a(href="javascript:void(0);") Action
+                    li
+                        a(href="javascript:void(0);") Action 2
+                    li
+                        a(href="javascript:void(0);") Action 3
 
+            a(href="javascript:void(0);").btn.btn-link.btn-bold.btn-grayed If link is a heading
+            a(href="javascript:void(0);").btn.btn-link.btn-grayed Regular link
 .row(style="margin-bottom: 20px;")
-    .col-md-5.col-sm-5.col-xs-12
+    .col-md-4.col-sm-12.col-xs-12
         h4 light-blue right panel / white background
-    .col-md-7.col-sm-7.col-xs-12
+    .col-md-8.col-sm-12.col-xs-12
         button(type="button").btn.btn-default Default
-        button(type="button").btn.btn-default.btn-outline Primary
+        button(type="button").btn.btn-default.btn-outline Other
         //btn dropdown
         .btn-group
             button(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").btn.btn-default.dropdown-toggle Default
@@ -47,11 +66,31 @@ h1 Buttons
 
         a(href="javascript:void(0);").btn.btn-link.btn-bold If link is a heading
         a(href="javascript:void(0);").btn.btn-link Regular link
+        div &nbsp;
+        //grayed buttons
+        button(type="button").btn.btn-default.btn-grayed Default
+        button(type="button").btn.btn-default.btn-outline.btn-grayed Other
+        //btn dropdown
+        .btn-group
+            button(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").btn.btn-default.btn-grayed.dropdown-toggle Default
+                span.caret
+            ul.dropdown-menu
+                li
+                    a(href="javascript:void(0);") Action
+                li
+                    a(href="javascript:void(0);") Action
+                li
+                    a(href="javascript:void(0);") Action 2
+                li
+                    a(href="javascript:void(0);") Action 3
+
+        a(href="javascript:void(0);").btn.btn-link.btn-bold.btn-grayed If link is a heading
+        a(href="javascript:void(0);").btn.btn-link.btn-grayed Regular link
 
 .row(style="margin-bottom: 20px;")
-    .col-md-3.col-sm-3.col-xs-12
+    .col-md-4.col-sm-12.col-xs-12
         h4 Social icons
-    .col-md-9.col-sm-9.col-xs-12
+    .col-md-8.col-sm-12.col-xs-12
         ul.list-inline.list-social-nav
             li
                 a.icon-box.facebook(href='http://www.facebook.com/undp', target='_blank')

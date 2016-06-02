@@ -1055,18 +1055,23 @@ p {
     color: $clr-blue;
     border-color: $clr-light-blue;
   }
-
+  &.btn-grayed {
+    background-color: $clr-gray;
+    color: $clr-gray5;
+    border-color: $clr-gray;
+  }
   &.btn-outline {
     background-color: transparent;
     color: $clr-blue4;
-
     &.btn-inverse {
       color: $clr-light-blue;
       border-color: $clr-light-blue;
     }
-
+    &.btn-grayed {
+      color: $clr-gray;
+      border-color: $clr-gray;
+    }
   }
-
 }
 .btn-link {
   color: $clr-blue4;
@@ -1078,7 +1083,21 @@ p {
   &.btn-inverse {
     color: $clr-light-blue
   }
+  &.btn-grayed {
+    color: $clr-gray;
+  }
 
+}
+.btn-group {
+  .btn {
+    padding-right: 40px;
+    .caret {
+      margin: 0;
+      position: absolute;
+      right: 10px;
+      top: 47%;
+    }
+  }
 }
 
 //tables
