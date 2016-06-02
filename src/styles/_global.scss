@@ -378,6 +378,9 @@ body {
     color: $clr-white;
     text-decoration: none;
   }
+  &.icon-caret-up:before {
+    vertical-align: middle;
+  }
   @media (max-width: $screen-md-max){
     display: inline-block;
   }
@@ -1033,7 +1036,6 @@ p {
   }
 }
 
-
 //global buttons
 .btn {
   @include border-radius(0);
@@ -1304,6 +1306,9 @@ input,.form-control,select,textarea {
   }
   .modal-content {
     @include border-radius(0);
+    -webkit-box-shadow: 4px 3px 7px 0px rgba(161,161,161,1);
+    -moz-box-shadow: 4px 3px 7px 0px rgba(161,161,161,1);
+    box-shadow: 4px 3px 7px 0px rgba(161,161,161,1);
   }
   .modal-header {
     background-color: $clr-light-blue2;

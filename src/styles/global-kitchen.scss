@@ -54,18 +54,22 @@
   .modal {
     display: block;
     position: relative;
+    padding-bottom: 10px;
     .modal-dialog {
-      width: 100%;
+      width: 90%;
     }
   }
   .list-social-nav {
     text-align: left;
     margin-top: 10px;
   }
-  .btn-top {
-    display: block;
+  .btn-top,.btn-share {
+    display: inline-block;
     left: 0;
     position: relative;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
   }
 
   .undp-footer {
