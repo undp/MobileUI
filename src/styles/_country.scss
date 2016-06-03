@@ -453,9 +453,18 @@
           color: #0b387c;
           padding: 5px 5px;
           display: inline-block;
-          &:hover {
+          &:hover,&:active,&:focus {
             background-color: #76a3e1;
             color: #fff;
+          }
+        }
+        &.active a {
+          background-color: #76a3e1;
+          color: #fff;
+        }
+        &.disabled {
+          a {
+            color: $clr-gray;
           }
         }
       }
@@ -915,3 +924,4 @@
 
   }
 }
+

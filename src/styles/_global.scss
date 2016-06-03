@@ -392,6 +392,12 @@ body {
   }
 }
 
+.country-pg {
+  .btn-top {
+    background-color: $clr-blue6;
+  }
+}
+
 .funding-popup{
   position: absolute;
   background-color: $clr-dark-blue;
@@ -1056,6 +1062,7 @@ p {
     text-decoration: none;
   }
 }
+
 .btn-default,.open > .btn-default.dropdown-toggle {
   background-color: $clr-blue4;
   color: #fff;
@@ -1081,6 +1088,7 @@ p {
     }
   }
   &.btn-grayed,&[disabled] {
+    opacity: 1;
     background-color: $clr-gray;
     color: $clr-gray5;
     border-color: $clr-gray;
@@ -1107,6 +1115,7 @@ p {
       }
     }
     &.btn-grayed,&[disabled] {
+      opacity: 1;
       color: $clr-gray;
       border-color: $clr-gray;
       &:active,&:active:hover,&:active:focus,&:hover,&:focus,&.active {
@@ -1138,6 +1147,7 @@ p {
   }
 
   &.btn-grayed,&[disabled] {
+    opacity: 1;
     color: $clr-gray;
     &:active,&:active:hover,&:active:focus,&:hover,&:focus,&.active {
       color: $clr-gray;
@@ -1156,6 +1166,93 @@ p {
     }
   }
 }
+
+//buttons for country page
+.country-pg {
+  .btn-default,.open > .btn-default.dropdown-toggle {
+    background-color: $clr-blue6;
+    border-color: $clr-blue6;
+    &:active,&:active:hover,&:active:focus,&:hover,&:focus,&.active {
+      background-color: $clr-blue6;
+      border-color: $clr-blue6;
+    }
+    &.btn-inverse {
+      background-color: $clr-blue7;
+      color: $clr-light-blue;
+      border-color: $clr-blue7;
+      &:active,&:active:hover,&:active:focus,&:hover,&:focus,&.active {
+        background-color: $clr-blue7;
+        color: $clr-light-blue;
+        border-color: $clr-blue7;
+      }
+    }
+    &.btn-grayed,&[disabled] {
+      background-color: $clr-gray;
+      color: $clr-gray5;
+      border-color: $clr-gray;
+      &:active,&:active:hover,&:active:focus,&:hover,&:focus,&.active {
+        background-color: $clr-gray;
+        color: $clr-gray5;
+        border-color: $clr-gray;
+        text-decoration: none;
+      }
+    }
+    &.btn-outline {
+      background-color: transparent;
+      color: $clr-blue6;
+      &:active,&:active:hover,&:active:focus,&:hover,&:focus,&.active {
+        background-color: transparent;
+        color: $clr-blue6;
+      }
+      &.btn-inverse {
+        color: $clr-blue7;
+        border-color: $clr-blue7;
+        &:active,&:active:hover,&:active:focus,&:hover,&:focus,&.active {
+          color: $clr-blue7;
+          border-color: $clr-blue7;
+        }
+      }
+      &.btn-grayed,&[disabled] {
+        color: $clr-gray;
+        border-color: $clr-gray;
+        &:active,&:active:hover,&:active:focus,&:hover,&:focus,&.active {
+          color: $clr-gray;
+          border-color: $clr-gray;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .btn-link {
+    color: $clr-blue6;
+    &:active,&:active:hover,&:active:focus,&:hover,&:focus,&.active {
+      color: $clr-blue6;
+    }
+
+    &.btn-bold {
+      font-weight: bold;
+      &:active,&:active:hover,&:active:focus,&:hover,&:focus,&.active {
+        font-weight: bold;
+      }
+    }
+
+    &.btn-inverse {
+      color: $clr-blue7;
+      &:active,&:active:hover,&:active:focus,&:hover,&:focus,&.active {
+        color: $clr-blue7;
+      }
+    }
+
+    &.btn-grayed,&[disabled] {
+      color: $clr-gray;
+      &:active,&:active:hover,&:active:focus,&:hover,&:focus,&.active {
+        color: $clr-gray;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 
 //tables
 .table {
@@ -1201,10 +1298,34 @@ p {
       }
     }
   }
-
-
-
 }
+//country tables
+.country-pg {
+  .table {
+    thead {
+      tr > th {
+        background-color: $clr-blue6;
+        color: $clr-blue7;
+      }
+    }
+    a {
+      color: $clr-blue6;
+    }
+    .checkbox {
+      &.inverse {
+        [type="checkbox"]:not(:checked) + label:before {
+          color: $clr-blue7;
+        }
+        [type="checkbox"]:checked + label:after {
+          font-size: 12px;
+          left: 1px;
+        }
+      }
+    }
+  }
+}
+
+
 
 //form elements {
 input,.form-control,select,textarea {
@@ -1296,6 +1417,7 @@ input,.form-control,.select {
 
 // Checkboxes
 // Custom Checkbox scss
+.radio,.checkbox {
 [type="checkbox"],[type="radio"] {
   visibility: hidden;
   display: none;
@@ -1335,26 +1457,16 @@ input,.form-control,.select {
   height: 18px;
   font-size: 18px;
   left: 0;
-  //@include border-radius(3px);
-  //background-color: #fff;
 }
-
-//[type="radio"] + label:before {
-//  @include border-radius(50%);
-//}
-
 [type="checkbox"]:not(:checked) + label:before{
   font-family: 'UNDPicons';
   content: "\e903";
 }
-
-
 [type="checkbox"]:checked + label:before {
   font-family: 'UNDPicons';
   content: "\e905";
   color: $clr-black;
 }
-
 [type="checkbox"]:checked + label:after {
   font-family: 'UNDPicons';
   content: "\e901";
@@ -1362,26 +1474,18 @@ input,.form-control,.select {
   font-size: 13px;
   left: 3px;
 }
-
-
 [type="radio"]:not(:checked) + label:before{
   //background-color: white;
   //border: 2px solid $clr-blue4;
   font-family: 'UNDPicons';
   content: "\e902";
 }
-
 [type="radio"]:checked + label:before {
   //border: 1px solid $clr-gray4;
   //background-color: $clr-black;
   font-family: 'UNDPicons';
   content: "\e904";
 }
-
-[type="radio"]:checked + label:after {
-
-}
-
 [type="checkbox"] + label:after,
 [type="radio"] + label:after {
   //font-family: 'UNDPicons';
@@ -1397,25 +1501,21 @@ input,.form-control,.select {
   text-align: center;
   width: 18px;
 }
-
 [type="checkbox"]:not(:checked) + label:after,
 [type="radio"]:not(:checked) + label:after{
   opacity: 0;
   transform: scale(0);
 }
-
 [type="checkbox"]:checked + label:after,
 [type="radio"]:checked + label:after{
   opacity: 1;
   transform: scale(1);
 }
 
-.radio,.checkbox {
   &.inverse {
     label {
       color: #fff;
     }
-
     [type="checkbox"]:checked + label,
     [type="checkbox"]:checked + label:before,
     [type="radio"]:checked + label,
@@ -1428,21 +1528,53 @@ input,.form-control,.select {
     [type="radio"]:not(:checked) + label:before {
       color: $clr-light-blue;
     }
-
     [type="radio"]:checked + label:after {
       color: $clr-white;
     }
-
-
     [type="checkbox"]:checked + label:after {
       color: $clr-blue;
       font-size: 14px;
       left: 2px;
     }
-
-
   }
 }
+
+//country
+.country-pg {
+  .radio,.checkbox {
+    [type="checkbox"]:checked + label,
+    [type="radio"]:checked + label {
+      color: $clr-black;
+    }
+
+    [type="checkbox"]:not(:checked) + label,
+    [type="checkbox"]:not(:checked) + label:before,
+    [type="radio"]:not(:checked) + label,
+    [type="radio"]:not(:checked) + label:before {
+      color: $clr-blue6;
+    }
+
+    &.inverse {
+      [type="checkbox"]:checked + label,
+      [type="radio"]:checked + label {
+        color: $clr-white;
+      }
+
+      [type="checkbox"]:checked + label:after {
+        color: $clr-blue6;
+      }
+
+      [type="checkbox"]:not(:checked) + label,
+      [type="checkbox"]:not(:checked) + label:before,
+      [type="radio"]:not(:checked) + label,
+      [type="radio"]:not(:checked) + label:before {
+        color: $clr-blue7;
+      }
+
+    }
+  }
+}
+
 
 /*bootstrap custom selectbox*/
 .c-select {
@@ -1458,6 +1590,13 @@ input,.form-control,.select {
 //panels
 .panel {
   @include border-radius(0);
+  .panel-heading {
+    font-size: 13px;
+    h3 {
+      font-size: 13px;
+    }
+  }
+
   &.panel-default {
     .panel-heading, .panel-footer {
       background-color: $clr-light-blue2;
@@ -1531,6 +1670,8 @@ input,.form-control,.select {
   @include border-radius(0);
   .popover-content {
     background-color: $clr-light-blue2;
+    font-size: 13px;
+    color: $clr-gray4;
   }
   &.top > .arrow:after {
     border-top-color: $clr-light-blue2;
@@ -1550,13 +1691,13 @@ input,.form-control,.select {
 .tooltip {
   background-color: $clr-blue;
   padding: 0!important;
+  font-size: 13px;
   .tooltip-inner {
     padding: 10px;
     color: $clr-white;
     background-color: $clr-blue;
   }
 
-  font-size: 13px;
   &.fade.in {
     display: block;
   }
@@ -1577,4 +1718,25 @@ input,.form-control,.select {
     border-right-color: $clr-blue;
   }
 
+}
+
+.country-pg {
+  .tooltip {
+    .tooltip-inner {
+      color: $clr-white;
+      background-color: $clr-blue6;
+    }
+    &.left .tooltip-arrow {
+      border-left-color: $clr-blue6;
+    }
+    &.top .tooltip-arrow {
+      border-top-color: $clr-blue6;
+    }
+    &.bottom .tooltip-arrow {
+      border-bottom-color: $clr-blue6;
+    }
+    &.right .tooltip-arrow {
+      border-right-color: $clr-blue6;
+    }
+  }
 }

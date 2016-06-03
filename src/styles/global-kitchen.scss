@@ -1,4 +1,5 @@
 .global-kitchen {
+
   .tab-content {
     .row > div {
       margin-bottom: 20px;
@@ -122,6 +123,25 @@
         a {
           padding: 8px 20px;
         }
+      }
+    }
+  }
+
+  //country page
+  .country-pg {
+      .dark-blue-bg {
+        background-color: $clr-blue6;
+        color: $clr-blue7;
+      }
+
+    .list-main-nav {
+      display: none;
+    }
+    .country-header {
+      min-height: 50px;
+      .list-main-nav {
+        margin: 0!important;
+        display: block;
       }
     }
   }
