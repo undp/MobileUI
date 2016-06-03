@@ -264,6 +264,9 @@
             color: $clr-black;
           }
         }
+        &.active:before {
+          display: none;
+        }
       }
     }
   }
