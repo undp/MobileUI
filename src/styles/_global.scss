@@ -212,16 +212,8 @@ body {
 
   .countries-popup{
     @include flexbox();
-    display: -webkit-box;
-    display: -ms-flexbox;
     @include flex-direction(column);
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     @include flex-wrap(wrap);
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     height: 850px;
     margin: 0 -10px;
     @include flex(1 100%);
@@ -241,10 +233,12 @@ body {
 
   .list-countries{
     width: 185px;
-    margin: 0 10px;
+    margin: 0 10px 8px 10px;
     padding: 5px 0;
     //border-bottom: 1px solid $clr-blue2;
-
+    @media (max-width: $screen-md-max){
+      margin: 0 10px;
+    }
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
       width: 165px;
     }
@@ -276,8 +270,8 @@ body {
         }
       }
 
-      span{
-        font-size: 12px;
+      span {
+        font-size: 13px;
         line-height: 22px;
         color: $clr-gray1;
         font-weight: bold;

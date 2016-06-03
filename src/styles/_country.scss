@@ -671,15 +671,8 @@
 
 .flex-row-wrap {
   @include flexbox();
-  display: -webkit-box;
-  display: -ms-flexbox;
   @include flex-direction(row);
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
   @include flex-wrap(wrap);
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .country-main-content {
@@ -791,7 +784,7 @@
     background-color: #5a90da;
     .list-footer-nav {
       li {
-        color: #333;
+        color: #666;
         font-size: 12px;
       }
       a {
@@ -801,7 +794,7 @@
           color: #fff;
         }
         span {
-          color: #333 !important;
+          color: #666 !important;
         }
       }
     }

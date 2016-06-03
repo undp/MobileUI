@@ -8,11 +8,19 @@ ul#aside-link.list-unstyled.collapse.navbar-collapse.box-collapse
     a(href='javascript:void(0);') Crisis response
   li
     a(href='javascript:void(0);') Development impact
-  li
+  li.active(data-toggle='collapse', data-target='.sub-level')
     a(href='javascript:void(0);')
       i.icon-caret-right
       | Global Policy Centers
-  li.active
+    ul.sub-level.collapse.in
+      li
+        a(href='javascript:void(0);') Dummy sub text
+      li
+        a(href='javascript:void(0);') Dummy sub text one
+      li
+        a(href='javascript:void(0);') Dummy sub text three
+
+  li
     a(href='javascript:void(0);') Our Stories
   li
     a(href='javascript:void(0);')
