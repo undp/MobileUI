@@ -1359,6 +1359,7 @@
       height: 55px;
       width: 25px;
       z-index: 9;
+      //top: 0; require for ipad 8.4
 
       &:before {
         content: '';
