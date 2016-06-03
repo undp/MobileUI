@@ -1310,11 +1310,21 @@ input,.form-control,.select {
   content: "\e903";
 }
 
-[type="checkbox"]:checked + label:after,
+
 [type="checkbox"]:checked + label:before {
   font-family: 'UNDPicons';
   content: "\e905";
+  color: $clr-black;
 }
+
+[type="checkbox"]:checked + label:after {
+  font-family: 'UNDPicons';
+  content: "\e901";
+  color: $clr-white;
+  font-size: 13px;
+  left: 3px;
+}
+
 
 [type="radio"]:not(:checked) + label:before{
   //background-color: white;
@@ -1322,12 +1332,16 @@ input,.form-control,.select {
   font-family: 'UNDPicons';
   content: "\e902";
 }
-[type="radio"]:checked + label:after,
+
 [type="radio"]:checked + label:before {
   //border: 1px solid $clr-gray4;
   //background-color: $clr-black;
   font-family: 'UNDPicons';
   content: "\e904";
+}
+
+[type="radio"]:checked + label:after {
+
 }
 
 [type="checkbox"] + label:after,
@@ -1376,9 +1390,16 @@ input,.form-control,.select {
     [type="radio"]:not(:checked) + label:before {
       color: $clr-light-blue;
     }
-    [type="checkbox"]:checked + label:after,
+
     [type="radio"]:checked + label:after {
       color: $clr-white;
+    }
+
+
+    [type="checkbox"]:checked + label:after {
+      color: $clr-blue;
+      font-size: 14px;
+      left: 2px;
     }
 
 

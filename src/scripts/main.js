@@ -171,19 +171,19 @@
     //aside link list second level ul
     // $('.aside-link > li ul').addClass('sub-level').hide();
 
-    $('.aside-link li').on('click', function() {
-        if ($(this).hasClass('.active')) {
-          $(this).find('ul').hide();
-          $(this).removeClass('active');
-        }else {
-          $(this).siblings().find('ul').removeClass('in');
-          $(this).siblings().removeClass('active');
-          $(this).addClass('active');
-          //event.stopPropagation();
-        }
-        //return false;
-
-      });
+    // $('.aside-link li').on('click', function() {
+    //     if ($(this).hasClass('.active')) {
+    //       $(this).find('ul').hide();
+    //       $(this).removeClass('active');
+    //     }else {
+    //       $(this).siblings().find('ul').removeClass('in');
+    //       $(this).siblings().removeClass('active');
+    //       $(this).addClass('active');
+    //       //event.stopPropagation();
+    //     }
+    //     //return false;
+    //
+    //   });
 
 //countries popup mobile go to top btn
     $('.btn-top').click(function (e) {
