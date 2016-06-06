@@ -277,15 +277,17 @@
       list-style: none;
       display: none;
       padding: 0;
-      background-color: #5c6873;
+      //background-color: #5c6873;
 
       li {
         a {
-          padding: 5px 10px 5px 50px;
-          color: $clr-white;
-          &:hover, &:focus, &:active {
-            background-color: #9ebeda;
-            color: $clr-black;
+          padding: 10px 10px 10px 60px;
+          color: $clr-gray;
+        }
+        &:hover, &:focus, &:active {
+          a {
+            background-color: $clr-gray2;
+            color: $clr-white;
           }
         }
         &.active:before {
@@ -1132,6 +1134,10 @@
 
   .content-box{
     margin-bottom: 20px;
+    font-size: 13px;
+    p {
+      font-size: 13px;
+    }
 
     ul{
       padding: 5px 0 5px 35px;
@@ -1329,7 +1335,10 @@
 
 .video-box{
   margin-bottom: 20px;
-
+  font-size: 13px;
+  p {
+    font-size: 13px;
+  }
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
     margin: 0;
   }
@@ -1377,8 +1386,8 @@
   .goals-wrap {
     .img-wrap {
       text-align: left;
-      > img {
-        margin: 0 20px 20px 0;
+      img {
+        margin-bottom: 20px;
       }
     }
   }
