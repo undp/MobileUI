@@ -51,6 +51,10 @@
   #navs {
     .dark-blue-bg {
       padding-bottom: 0;
+
+      .country-header {
+        display: none;
+      }
     }
     .list-main-nav {
       margin-top: 20px;
@@ -132,13 +136,16 @@
       .dark-blue-bg {
         background-color: $clr-blue6;
         color: $clr-blue7;
+        > .list-main-nav {
+          display: none;
+        }
       }
 
-    .list-main-nav {
-      display: none;
-    }
+
     .country-header {
-      min-height: 50px;
+      display: block!important;
+      min-height: 45px;
+      border-bottom: none;
       .list-main-nav {
         margin: 0!important;
         display: block;

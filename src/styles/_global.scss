@@ -4,6 +4,7 @@ html {
 }
 
 body {
+  font-size: 13px;
   //margin-bottom: 100px;
   //
   //@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
@@ -1167,6 +1168,15 @@ p {
       top: 47%;
     }
   }
+  &.open {
+    .btn {
+      box-shadow: none;
+    }
+    .caret {
+      border-top: none;
+      border-bottom: 4px dashed;
+    }
+  }
 }
 
 //buttons for country page
@@ -1420,6 +1430,7 @@ input,.form-control,.select {
 // Checkboxes
 // Custom Checkbox scss
 .radio,.checkbox {
+  margin-bottom: 20px;
 [type="checkbox"],[type="radio"] {
   visibility: hidden;
   display: none;
