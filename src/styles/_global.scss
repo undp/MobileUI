@@ -632,7 +632,9 @@ body {
   margin: 0 -5px;
 
   > li{
-
+      a {
+        display: block;
+      }
     .icon-box{
       display: block;
       width: 25px;
@@ -641,10 +643,10 @@ body {
       line-height: 25px;
       color: $clr-white;
       @include opacity(0.6);
-
-      svg{
-        fill: $clr-white;
-      }
+      fill: $clr-white;
+      //svg{
+      //  fill: $clr-white;
+      //}
 
       &:hover, &:focus{
         @include opacity(1);

@@ -1,0 +1,142 @@
+[dir="rtl"] {
+
+  .undp-header {
+    .box-logo {
+      float: right !important;
+    }
+    .box-right {
+      margin-left: 0;
+      margin-right: 186px;
+    }
+    .box-search-wrap {
+      float: left !important;
+      .list-language, .list-social-nav {
+        padding-right: 0;
+      }
+    }
+    .nav-wrap {
+      float: right !important;
+      .list-top-nav, .list-main-nav {
+        padding-right: 0;
+        margin-right: 0;
+      }
+      .list-top-nav {
+        .funding-popup {
+          right: 0;
+        }
+      }
+    }
+  }
+  .main-subnav {
+      ul.slick-tabs {
+        list-style: none;
+        padding: 0;
+        .slick-prev {
+          right: auto;
+        }
+
+        &.slick-slider {
+          padding-left: 0!important;
+        }
+      }
+    }
+
+  .stories-wrap {
+      .btn-subscribe {
+        text-align: left;
+        img {
+          margin-right: 5px;
+          margin-left: 0;
+        }
+      }
+
+    .form-wrap {
+      label {
+        direction: ltr;
+        }
+      .select-box {
+        i {
+          right: initial;
+          left: 12px;
+          line-height: 40px;
+        }
+      }
+    }
+    .media-stories {
+      .media-left {
+        padding-right: 0;
+        padding-left: 20px;
+      }
+    }
+
+  }
+
+  .aside-link {
+    ul {
+      > li {
+        &.active {
+          &:before {
+            right: auto;
+            left: -8px;
+            border-left: none;
+            border-right: 8px solid $clr-gray2;
+          }
+        }
+      }
+    }
+  }
+
+  .aside-latest {
+    .list-social-nav {
+      text-align: right;
+      padding-right: 0;
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .aside-link {
+    ul {
+      li {
+        a {
+          padding-left: 20px;
+          padding-right: 40px;
+          i {
+            position: absolute;
+            right: 28px;
+            padding-right: 0;
+            margin-left: 0;
+            line-height: 20px;
+            &:before {
+              content: "\f0d9"; // <
+            }
+          }
+        }
+      }
+      ul {
+        li {
+          a {
+            padding-left: 10px;
+            padding-right: 50px;
+          }
+        }
+      }
+    }
+  }
+  
+  .pagination {
+    direction: rtl;
+  }
+  .list-footer-nav {
+    padding-right: 0;
+  }
+
+  .info-wrap {
+    &.work-wrap {
+      > img {
+        float: left!important;
+      }
+    }
+  }
+}
