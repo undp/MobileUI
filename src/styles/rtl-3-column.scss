@@ -7,11 +7,26 @@
     .box-right {
       margin-left: 0;
       margin-right: 186px;
+
+
+      @media (max-width: $screen-sm-max) {
+        .wrap-heading {
+          left: auto;
+          right: 0;
+        }
+      }
+
+
     }
     .box-search-wrap {
       float: left !important;
       .list-language, .list-social-nav {
         padding-right: 0;
+      }
+      @media (max-width: $screen-sm-max) {
+        float: none;
+        left: 0;
+        right: auto;
       }
     }
     .nav-wrap {
@@ -29,15 +44,28 @@
   }
   .main-subnav {
       ul.slick-tabs {
-        list-style: none;
-        padding: 0;
-        .slick-prev {
-          right: auto;
-        }
+
+        //.slick-prev {
+        //  right: auto;
+        //}
 
         &.slick-slider {
           padding-left: 0!important;
         }
+
+        .slick-prev {
+          left: auto;
+          right: 0;
+          background: #def3ff url("../images/arrow-right.svg") right center no-repeat;
+          margin-right: -3px;
+        }
+        .slick-next {
+          right: auto;
+          left: 0;
+          background: #def3ff url("../images/arrow-left.svg") left center no-repeat;
+          margin-left: -3px;
+        }
+
       }
     }
 
@@ -73,7 +101,7 @@
 
   .aside-link {
     ul {
-      > li {
+      li {
         &.active {
           &:before {
             right: auto;
@@ -82,23 +110,6 @@
             border-right: 8px solid $clr-gray2;
           }
         }
-      }
-    }
-  }
-
-  .aside-latest {
-    .list-social-nav {
-      text-align: right;
-      padding-right: 0;
-      svg {
-        margin-left: 10px;
-      }
-    }
-  }
-
-  .aside-link {
-    ul {
-      li {
         a {
           padding-left: 20px;
           padding-right: 40px;
@@ -124,6 +135,17 @@
       }
     }
   }
+
+  .aside-latest {
+    .list-social-nav {
+      text-align: right;
+      padding-right: 0;
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+  
   
   .pagination {
     direction: rtl;
@@ -133,18 +155,35 @@
   }
 
   .info-wrap {
-    padding-left: 0;
-    padding-right: 40px;
+    //padding-right: 0;
+    //padding-left: 0;
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+      padding: 0 10px!important;
+    }
+
+    @media (max-width: $screen-xs-max){
+      padding: 0;
+    }
+
     &:before {
       border-right: 0;
       border-left: 1px solid $clr-light-blue1;
     }
     &.work-wrap {
+      padding-left: 40px;
+      padding-right: 0;
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+        padding: 0;
+      }
+
+      @media (max-width: $screen-xs-max){
+        padding: 25px 0 0;
+      }
       &:before {
         border-left: none;
       }
-      padding-left: 40px;
-      padding-right: 0;
+
       > img {
         float: left!important;
       }
@@ -155,9 +194,66 @@
     &.goal-wrap {
       padding-left: 40px;
       padding-right: 40px;
+
+
+
+      /* For landscape layouts only */
+      //@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation:landscape) {
+      //  padding: 30px 0!important;
+      //}
+
+      @media  (max-width: $screen-md-max) {
+        margin: 0;
+        padding: 0;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        margin: 30px 0;
+        padding: 30px 0!important;
+      }
+
       > h4 {
         text-align: right;
       }
     }
+    &.prespective-wrap {
+      padding-left: 0;
+      padding-right: 40px;
+
+      @media (max-width: $screen-sm-max){
+        padding: 0;
+      }
+
+      .media-right {
+        padding-left: 0;
+        padding-right: 10px;
+      }
+
+    }
+  }
+  .menubar {
+    margin-left: 0;
+    margin-right: 28px;
+  }
+  #slide-menu {
+    .list-social-nav {
+      padding: 0;
+    }
+    .funding-popup {
+      left: auto;
+      right: 30px;
+    }
+  .canvas-header {
+    .btn-close {
+      left: 10px;
+      right: auto;
+    }
+  }
+  #contriesPop {
+    .btn-close {
+      left: 10px;
+      right: auto;
+    }
+  }
   }
 }

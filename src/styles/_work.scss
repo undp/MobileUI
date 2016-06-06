@@ -1400,6 +1400,8 @@
     height: 57px;
     max-height: 57px;
     margin: 0;
+    list-style: none;
+    padding: 0;
     .slick-track {
       height: 57px;
     }
@@ -1418,7 +1420,7 @@
         display: none;
       }
       &.slick-disabled {
-        background: transparent;
+        background: transparent!important;
       }
     }
     .slick-prev {
