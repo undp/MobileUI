@@ -133,9 +133,30 @@
   }
 
   .info-wrap {
+    padding-left: 0;
+    padding-right: 40px;
+    &:before {
+      border-right: 0;
+      border-left: 1px solid $clr-light-blue1;
+    }
     &.work-wrap {
+      &:before {
+        border-left: none;
+      }
+      padding-left: 40px;
+      padding-right: 0;
       > img {
         float: left!important;
+      }
+      .nav-work {
+        padding-right: 0;
+      }
+    }
+    &.goal-wrap {
+      padding-left: 40px;
+      padding-right: 40px;
+      > h4 {
+        text-align: right;
       }
     }
   }
