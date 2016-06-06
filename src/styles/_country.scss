@@ -314,6 +314,8 @@
     padding: 0;
     height: 185px;
     margin: 0;
+    position: relative;
+    padding-right: 90px;
     @media (max-width: $screen-xs-max) {
       width: 280px;
       margin: 0 auto;
@@ -327,6 +329,12 @@
         width: 72px;
         height: 36px;
         display: inline-block;
+      }
+
+      &.flag {
+        position: absolute;
+        right: 0;
+        top: 0;
       }
     }
     span {
