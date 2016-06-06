@@ -148,7 +148,11 @@
   
   
   .pagination {
-    direction: rtl;
+    //direction: rtl;
+    padding: 0;
+    li {
+      float: right;
+    }
   }
   .list-footer-nav {
     padding-right: 0;
