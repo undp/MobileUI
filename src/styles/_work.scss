@@ -146,11 +146,14 @@
     a{
       color: $clr-blue4;
       font-size: 13px;
-
+    }
       span{
         font-size: 15px;
+        vertical-align: text-bottom;
+        margin-left: 5px;
+        color: $clr-gray;
       }
-    }
+
   }
 }
 
