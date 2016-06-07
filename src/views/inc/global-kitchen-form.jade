@@ -16,7 +16,7 @@ form
             .form-group
                 label(for="example4").control-label Label
                 select.form-control.c-select(id="example4")
-                    option Select
+                    option Data selected from the list
                     option Select 2
         .col-md-4.col-sm-12.col-xs-12
             .form-group.has-warning
@@ -59,3 +59,71 @@ form
                 div.checkbox
                     input(type="checkbox" name="optionsCheck1" id="Check4" checked)
                     label(for="Check4") Checkbox selected
+
+.row
+    pre.codesnippet
+        //Data not yet entered
+        .form-group
+            label(for="example1").control-label Label
+            input.form-control(type="text" id="example1" placeholder="Data not yet entered")
+        //Data entered
+        .form-group
+            label(for="example2").control-label Label
+            input.form-control(type="text" id="example2" value="Data entered" placeholder="Data not yet entered")
+        //Select box
+        .form-group
+            label(for="example3").control-label Label
+            select.form-control.c-select(id="example3")
+                option Select
+                option Select 2
+        //select box
+        .form-group
+            label(for="example4").control-label Label
+            select.form-control.c-select(id="example4")
+                option Data selected from the list
+                option Select 2
+.row
+    pre.codesnippet
+        .form-group.has-warning
+            label(for="example5").control-label Input warning
+            input.form-control(type="text" value="Data entered" id="example5" placeholder="Data not yet entered")
+        .form-group.has-error
+            label(for="example6").control-label Input error
+            input.form-control(type="text" value="Data entered" id="example6" placeholder="Data not yet entered")
+        .form-group.has-success
+            label(for="example7").control-label Input success
+            input.form-control(type="text" value="Data entered" id="example7" placeholder="Data not yet entered")
+        .form-group.small
+            label(for="example8").control-label Small input
+            input.form-control.small(type="text" id="example8" placeholder="Data not yet entered")
+
+.row
+    pre.codesnippet
+        //radio and checkbox on dark blue background
+        div.radio.inverse
+            input(type="radio" name="optionsRadios" id="Radios1" value)
+            label(for="Radios1") Radio not selected
+        div.radio.inverse
+            input(type="radio" name="optionsRadios" id="Radios2" checked)
+            label(for="Radios2") Radio selected
+        div.checkbox.inverse
+            input(type="checkbox" name="optionsCheck" id="Check1" value)
+            label(for="Check1") Checkbox not selected
+        div.checkbox.inverse
+            input(type="checkbox" name="optionsCheck" id="Check2" checked)
+            label(for="Check2") Checkbox selected
+.row
+    pre.codesnippet
+        //radio and checkbox on white background
+        div.radio
+            input(type="radio" name="optionsRadios1" id="Radios3" value)
+            label(for="Radios3") Radio not selected
+        div.radio
+            input(type="radio" name="optionsRadios1" id="Radios4" checked)
+            label(for="Radios4") Radio selected
+        div.checkbox
+            input(type="checkbox" name="optionsCheck1" id="Check3" value)
+            label(for="Check3") Checkbox not selected
+        div.checkbox
+            input(type="checkbox" name="optionsCheck1" id="Check4" checked)
+            label(for="Check4") Checkbox selected
