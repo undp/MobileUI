@@ -208,7 +208,7 @@
         replace(/"/g,'&quot;')
       );
     };
-    var codeEl = document.getElementById('codeSnippet');
+    var codeEl = document.getElementById('btnCodes1');
     if (codeEl) {
       codeEl.innerHTML = codeEl.innerHTML.escapeHTML();
       //alert(codeEl.innerHTML);
