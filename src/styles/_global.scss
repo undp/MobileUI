@@ -570,12 +570,14 @@ body {
         a {
           font-size: 14px;
           color: $clr-black;
+          padding: 5px 10px;
         }
       }
       &.disabled {
         pointer-events: none;
       }
     }
+
   }
 }
 .pos-top .list-main-nav {

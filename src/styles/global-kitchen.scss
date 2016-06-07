@@ -131,9 +131,17 @@
       }
     }
   }
-
+.country {
+  display: none;
+}
   //country page
   .country-pg {
+    .not-country {
+      display: none;
+    }
+    .country {
+      display: block;
+    }
       .dark-blue-bg {
         background-color: $clr-blue6;
         color: $clr-blue7;

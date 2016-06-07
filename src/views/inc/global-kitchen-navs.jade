@@ -56,14 +56,15 @@ h1 Navs
         ul.list-inline.undp-breadcrumb
             li
                 a(href="javascript:void(0);") Home
-                    span  &raquo;
+                span.icon-arrow-right
         ul.list-inline.undp-breadcrumb
             li
                 a(href="javascript:void(0);") Home
-                    span  &raquo;
+                span.icon-arrow-right
             li
                 a(href="javascript:void(0);") Inner page
-                    span  &raquo;
+                span.icon-arrow-right
+
     .col-xs-12 &nbsp;
     .col-md-6.col-sm-12.col-xs-12
         h4 Pagination
@@ -83,8 +84,108 @@ h1 Navs
                 li
                     a(href='javascript:void(0);', aria-label='Next')
                         span(aria-hidden='true') Next &raquo;
+
     .col-md-6.col-sm-12.col-xs-12
         h4 Pager
+        nav.nav-pagination
+            ul.pagination.undp-pagination
+                li
+                    a(href='javascript:void(0);', aria-label='Previous')
+                        span(aria-hidden='true') &laquo; Previous
+                li
+                    a(href='javascript:void(0);', aria-label='Next')
+                        span(aria-hidden='true') Next &raquo;
+div &nbsp;
+.row.not-country
+    pre.codesnippet
+        //Tabs global
+        ul.list-main-nav
+            li.active
+                a(href="javascript:void(0);") Home
+            li
+                a(href="javascript:void(0);") Tab Name
+            li.disabled
+                a(href="javascript:void(0);") Tab Name
+            li.dropdown
+                a(href="javascript:void(0):" data-toggle="dropdown" aria-expanded="true").dropdown-toggle Tab Name
+                    span.caret
+                ul.dropdown-menu
+                    li
+                        a(href="javascript:void(0);") Action
+                    li
+                        a(href="javascript:void(0);") Action
+            li.dropdown.disabled
+                a(href="javascript:void(0):" data-toggle="dropdown" aria-expanded="true") Tab Name
+                    span.caret
+                ul.dropdown-menu
+                    li
+                        a(href="javascript:void(0);") Action
+                    li
+                        a(href="javascript:void(0);") Action
+
+.row.country
+    pre.codesnippet
+        // Tabs for country
+        ul.list-main-nav
+            li.active
+                a(href="javascript:void(0);") Home
+            li
+                a(href="javascript:void(0);") Tab Name
+            li.disabled
+                a(href="javascript:void(0);") Tab Name
+            li.dropdown
+                a(href="javascript:void(0):" data-toggle="dropdown" aria-expanded="true").dropdown-toggle Tab Name
+                    span.caret
+                ul.dropdown-menu
+                    li
+                        a(href="javascript:void(0);") Action
+                    li
+                        a(href="javascript:void(0);") Action
+            li.dropdown.disabled
+                a(href="javascript:void(0):" data-toggle="dropdown" aria-expanded="true") Tab Name
+                    span.caret
+                ul.dropdown-menu
+                    li
+                        a(href="javascript:void(0);") Action
+                    li
+                        a(href="javascript:void(0);") Action
+
+
+.row
+    pre.codesnippet
+        //breadcrums
+        ul.list-inline.undp-breadcrumb
+            li
+                a(href="javascript:void(0);") Home
+                span.icon-arrow-right
+            li
+                a(href="javascript:void(0);") Inner page
+                span.icon-arrow-right
+
+
+.row
+    pre.codesnippet
+        //page numbers pagination
+        nav.nav-pagination
+            ul.pagination.undp-pagination
+                li
+                    a(href='javascript:void(0);', aria-label='Previous')
+                        span(aria-hidden='true') &laquo; Previous
+                li.active
+                    a(href='javascript:void(0);') 1
+                li
+                    a(href='javascript:void(0);') 2
+                li
+                    a(href='javascript:void(0);') 3
+                li
+                    a(href='javascript:void(0);') 4
+                li
+                    a(href='javascript:void(0);', aria-label='Next')
+                        span(aria-hidden='true') Next &raquo;
+
+.row
+    pre.codesnippet
+        //previous next pagination
         nav.nav-pagination
             ul.pagination.undp-pagination
                 li
