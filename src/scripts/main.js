@@ -201,21 +201,16 @@
 
 
     //styleguide documentation convert code brackets for pre tag
-    String.prototype.escapeHTML = function () {
-      return(
-        this.replace(/>/g,'&gt;').
-        replace(/</g,'&lt;').
-        replace(/"/g,'&quot;')
-      );
-    };
-    var codeEl = document.getElementById('btnCodes1');
-    if (codeEl) {
-      codeEl.innerHTML = codeEl.innerHTML.escapeHTML();
-      //alert(codeEl.innerHTML);
+    function htmlEntities(str) {
+      return String(str).replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
-    
-    
-    
+
+    var $snippets = $('.codesnippet');
+
+    $.each($snippets, function (index, obj) {
+      var $this = $(this);
+      $this.html(htmlEntities($this.html()));
+    });
 
 
   });
