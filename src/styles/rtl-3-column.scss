@@ -15,7 +15,9 @@
           right: 0;
         }
       }
-
+      @media (max-width: $screen-xs-max) {
+        margin-right: 100px;
+      }
 
     }
     .box-search-wrap {
@@ -145,8 +147,13 @@
       }
     }
   }
-  
-  
+  .undp-breadcrumb {
+    .icon-arrow-right {
+      &:before {
+        content: "\e908";
+      }
+    }
+  }
   .pagination {
     //direction: rtl;
     padding: 0;

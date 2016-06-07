@@ -1429,7 +1429,8 @@
       z-index: 9;
       top: 0;
       -webkit-transform: translate(0, 0);
-
+      -moz-transition: unset;
+      transform: unset;
       &:before {
         content: '';
         display: none;
@@ -1442,11 +1443,17 @@
       left: 0;
       background: #def3ff url("../images/arrow-left.svg") left center no-repeat;
       margin-left: -3px;
+      @media (max-width: $screen-md-max) {
+        margin-left: 0;
+      }
     }
     .slick-next {
       right: 0;
       background: #def3ff url("../images/arrow-right.svg") right center no-repeat;
       margin-right: -3px;
+      @media (max-width: $screen-md-max) {
+        margin-right: 0;
+      }
     }
     .slick-slide {
       position: relative;

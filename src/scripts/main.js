@@ -200,6 +200,22 @@
 
 
 
+    //styleguide documentation convert code brackets for pre tag
+    String.prototype.escapeHTML = function () {
+      return(
+        this.replace(/>/g,'&gt;').
+        replace(/</g,'&lt;').
+        replace(/"/g,'&quot;')
+      );
+    };
+    var codeEl = document.getElementById('codeSnippet');
+    if (codeEl) {
+      codeEl.innerHTML = codeEl.innerHTML.escapeHTML();
+      //alert(codeEl.innerHTML);
+    }
+    
+    
+    
 
 
   });
