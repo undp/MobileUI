@@ -1296,19 +1296,19 @@ p {
     [type="radio"]:checked + label:before,
     [type="checkbox"]:not(:checked) + label:before,
     [type="radio"]:not(:checked) + label:before {
-      font-size: 14px;
+      //font-size: 14px;
     }
 
     [type="checkbox"]:checked + label:after {
-      font-size: 10px;
+      //font-size: 10px;
     }
     &.inverse {
       [type="checkbox"]:not(:checked) + label:before {
         color: $clr-white;
       }
       [type="checkbox"]:checked + label:after {
-        font-size: 12px;
-        left: 1px;
+        //font-size: 12px;
+        //left: 1px;
       }
     }
   }
@@ -1331,15 +1331,13 @@ p {
           color: $clr-blue7;
         }
         [type="checkbox"]:checked + label:after {
-          font-size: 12px;
-          left: 1px;
+          //font-size: 12px;
+          //left: 1px;
         }
       }
     }
   }
 }
-
-
 
 //form elements {
 input,.form-control,select,textarea {
@@ -1476,10 +1474,12 @@ input,.form-control,.select {
 [type="checkbox"]:not(:checked) + label:before{
   font-family: 'UNDPicons';
   content: "\e903";
+
 }
 [type="checkbox"]:checked + label:before {
   font-family: 'UNDPicons';
-  content: "\e905";
+  //content: "\e905";
+  content: "\e90a";
   color: $clr-black;
 }
 [type="checkbox"]:checked + label:after {
