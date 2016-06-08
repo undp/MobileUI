@@ -698,6 +698,12 @@
   @include flexbox();
   @include flex-direction(row);
   @include flex-wrap(wrap);
+  > div {
+    @include flex-grow(1);
+  }
+  &:before {
+    display: none;
+  }
 }
 
 .country-main-content {

@@ -82,14 +82,23 @@
     text-align: left;
     margin-top: 10px;
   }
-  .btn-top,.btn-share {
-    display: inline-block;
-    left: 0;
-    position: relative;
-    bottom: 0;
-    right: 0;
-    margin-right: 10px;
+
+  .btn-top {
+    display: block;
+    bottom: 135px;
   }
+
+  #buttons {
+    .btn-top,.btn-share {
+      display: inline-block;
+      left: 0;
+      position: relative;
+      bottom: 0;
+      right: 0;
+      margin-right: 10px;
+    }
+  }
+
 
   .undp-footer {
     position: absolute;
@@ -161,9 +170,16 @@
       }
     }
   }
-
+  h5 {
+    span {
+      color: $clr-gray5;
+      font-weight: 300;
+      margin-left: 10px;
+    }
+  }
   .codesnippet {
-      white-space: pre-wrap;
+    white-space: pre-wrap;
+    margin-bottom: 30px;
   }
 
 }

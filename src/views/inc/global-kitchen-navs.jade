@@ -96,9 +96,13 @@ h1 Navs
                     a(href='javascript:void(0);', aria-label='Next')
                         span(aria-hidden='true') Next &raquo;
 div &nbsp;
-.row.not-country
+
+//codesnippet
+//global
+.not-country
+    h5 Tabs Nav
+        span &lt;/&gt;
     pre.codesnippet
-        //Tabs global
         ul.list-main-nav
             li.active
                 a(href="javascript:void(0);") Home
@@ -123,9 +127,11 @@ div &nbsp;
                     li
                         a(href="javascript:void(0);") Action
 
-.row.country
+//for country page
+.country
+    h5 Tabs Nav
+        span &lt;/&gt;
     pre.codesnippet
-        // Tabs for country
         ul.list-main-nav
             li.active
                 a(href="javascript:void(0);") Home
@@ -150,47 +156,46 @@ div &nbsp;
                     li
                         a(href="javascript:void(0);") Action
 
+h5 Breadcrumb
+    span &lt;/&gt;
+pre.codesnippet
+    ul.list-inline.undp-breadcrumb
+        li
+            a(href="javascript:void(0);") Home
+            span.icon-arrow-right
+        li
+            a(href="javascript:void(0);") Inner page
+            span.icon-arrow-right
 
-.row
-    pre.codesnippet
-        //breadcrumb
-        ul.list-inline.undp-breadcrumb
+h5 Pagination - Page numbers
+    span &lt;/&gt;
+pre.codesnippet
+    nav.nav-pagination
+        ul.pagination.undp-pagination
             li
-                a(href="javascript:void(0);") Home
-                span.icon-arrow-right
+                a(href='javascript:void(0);', aria-label='Previous')
+                    span(aria-hidden='true') &laquo; Previous
+            li.active
+                a(href='javascript:void(0);') 1
             li
-                a(href="javascript:void(0);") Inner page
-                span.icon-arrow-right
+                a(href='javascript:void(0);') 2
+            li
+                a(href='javascript:void(0);') 3
+            li
+                a(href='javascript:void(0);') 4
+            li
+                a(href='javascript:void(0);', aria-label='Next')
+                    span(aria-hidden='true') Next &raquo;
 
-
-.row
-    pre.codesnippet
-        //page numbers pagination
-        nav.nav-pagination
-            ul.pagination.undp-pagination
-                li
-                    a(href='javascript:void(0);', aria-label='Previous')
-                        span(aria-hidden='true') &laquo; Previous
-                li.active
-                    a(href='javascript:void(0);') 1
-                li
-                    a(href='javascript:void(0);') 2
-                li
-                    a(href='javascript:void(0);') 3
-                li
-                    a(href='javascript:void(0);') 4
-                li
-                    a(href='javascript:void(0);', aria-label='Next')
-                        span(aria-hidden='true') Next &raquo;
-
-.row
-    pre.codesnippet
-        //previous next pagination
-        nav.nav-pagination
-            ul.pagination.undp-pagination
-                li
-                    a(href='javascript:void(0);', aria-label='Previous')
-                        span(aria-hidden='true') &laquo; Previous
-                li
-                    a(href='javascript:void(0);', aria-label='Next')
-                        span(aria-hidden='true') Next &raquo;
+h5 Pagination - Previous and Next button
+    span &lt;/&gt;
+pre.codesnippet
+    //previous next pagination
+    nav.nav-pagination
+        ul.pagination.undp-pagination
+            li
+                a(href='javascript:void(0);', aria-label='Previous')
+                    span(aria-hidden='true') &laquo; Previous
+            li
+                a(href='javascript:void(0);', aria-label='Next')
+                    span(aria-hidden='true') Next &raquo;
