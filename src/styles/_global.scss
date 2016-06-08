@@ -1276,6 +1276,11 @@ p {
 //tables
 .table {
   thead {
+    tr:first-child {
+      > th {
+        vertical-align: middle;
+      }
+    }
     tr > th {
       background-color: $clr-blue4;
       color: #fff;
@@ -1287,6 +1292,11 @@ p {
     }
   }
   tbody {
+    tr {
+      > td:first-child {
+        vertical-align: middle;
+      }
+    }
     tr > td {
       font-size: 13px !important;
     }

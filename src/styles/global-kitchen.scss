@@ -84,8 +84,14 @@
   }
 
   .btn-top {
-    display: block;
+    //display: block;
     bottom: 135px;
+    position: fixed;
+
+    @media (max-width: $screen-sm-max) {
+      bottom: 0;
+      right: 10px;
+    }
   }
 
   #buttons {

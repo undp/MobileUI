@@ -185,6 +185,19 @@
     //
     //   });
 
+
+    //btn go to top
+    var offset = 250;
+    var duration = 300;
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > offset) {
+        $('.btn-top').fadeIn(duration);
+      } else {
+        $('.btn-top').fadeOut(duration);
+      }
+    });
+
+
 //countries popup mobile go to top btn
     $('.btn-top').click(function (e) {
       e.preventDefault();
