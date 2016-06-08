@@ -1307,24 +1307,12 @@ p {
     label {
       vertical-align: middle;
     }
-    //[type="checkbox"]:checked + label:before,
-    //[type="radio"]:checked + label:before,
-    //[type="checkbox"]:not(:checked) + label:before,
-    //[type="radio"]:not(:checked) + label:before {
-    //  //font-size: 14px;
-    //}
 
-    //[type="checkbox"]:checked + label:after {
-    //  //font-size: 10px;
-    //}
     &.inverse {
       [type="checkbox"]:not(:checked) + label:before {
         color: $clr-white;
       }
-      //[type="checkbox"]:checked + label:after {
-      //  //font-size: 12px;
-      //  //left: 1px;
-      //}
+
     }
   }
 }
@@ -1512,7 +1500,7 @@ input, .form-control, .select {
     //content: "\e905";
     content: "\e90a";
     color: $clr-black;
-    line-height: 19px;
+    line-height: 18px;
   }
 
   [type="radio"]:not(:checked) + label:before {
@@ -1562,6 +1550,12 @@ input, .form-control, .select {
     [type="radio"]:checked + label:before {
       color: $clr-white;
     }
+
+    [type="checkbox"]:checked + label,
+    [type="checkbox"]:checked + label:before {
+      font-size: 17px;
+    }
+
     [type="checkbox"]:not(:checked) + label,
     [type="checkbox"]:not(:checked) + label:before,
     [type="radio"]:not(:checked) + label,
