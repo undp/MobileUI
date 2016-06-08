@@ -1063,9 +1063,7 @@ p {
 .btn {
   @include border-radius(0);
   font-size: 14px;
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 40px;
+  padding: 9px 20px;
   &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
     text-decoration: underline;
   }
@@ -1138,17 +1136,17 @@ p {
   }
 }
 
+.btn-bold {
+  font-weight: 700;
+  &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
+    font-weight: bold;
+  }
+}
+
 .btn-link {
   color: $clr-blue4;
   &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
     color: $clr-blue4;
-  }
-
-  &.btn-bold {
-    font-weight: bold;
-    &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
-      font-weight: bold;
-    }
   }
 
   &.btn-inverse {
