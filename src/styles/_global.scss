@@ -1097,44 +1097,59 @@ p {
     color: $clr-blue;
     border-color: $brand-warning;
     &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
-      color: $clr-white;
+      color: $clr-white!important;
       background-color: $brand-warning;
       border-color: $brand-warning;
     }
     &.btn-link {
       border: none;
       background-color: transparent;
-      color: $brand-warning;
+      color: $brand-warning!important;
+
       &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
-        color: $brand-warning;
+        color: $brand-warning!important;
         background-color: transparent;
       }
-      &[disabled] {
-        color: $clr-gray;
+
+      &.btn-inverse {
+        &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+          color: $clr-white!important;
+          background-color: transparent;
+        }
       }
 
+      &[disabled] {
+        color: $clr-gray!important;
+      }
     }
-
   }
   &.btn-danger {
     background-color: $brand-danger;
     color: $clr-blue;
     border-color: $brand-danger;
     &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
-      color: $clr-white;
+      color: $clr-white!important;
       background-color: $brand-danger;
       border-color: $brand-danger;
     }
     &.btn-link {
       border: none;
       background-color: transparent;
-      color: $brand-danger;
+      color: $brand-danger!important;
       &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
-        color: $brand-danger;
+        color: $brand-danger!important;
         background-color: transparent;
       }
+
+      &.btn-inverse {
+        &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+          color: $clr-white!important;
+          background-color: transparent;
+        }
+      }
+
       &[disabled] {
-        color: $clr-gray;
+        color: $clr-gray!important;
       }
     }
 
@@ -1150,13 +1165,20 @@ p {
     &.btn-link {
       border: none;
       background-color: transparent;
-      color: $brand-success;
+      color: $brand-success!important;
       &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
-        color: $brand-success;
+        color: $brand-success!important;
         background-color: transparent;
       }
+      &.btn-inverse {
+        &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+          color: $clr-white!important;
+          background-color: transparent;
+        }
+      }
+
       &[disabled] {
-        color: $clr-gray;
+        color: $clr-gray!important;
       }
 
     }
@@ -1319,9 +1341,11 @@ p {
 //buttons for country page
 .country-pg {
   .btn-default, .open > .btn-default.dropdown-toggle {
+    color: $clr-white;
     background-color: $clr-blue6;
     border-color: $clr-blue6;
     &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
+      color: $clr-blue;
       background-color: $clr-blue6;
       border-color: $clr-blue6;
     }
@@ -1351,7 +1375,7 @@ p {
       color: $clr-blue6;
       &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
         background-color: transparent;
-        color: $clr-blue6;
+        color: $clr-blue;
       }
       &.btn-inverse {
         color: $clr-blue7;
@@ -1403,7 +1427,7 @@ p {
 }
 
 //tables
-.table {
+.table  {
   thead {
     tr:first-child {
       > th {
@@ -1437,12 +1461,6 @@ p {
       vertical-align: middle;
     }
 
-    &.inverse {
-      [type="checkbox"]:not(:checked) + label:before {
-        color: $clr-white;
-      }
-
-    }
   }
 }
 
@@ -1462,10 +1480,6 @@ p {
       &.inverse {
         [type="checkbox"]:not(:checked) + label:before {
           color: $clr-blue7;
-        }
-        [type="checkbox"]:checked + label:after {
-          //font-size: 12px;
-          //left: 1px;
         }
       }
     }
@@ -1680,7 +1694,6 @@ input, .form-control, .select {
       color: $clr-white;
     }
 
-    [type="checkbox"]:checked + label,
     [type="checkbox"]:checked + label:before {
       font-size: 17px;
     }
@@ -1700,6 +1713,36 @@ input, .form-control, .select {
       //left: 2px;
     }
   }
+
+  &.sml {
+    [type="checkbox"]:checked + label:before,
+    [type="checkbox"]:not(:checked) + label:before {
+      font-size: 14px;
+    }
+
+    [type="checkbox"]:checked + label:after {
+      font-size: 11px;
+      left: 2px;
+      font-weight: 500;
+    }
+    &.inverse {
+      [type="checkbox"]:not(:checked) + label:before {
+        color: $clr-white;
+      }
+      [type="checkbox"]:checked + label:before,
+      [type="checkbox"]:not(:checked) + label:before {
+        font-size: 13px;
+      }
+      [type="checkbox"]:checked + label:after {
+        font-size: 12px;
+        left: 1px;
+        font-weight: 500;
+      }
+
+    }
+  }
+
+
 }
 
 //country

@@ -1,4 +1,4 @@
-//buttons
+//buttons inverse
 h1 Buttons
 .row
     .col-md-3.col-sm-12.col-xs-12
@@ -64,8 +64,7 @@ h1 Buttons
             a(href="javascript:void(0);" disabled="disabled").btn.btn-link.btn-success Success
 
 div &nbsp;
-//codesnippet
-
+//inverse codesnippet
 h5 Default button on dark blue background
     span &lt;/&gt;
 pre.codesnippet
@@ -204,13 +203,14 @@ pre.codesnippet
 
 div &nbsp;
 
- // buttons on normal background
+// global buttons on normal background
 .row
     .col-md-4.col-sm-12.col-xs-12
         h4 light-blue right panel / white background
     .col-md-8.col-sm-12.col-xs-12
         button(type="button").btn.btn-default Default
         button(type="button").btn.btn-default.btn-outline Other
+
         //btn dropdown
         .btn-group
             button(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").btn.btn-default.dropdown-toggle Default
@@ -227,6 +227,7 @@ div &nbsp;
 
 
 
+
         button(type="button").btn.btn-warning Warning
         button(type="button").btn.btn-danger Error
         button(type="button").btn.btn-success Success
@@ -239,9 +240,11 @@ div &nbsp;
         a(href="javascript:void(0);").btn.btn-link.btn-success Success
 
         div &nbsp;
+
         //grayed buttons
         button(type="button" disabled="disabled").btn.btn-default Default
         button(type="button" disabled="disabled").btn.btn-default.btn-outline Other
+
         //btn dropdown
         .btn-group
             button(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled="disabled").btn.btn-default.dropdown-toggle Default
@@ -257,6 +260,7 @@ div &nbsp;
                     a(href="javascript:void(0);") Action 3
 
 
+
         button(type="button" disabled="disabled").btn.btn-warning Warning
         button(type="button" disabled="disabled").btn.btn-danger Error
         button(type="button" disabled="disabled").btn.btn-success Success
@@ -268,9 +272,8 @@ div &nbsp;
         a(href="javascript:void(0);" disabled="disabled").btn.btn-link.btn-danger Error
         a(href="javascript:void(0);" disabled="disabled").btn.btn-link.btn-success Success
 
-
 div &nbsp;
-//codesnippet
+//global buttons codesnippet
 h5 Default button on white background
     span &lt;/&gt;
 pre.codesnippet
@@ -365,6 +368,23 @@ pre.codesnippet
             li
                 a(href="javascript:void(0);") Action 3
 
+//
+h5 Disabled button warning on white background
+    span &lt;/&gt;
+pre.codesnippet
+    button(type="button" disabled="disabled").btn.btn-warning Warning
+
+h5 Disabled button error on white background
+    span &lt;/&gt;
+pre.codesnippet
+    button(type="button" disabled="disabled").btn.btn-danger Error
+
+h5 Disabled button success on white background
+    span &lt;/&gt;
+pre.codesnippet
+    button(type="button" disabled="disabled").btn.btn-success Success
+
+//
 h5 Disabled heading button on white background
     span &lt;/&gt;
 pre.codesnippet
@@ -374,6 +394,21 @@ h5 Disabled link button on white background
     span &lt;/&gt;
 pre.codesnippet
     a(href="javascript:void(0);" disabled="disabled").btn.btn-link Regular link
+
+h5 Disabled link button warning on white background
+    span &lt;/&gt;
+pre.codesnippet
+    a(href="javascript:void(0);" disabled="disabled").btn.btn-link.btn-warning Warning
+
+h5 Disabled link button error on white background
+    span &lt;/&gt;
+pre.codesnippet
+    a(href="javascript:void(0);" disabled="disabled").btn.btn-link.btn-danger Error
+
+h5 Disabled link button success on white background
+    span &lt;/&gt;
+pre.codesnippet
+    a(href="javascript:void(0);" disabled="disabled").btn.btn-link.btn-success Success
 
 div &nbsp;
 //social icons
