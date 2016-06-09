@@ -1086,6 +1086,7 @@ p {
       border-color: $clr-gray;
     }
     &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+      color: $clr-white;
       box-shadow: none;
       outline: none;
     }
@@ -1096,6 +1097,7 @@ p {
     color: $clr-blue;
     border-color: $brand-warning;
     &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+      color: $clr-white;
       background-color: $brand-warning;
       border-color: $brand-warning;
     }
@@ -1119,6 +1121,7 @@ p {
     color: $clr-blue;
     border-color: $brand-danger;
     &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+      color: $clr-white;
       background-color: $brand-danger;
       border-color: $brand-danger;
     }
