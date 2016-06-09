@@ -4,7 +4,10 @@ h4 List groups
 .row
     .col-md-4.col-sm-12.col-xs-12
         aside.aside-wrap.aside-link
-            ul.list-unstyled
+            button.navbar-toggle.box-toggle.collapsed(type='button', data-toggle='collapse', data-target='#aside-link-1')
+                | Normal list group
+                i.icon-caret-down.pull-right
+            ul#aside-link-1.list-unstyled.collapse.navbar-collapse.box-collapse
                 li.active
                     a(href="javascript:void(0)") Item 1
                 li
@@ -16,18 +19,24 @@ h4 List groups
 
     .col-md-4.col-sm-12.col-xs-12
         .main-subnav
-            .container
-                ul.list-inline
-                    li
-                        a(href='javascript:void(0);') Item 1
-                    li
-                        a(href='javascript:void(0);') Item 2
-                    li
-                        a(href='javascript:void(0);') Item 3
+            ul.list-inline
+                li
+                    a(href='javascript:void(0);')
+                        span Item 1
+                li
+                    a(href='javascript:void(0);')
+                        span Item 2
+                li
+                    a(href='javascript:void(0);')
+                        span Item 3
+
 
     .col-md-4.col-sm-12.col-xs-12
         aside.aside-wrap.aside-link
-            ul.list-unstyled
+            button.navbar-toggle.box-toggle.collapsed(type='button', data-toggle='collapse', data-target='#aside-link-2')
+                | List group with count badge
+                i.icon-caret-down.pull-right
+            ul#aside-link-2.list-unstyled.collapse.navbar-collapse.box-collapse
                 li.active
                     a(href="javascript:void(0)")
                         span.badge 10
