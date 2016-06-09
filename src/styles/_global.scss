@@ -983,10 +983,6 @@ body {
 .off-canvas#slide-menu {
   overflow-y: scroll;
   .canvas-scroll {
-    @media (max-width: $screen-md-max) {
-      //height: 75%;
-      //overflow-y: scroll;
-    }
     .list-main-nav, .list-top-nav {
       //margin: 0;
       li {
@@ -1065,10 +1061,78 @@ p {
   font-size: 14px;
   padding: 9px 20px;
   &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
-    text-decoration: underline;
+    text-decoration: none;
+    color: $clr-white!important;
   }
   &[disabled] {
     text-decoration: none;
+    pointer-events: none;
+    cursor: pointer;
+  }
+
+  &.btn-warning {
+   background-color: $brand-warning;
+    color: $clr-blue;
+    border-color: $brand-warning;
+    &[disabled] {
+      opacity: 1;
+      background-color: $clr-gray;
+      color: $clr-gray5;
+      border-color: $clr-gray;
+    }
+    &.btn-link {
+      border: none;
+      background-color: transparent;
+      color: $brand-warning;
+
+      &[disabled] {
+        color: $clr-gray;
+      }
+
+    }
+
+  }
+  &.btn-danger {
+    background-color: $brand-danger;
+    color: $clr-blue;
+    border-color: $brand-danger;
+    &[disabled] {
+      opacity: 1;
+      background-color: $clr-gray;
+      color: $clr-gray5;
+      border-color: $clr-gray;
+    }
+    &.btn-link {
+      border: none;
+      background-color: transparent;
+      color: $brand-danger;
+
+      &[disabled] {
+        color: $clr-gray;
+      }
+    }
+
+  }
+  &.btn-success {
+    background-color: $brand-success;
+    color: $clr-blue;
+    border-color: $brand-success;
+    &[disabled] {
+      opacity: 1;
+      background-color: $clr-gray;
+      color: $clr-gray5;
+      border-color: $clr-gray;
+    }
+    &.btn-link {
+      border: none;
+      background-color: transparent;
+      color: $brand-success;
+
+      &[disabled] {
+        color: $clr-gray;
+      }
+
+    }
   }
 }
 
