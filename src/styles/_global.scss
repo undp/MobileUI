@@ -1062,24 +1062,41 @@ p {
   padding: 9px 20px;
   &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
     text-decoration: none;
-    color: $clr-white!important;
+    color: $clr-white;
   }
+
+  &.btn-inverse {
+    &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+      text-decoration: none;
+      color: $clr-white!important;
+    }
+  }
+
   &[disabled] {
     text-decoration: none;
     pointer-events: none;
     cursor: pointer;
   }
 
-  &.btn-warning {
-   background-color: $brand-warning;
-    color: $clr-blue;
-    border-color: $brand-warning;
+  &.btn-warning,&.btn-danger,&.btn-success {
     &[disabled] {
       opacity: 1;
       background-color: $clr-gray;
       color: $clr-gray5;
       border-color: $clr-gray;
     }
+    &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+      color: $clr-white;
+    }
+  }
+
+
+
+
+  &.btn-warning {
+    background-color: $brand-warning;
+    color: $clr-blue;
+    border-color: $brand-warning;
     &.btn-link {
       border: none;
       background-color: transparent;
@@ -1090,18 +1107,11 @@ p {
       }
 
     }
-
   }
   &.btn-danger {
     background-color: $brand-danger;
     color: $clr-blue;
     border-color: $brand-danger;
-    &[disabled] {
-      opacity: 1;
-      background-color: $clr-gray;
-      color: $clr-gray5;
-      border-color: $clr-gray;
-    }
     &.btn-link {
       border: none;
       background-color: transparent;
@@ -1117,12 +1127,6 @@ p {
     background-color: $brand-success;
     color: $clr-blue;
     border-color: $brand-success;
-    &[disabled] {
-      opacity: 1;
-      background-color: $clr-gray;
-      color: $clr-gray5;
-      border-color: $clr-gray;
-    }
     &.btn-link {
       border: none;
       background-color: transparent;
@@ -1137,13 +1141,13 @@ p {
 }
 
 .btn-default, .open > .btn-default.dropdown-toggle {
-  background-color: $clr-blue4;
-  color: #fff;
-  border-color: $clr-blue4;
+  background-color: $clr-blue;
+  color:$clr-light-blue;
+  border-color: $clr-blue;
   &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
-    background-color: $clr-blue4;
-    color: #fff;
-    border-color: $clr-blue4;
+    background-color: $clr-blue;
+    color: $clr-white;
+    border-color: $clr-blue;
     outline: none;
   }
 
@@ -1177,13 +1181,13 @@ p {
     color: $clr-blue4;
     &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
       background-color: transparent;
-      color: $clr-blue4;
+      color: $clr-light-blue;
     }
     &.btn-inverse {
       color: $clr-light-blue;
       border-color: $clr-light-blue;
       &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
-        color: $clr-light-blue;
+        color: $clr-white;
         border-color: $clr-light-blue;
       }
     }
@@ -1211,12 +1215,14 @@ p {
   color: $clr-blue4;
   &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
     color: $clr-blue4;
+    text-decoration: underline;
   }
 
   &.btn-inverse {
     color: $clr-light-blue;
     &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
       color: $clr-light-blue;
+      text-decoration: none;
     }
   }
 
