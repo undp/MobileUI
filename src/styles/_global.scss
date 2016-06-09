@@ -1351,11 +1351,11 @@ p {
     }
     &.btn-inverse {
       background-color: $clr-blue7;
-      color: $clr-light-blue;
+      color: $clr-blue6;
       border-color: $clr-blue7;
       &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
         background-color: $clr-blue7;
-        color: $clr-light-blue;
+        color: $clr-blue6;
         border-color: $clr-blue7;
       }
     }
@@ -1399,7 +1399,7 @@ p {
   .btn-link {
     color: $clr-blue6;
     &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
-      color: $clr-blue;
+      color: $clr-blue6;
     }
 
     &.btn-bold {
@@ -1424,10 +1424,60 @@ p {
       }
     }
   }
+  .btn-warning,.btn-danger,.btn-success {
+    color: $clr-white;
+    &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
+      color: $clr-blue7!important;
+    }
+
+    &.btn-inverse {
+      color: $clr-blue7;
+      &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
+        color: $clr-white!important;
+      }
+    }
+  }
+
+  .btn-group {
+    .dropdown-menu {
+      li {
+        a {
+          &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
+            background-color: $clr-blue6;
+          }
+        }
+      }
+    }
+    > .btn-inverse + .dropdown-menu {
+      @include border-radius(0);
+      border-color: $clr-gray;
+      background-color: $clr-blue6;
+      li {
+        a {
+          color: $clr-blue7;
+          &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
+            color: $clr-white;
+            background-color: transparent;
+            text-decoration: none;
+          }
+
+        }
+      }
+
+    }
+
+
+    .dropdown-menu {
+
+    }
+  }
 }
 
 //tables
 .table  {
+  a,a:hover,a:focus,a:active {
+      color: $clr-blue4;
+  }
   thead {
     tr:first-child {
       > th {
@@ -1473,7 +1523,7 @@ p {
         color: $clr-blue7;
       }
     }
-    a {
+    a,a:hover,a:focus,a:active {
       color: $clr-blue6;
     }
     .checkbox {
@@ -1745,7 +1795,7 @@ input, .form-control, .select {
 
 }
 
-//country
+//country radio checkbox
 .country-pg {
   .radio, .checkbox {
     [type="checkbox"]:checked + label,
