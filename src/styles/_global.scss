@@ -576,6 +576,14 @@ body {
       &.disabled {
         pointer-events: none;
       }
+
+      &.open {
+        .caret {
+          border-top: none;
+          border-bottom: 4px dashed;
+        }
+      }
+
     }
 
   }
@@ -1946,14 +1954,14 @@ input, .form-control, .select {
 
 //tooltip
 .tooltip {
-  background-color: $clr-blue;
+  background-color: $clr-dark-blue;
   padding: 0 !important;
   font-size: 13px;
 
   .tooltip-inner {
     padding: 10px;
     color: $clr-white;
-    //background-color: $clr-blue;
+    background-color: $clr-dark-blue;
     @include border-radius(0);
   }
 
@@ -1962,19 +1970,19 @@ input, .form-control, .select {
   }
   &.left .tooltip-arrow {
     right: -5px;
-    border-left-color: $clr-blue;
+    border-left-color: $clr-dark-blue;
   }
   &.top .tooltip-arrow {
     bottom: -5px;
-    border-top-color: $clr-blue;
+    border-top-color: $clr-dark-blue;
   }
   &.bottom .tooltip-arrow {
     top: -5px;
-    border-bottom-color: $clr-blue;
+    border-bottom-color: $clr-dark-blue;
   }
   &.right .tooltip-arrow {
     left: -5px;
-    border-right-color: $clr-blue;
+    border-right-color: $clr-dark-blue;
   }
 
 }
