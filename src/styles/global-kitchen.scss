@@ -8,6 +8,11 @@
       margin-right: 5px;
       margin-bottom: 10px;
     }
+    .btn-group {
+      .dropdown-menu {
+        margin-top: -10px;
+      }
+    }
   }
 
   .list-footer-nav {
@@ -44,7 +49,7 @@
     }
   }
   .dark-blue-bg {
-    background-color: $clr-blue;
+    background-color: $clr-blue8;
     padding: 10px;
   }
 

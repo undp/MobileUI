@@ -1068,7 +1068,7 @@ p {
   &.btn-inverse {
     &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
       text-decoration: none;
-      color: $clr-white!important;
+      color: $clr-white !important;
     }
   }
 
@@ -1078,7 +1078,7 @@ p {
     cursor: pointer;
   }
 
-  &.btn-warning,&.btn-danger,&.btn-success {
+  &.btn-warning, &.btn-danger, &.btn-success {
     &[disabled] {
       opacity: 1;
       background-color: $clr-gray;
@@ -1086,37 +1086,50 @@ p {
       border-color: $clr-gray;
     }
     &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
-      color: $clr-white;
+      box-shadow: none;
+      outline: none;
     }
   }
-
-
-
 
   &.btn-warning {
     background-color: $brand-warning;
     color: $clr-blue;
     border-color: $brand-warning;
+    &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+      background-color: $brand-warning;
+      border-color: $brand-warning;
+    }
     &.btn-link {
       border: none;
       background-color: transparent;
       color: $brand-warning;
-
+      &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+        color: $brand-warning;
+        background-color: transparent;
+      }
       &[disabled] {
         color: $clr-gray;
       }
 
     }
+
   }
   &.btn-danger {
     background-color: $brand-danger;
     color: $clr-blue;
     border-color: $brand-danger;
+    &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+      background-color: $brand-danger;
+      border-color: $brand-danger;
+    }
     &.btn-link {
       border: none;
       background-color: transparent;
       color: $brand-danger;
-
+      &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+        color: $brand-danger;
+        background-color: transparent;
+      }
       &[disabled] {
         color: $clr-gray;
       }
@@ -1127,11 +1140,18 @@ p {
     background-color: $brand-success;
     color: $clr-blue;
     border-color: $brand-success;
+    &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+      background-color: $brand-success;
+      border-color: $brand-success;
+    }
     &.btn-link {
       border: none;
       background-color: transparent;
       color: $brand-success;
-
+      &:hover, &:active:hover, &:active:focus, &:focus, &:active, &.active {
+        color: $brand-success;
+        background-color: transparent;
+      }
       &[disabled] {
         color: $clr-gray;
       }
@@ -1142,7 +1162,7 @@ p {
 
 .btn-default, .open > .btn-default.dropdown-toggle {
   background-color: $clr-blue;
-  color:$clr-light-blue;
+  color: $clr-light-blue;
   border-color: $clr-blue;
   &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
     background-color: $clr-blue;
@@ -1254,7 +1274,43 @@ p {
       border-top: none;
       border-bottom: 4px dashed;
     }
+
+    .dropdown-menu {
+      @include border-radius(0);
+      border-color: $clr-blue;
+
+      li {
+        a {
+          color: $clr-black;
+          font-size: 12px;
+          &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
+            background-color: $clr-light-blue;
+          }
+
+        }
+      }
+
+    }
+
+    > .btn-inverse + .dropdown-menu {
+      @include border-radius(0);
+      border-color: $clr-blue;
+      background-color: $clr-dark-blue;
+      li {
+        a {
+          color: $clr-white;
+          &:active, &:active:hover, &:active:focus, &:hover, &:focus, &.active {
+            background-color: transparent;
+            text-decoration: underline;
+          }
+
+        }
+      }
+
+    }
+
   }
+
 }
 
 //buttons for country page
