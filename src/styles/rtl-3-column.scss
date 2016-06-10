@@ -20,6 +20,12 @@
       }
 
     }
+
+    .list-language > li:before {
+      right: auto;
+      left: -2px;
+    }
+
     .box-search-wrap {
       float: left !important;
       .list-language, .list-social-nav {
@@ -44,6 +50,18 @@
       }
     }
   }
+
+  .latest-box {
+    &.news-box {
+      > p {
+        span {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+
   .main-subnav {
       .main-subnav-tabs {
         &.slick-slider {
@@ -63,7 +81,14 @@
           margin-left: -3px;
         }
 
+        .slick-slide:before {
+          left: auto;
+          right: 0;
+        }
+
       }
+
+
     }
 
   .stories-wrap {

@@ -17,9 +17,10 @@ h4 List groups
                         i.icon-caret-right
                         | Item 3
 
-    .col-md-12.col-sm-12.col-xs-12
+    .col-md-4.col-sm-12.col-xs-12
+        //slick tabs
         .main-subnav
-            .list-inline.main-subnav-tabs.slick-tabs-component
+            .list-inline.main-subnav-tabs.slick-tabs
                 div
                     a(href='javascript:void(0);')
                         span Item 1
@@ -38,6 +39,7 @@ h4 List groups
                 div
                     a(href='javascript:void(0);')
                         span Item 3
+
 
     .col-md-4.col-sm-12.col-xs-12
         aside.aside-wrap.aside-link
@@ -109,18 +111,62 @@ pre.codesnippet
                     a(href="javascript:void(0)")
                         i.icon-caret-right
                         | Item 3
+
 h5 List group - Horizontal
     span &lt;/&gt;
 pre.codesnippet
-        .main-subnav
-            .container
-                ul.list-inline
-                    li
-                        a(href='javascript:void(0);') Item 1
-                    li
-                        a(href='javascript:void(0);') Item 2
-                    li
-                        a(href='javascript:void(0);') Item 3
+    .main-subnav
+        .list-inline.main-subnav-tabs.example-scroll-links
+            div
+                a(href='javascript:void(0);')
+                    span Item 1
+            div
+                a(href='javascript:void(0);')
+                    span Item 2
+            div
+                a(href='javascript:void(0);')
+                    span Item 3
+            div
+                a(href='javascript:void(0);')
+                    span Item 1
+            div
+                a(href='javascript:void(0);')
+                    span Item 2
+            div
+                a(href='javascript:void(0);')
+                    span Item 3
+
+h5 List group - Horizontal javascript function
+    span &lt;/&gt;
+pre.codesnippet.text-center
+    script(type='text/javascript').
+        $('.example-scroll-links').slick({
+        //setting-name: setting-value
+        slidesToShow: 4,
+        infinite: false,
+        swipeToSlide: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 667,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 568,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
+        });
+    // Plugin Reference link -> http://kenwheeler.github.io/slick/
 
 h5 List group - Vertical with count badge
     span &lt;/&gt;

@@ -4,26 +4,36 @@ block content
     .container.kitchen-content
         .row
             .col-md-3.col-sm-12.col-xs-12
+                //kitchen aside menu
                 include ./inc/global-kitchen-aside-menu
+
             .col-md-9.col-sm-12.col-xs-12
-                div.tab-content
-                    div(role="tabpanel" id="buttons").tab-pane.active
+                //kitchen tab content
+                .tab-content
+                    //kitchen buttons
+                    div(role="tabpanel" id="buttons").tab-pane
                         include ./inc/global-kitchen-buttons
 
+                    //kitchen typo
                     div(role="tabpanel" id="typo").tab-pane
                         include ./inc/global-kitchen-typo
 
+                    //kitchen tables
                     div(role="tabpanel" id="tables").tab-pane
                         include ./inc/global-kitchen-tables
 
+                    //kitchen form elements
                     div(role="tabpanel" id="formelements").tab-pane
                         include ./inc/global-kitchen-form
 
+                    //kitchen navs
                     div(role="tabpanel" id="navs").tab-pane
                         include ./inc/global-kitchen-navs
 
-                    div(role="tabpanel" id="containers").tab-pane
+                    //kitchen containers
+                    div(role="tabpanel" id="containerss").tab-pane.active
                         include ./inc/global-kitchen-containers
 
+                    //kitchen dialogs
                     div(role="tabpanel" id="dialogs").tab-pane
                         include ./inc/global-kitchen-dialogs
