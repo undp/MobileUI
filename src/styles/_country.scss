@@ -602,6 +602,7 @@
       line-height: 12px;
       font-size: 11px;
       margin: 0;
+
       &:first-child {
         border-left: none;
         padding-left: 0;
@@ -609,6 +610,9 @@
       @media (max-width: $screen-xs-max) {
         font-size: 10px;
         padding: 0 3px;
+      }
+      @media (max-width: $screen-xs-max) and (orientation: portrait) {
+        margin-bottom: 10px;
       }
       a {
         color: #66c2ff;

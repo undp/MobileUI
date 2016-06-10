@@ -148,13 +148,6 @@
     });
 
 
-    //global kitchen mobile slide menu
-    $('.off-canvas #aside-link a').on('click',function () {
-        $('#slide-menu').removeClass('open');
-        $('body').removeClass('no-scroll');
-    });
-
-
 
     //styleguide documentation convert code brackets for pre tag
     function htmlEntities(str) {

@@ -8,11 +8,11 @@ ul#aside-link.list-unstyled.collapse.navbar-collapse.box-collapse
     a(href='javascript:void(0);') Crisis response
   li
     a(href='javascript:void(0);') Development impact
-  li(data-toggle='collapse', data-target='.sub-level')
-    a(href='javascript:void(0);')
+  li
+    a(data-toggle="collapse" href=".sub-level" aria-expanded="true" aria-controls="collapseOne")
       i.icon-caret-right
       | Global Policy Centers
-    ul.sub-level.collapse.in
+    ul.sub-level.panel-collapse.collapse.in(role="tabpanel")
       li
         a(href='javascript:void(0);') Dummy sub text
       li
