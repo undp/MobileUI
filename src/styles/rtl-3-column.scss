@@ -205,6 +205,8 @@
   }
   .undp-breadcrumb {
     .icon-arrow-right {
+      margin-left: 0;
+      margin-right: 5px;
       &:before {
         content: "\e908";
       }

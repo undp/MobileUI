@@ -876,6 +876,17 @@ body {
   }
 }
 
+.undp-work {
+  .off-canvas {
+    .canvas-header {
+      h4 {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+
 .canvas-scroll {
   width: 100%;
   //@include align-self(flex-end);

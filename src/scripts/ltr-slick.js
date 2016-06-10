@@ -24,13 +24,14 @@
             settings: {
               slidesToShow: 3
             }
-          },
-          {
-            breakpoint: 568,
-            settings: {
-              slidesToShow: 3
-            }
           }
+          // ,
+          // {
+          //   breakpoint: 568,
+          //   settings: {
+          //     slidesToShow: 3
+          //   }
+          // }
         ]
       });
 

@@ -112,7 +112,7 @@ pre.codesnippet
                         i.icon-caret-right
                         | Item 3
 
-h5 List group - Horizontal
+h5 Horizontal scrollable links
     span &lt;/&gt;
 pre.codesnippet
     .main-subnav
@@ -136,9 +136,10 @@ pre.codesnippet
                 a(href='javascript:void(0);')
                     span Item 3
 
-h5 List group - Horizontal javascript function
+h5 Horizontal scrollable links needs javascript function
     span &lt;/&gt;
 pre.codesnippet.text-center
+    // script start
     script(type='text/javascript').
         $('.example-scroll-links').slick({
         //setting-name: setting-value
@@ -157,15 +158,11 @@ pre.codesnippet.text-center
                 settings: {
                     slidesToShow: 3
                 }
-            },
-            {
-                breakpoint: 568,
-                settings: {
-                    slidesToShow: 2
-                }
             }
         ]
         });
+
+    //script end
     // Plugin Reference link -> http://kenwheeler.github.io/slick/
 
 h5 List group - Vertical with count badge
