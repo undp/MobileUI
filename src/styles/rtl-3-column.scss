@@ -45,12 +45,7 @@
     }
   }
   .main-subnav {
-      ul.slick-tabs {
-
-        //.slick-prev {
-        //  right: auto;
-        //}
-
+      .main-subnav-tabs {
         &.slick-slider {
           padding-left: 0!important;
         }

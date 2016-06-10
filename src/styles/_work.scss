@@ -1411,15 +1411,18 @@
     }
   }
 
-  //slick plugin
-  ul.slick-tabs {
+  //slick tabs plugin css on main nav
+  .main-subnav-tabs {
     height: 57px;
     max-height: 57px;
     margin: 0;
     list-style: none;
     padding: 0;
+
     .slick-track {
       height: 57px;
+      //width: 100%;
+      @include clearfix();
     }
     .slick-list {
       margin: 0 25px;
@@ -1442,7 +1445,7 @@
     }
     .slick-prev {
       left: 0;
-      background: #def3ff url("../images/arrow-left.svg") left center no-repeat;
+      background: #def3ff url("../images/arrow-left.svg") 3px center no-repeat;
       margin-left: -3px;
       @media (max-width: $screen-md-max) {
         margin-left: 0;
@@ -1450,7 +1453,7 @@
     }
     .slick-next {
       right: 0;
-      background: #def3ff url("../images/arrow-right.svg") right center no-repeat;
+      background: #def3ff url("../images/arrow-right.svg") 3px center no-repeat;
       margin-right: -3px;
       @media (max-width: $screen-md-max) {
         margin-right: 0;
@@ -1459,7 +1462,7 @@
     .slick-slide {
       position: relative;
       line-height: 57px;
-      min-width: 90px;
+      //min-width: 90px;
       a {
         display: table;
         width: 100%;

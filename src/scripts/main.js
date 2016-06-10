@@ -9,8 +9,11 @@
     //  }, false);
     //}
 
+
+    //popover
     $('[data-toggle="popover"]').popover();
 
+    //tooltip
     $('[data-toggle="tooltip"]').tooltip();
     //$('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
 
@@ -24,63 +27,6 @@
         $(this).addClass('hover').css('background-image', 'url(' + bgImg + ')');
       });
 
-    //scroll tabs
-    //tabSet = $('.main-subnav-tabset').scrollTabs();
-
-
-    
-    //if ('ontouchstart' in document.documentElement) {
-    //  console.log('device');
-    /*
-      $('[data-pop]').on('click touchstart',function(e) {
-        console.log('target', $(e.target).parent());
-        var popDiv = $(this).find('.smallpop');
-        if(e.type == 'touchstart'){
-          window.touchenabled = true;
-          console.log('click', e.type);
-          if($(popDiv).hasClass('hide')){
-            $(popDiv).removeClass('hide');
-            $(this).addClass('hover');
-          }else{
-            $(popDiv).addClass('hide');
-            $(this).removeClass('hover');
-          }
-        }
-        if(e.type == 'click'){
-          if(window.touchenabled == true){
-            return true;
-          }
-          $(popDiv).toggleClass('hide');
-          $(this).toggleClass('hover');
-          console.log($(popDiv).className);
-        }
-
-      });*/
-
-    //}else{
-    //  console.log('desktop');
-    //  data-pop
-    /*
-      $('[data-pop]').on('mouseover',function(e) {
-        if(window.touchenabled == true){
-          return true;
-        }
-        console.log('mouseover', e.type);
-        var popDiv = $(this).find('.smallpop');
-        $(popDiv).removeClass('hide');
-        $(this).addClass('hover');
-      });
-
-      $('[data-pop]').on('mouseout',function(e) {
-        if(window.touchenabled == true){
-          return true;
-        }
-        console.log('mouseout');
-        var popDiv = $(this).find('.smallpop');
-        $(popDiv).addClass('hide');
-        $(this).removeClass('hover');
-      });*/
-    //}
 
     // for desktop in header event
     $('header .dropdown-countries').hover(function (){
@@ -105,9 +51,6 @@
       $(this).parent('#contriesPop').addClass('hide');
       $('.off-canvas.open').removeAttr('style');
     });
-
-
-
 
 
 
@@ -217,14 +160,14 @@
     function htmlEntities(str) {
       return String(str).replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
-
     var $snippets = $('.codesnippet');
-
     $.each($snippets, function (index, obj) {
       var $this = $(this);
       $this.html(htmlEntities($this.html()));
     });
 
+
+    
 
   });
 })(window, document, jQuery);
