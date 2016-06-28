@@ -5,20 +5,14 @@
   "main": "gulpfile.babel.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/undp/MobileUI.git"
+    "url": "https://github.com/undp/MobileUI.git"
   },
-  "author": "UNDP <ihelp@undp.org>",
+  "author": "UNDP <ihelp@undp.org> (http://www.undp.org)",
   "contributors": [
-    {
-      "name": "Sachin Kamble",
-      "email": "sachin@clistesoft.com"
-    },
-    {
-      "name": "Jura Khrapunov",
-      "email": "jura@khrapunov.com"
-    }
+    "Sachin Kamble <sachin@clistesoft.com>",
+    "Jura Khrapunov <jura@khrapunov.com>"
   ],
-  "license": "MIT",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/undp/MobileUI/issues"
   },
@@ -71,5 +65,6 @@
     "gulp-uglify": "^1.5.1",
     "run-sequence": "^1.1.5"
   },
-  "homepage": "https://undp.github.io/MobileUI/"
+  "homepage": "https://undp.github.io/MobileUI/",
+  "private": true
 }
