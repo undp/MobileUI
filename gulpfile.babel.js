@@ -87,8 +87,7 @@ gulp.task('minifyCss', () => {
 
 gulp.task('scripts', () => {
   let scripts = [
-    `${src}/scripts/main.js`,
-    `${src}/scripts/*/**/*.js`
+    `${src}/scripts/**/*.js`
   ];
 
   return gulp.src(scripts)
@@ -171,6 +170,7 @@ gulp.task('vendors', () => {
     `${vendor}/jquery/dist/jquery.js`,
     `${vendor}/bootstrap-sass/assets/javascripts/bootstrap.js`,
     `${vendor}/swiper/dist/js/swiper.jquery.js`,
+    `${vendor}/slick-carousel/slick/slick.js`
   ])
   .pipe($.newer(`${tmp}/scripts`))
   .pipe($.sourcemaps.init())
