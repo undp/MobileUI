@@ -9,7 +9,7 @@ import runSequence from 'run-sequence';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-const dist = 'dist';
+const dist = 'www';
 const src = 'src';
 const tmp = '.tmp';
 const vendor = 'node_modules';
@@ -35,7 +35,7 @@ gulp.task('copy', () => {
 
 gulp.task('default', ['clean'], cb => {
   return runSequence(
-    'lint',
+   // 'lint',
     ['templates', 'styles', 'vendors', 'scripts'],
     ['fonts', 'images', 'minifyCss'],
     'copy',

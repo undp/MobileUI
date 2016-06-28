@@ -1,9 +1,37 @@
-extends ./layouts/bootstrap.jade
-
-block content
-  .container
-    .row
-      p.col-xs-6.text-center
-        img.img-responsive(src='images/lorempixel_640_480_abstract.jpeg', alt='Abstract Image')
-      p.col-xs-6.text-center
-        img.img-responsive(src='images/placeimg_640_480_nature.jpg', alt='Nature Image')
+doctype html
+html(class="no-js", lang="en")
+  head
+    block head
+      meta(charset="utf-8")
+      meta(content="IE=edge", http-equiv="X-UA-Compatible")
+      meta(content="width=device-width, initial-scale=1, user-scalable=0", name="viewport")
+      meta(name='description', content='Through sustainable development, the United Nations Development Programme (UNDP) works to eradicate poverty and reduce inequalities in some 170 countries and territories.')
+      meta(name='keywords', content='UNDP')
+      meta(name='theme-color', content='#006BB6')
+      meta(name='msapplication-TileColor', content='#006BB6')
+      meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
+      title UNDP - United Nations Development Programme
+      link(rel='stylesheet', href="styles/main.css")
+      link(rel='apple-touch-icon', href='/apple-touch-icon.png')
+      link(rel='icon', href='/favicon.ico')
+      //[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]
+  body(style='background-color:#FFF;')
+    //[if (lt IE 9) & (!IEMobile)]> <p class="browsehappy">Você está usando um <strong>navegador antigo</strong>. Por favor <a href="http://browsehappy.com/">atualize o seu navegador</a> para uma boa experiência.</p> <![endif]
+    .container
+      h3(style='color:#444444;') UNDP Links
+      div.list-group.col-sm-3
+        a.list-group-item(href='home.html', target='_blank') Home
+        a.list-group-item(href='our-work.html', target='_blank') Our Work
+        a.list-group-item(href='our-work-rtl.html', target='_blank') Our Work RTL
+        a.list-group-item(href='sustainable-development-goals.html', target='_blank') Sustainable Development Goals (SDGs)
+        a.list-group-item(href='results-at-a-glance.html', target='_blank') Results at a Glance
+        a.list-group-item(href='research-and-publication.html', target='_blank') Research & Publication
+        a.list-group-item(href='country-home.html', target='_blank') Country Home
+        a.list-group-item(href='country.html', target='_blank') Country
+        a.list-group-item(href='video.html', target='_blank') Video
+        //a.list-group-item(href='home-rtl.html', target='_blank') RTL
+        a.list-group-item(href='global-kitchen-page.html', target='_blank') Global kitchen sink
+        a.list-group-item(href='global-kitchen-country-page.html', target='_blank') Country kitchen sink
+    block scripts
+      script(src='scripts/vendors.min.js')
+      script(src='scripts/scripts.js')

@@ -1,0 +1,297 @@
+extends ./layouts/index1-rtl
+block vars
+  -var page='Our Work'
+block content
+  .main-content.main-content-work
+    .main-subnav
+      .container
+        .list-inline.main-subnav-tabs.slick-tabs
+          div
+            a(href='javascript:void(0);')
+              span Sustainable development
+          div
+            a(href='javascript:void(0);')
+              span Democratic governance and peacebuilding
+          div
+            a(href='javascript:void(0);')
+              span Climate and disaster resilience
+          div
+            a(href='javascript:void(0);')
+              span Sustainable development
+          div
+            a(href='javascript:void(0);')
+              span Democratic governance and peacebuilding
+          div
+            a(href='javascript:void(0);')
+              span Climate and disaster resilience
+    .container
+      ul.list-inline.undp-breadcrumb
+        li
+          a(href='home.html') Home
+          span.icon-arrow-right
+        li
+          a(href='javascript:void(0);') News Center
+          span.icon-arrow-right
+        li
+          a(href='javascript:void(0);') Press releases
+          span.icon-arrow-right
+        li
+          a(href='javascript:void(0);') 2016
+          span.icon-arrow-right
+        li
+          a(href='javascript:void(0);') 05
+          span.icon-arrow-right
+        li
+          a(href='javascript:void(0);') 25
+          span.icon-arrow-right
+      .row
+        .col-md-3
+          aside.aside-wrap.aside-latest
+            .aside-collapse-wrap
+              button.navbar-toggle.box-toggle.collapsed(type='button', data-toggle='collapse', data-target='#undp-news')
+                | Latest news
+                i.icon-caret-down.pull-right
+              #undp-news.latest-box.news-box.collapse.navbar-collapse.box-collapse
+                h4 Latest news
+                p
+                  span 10 Mar 2016:
+                  a(href='javascript:void(0);') Helen Clark: Speech on "Sustainable development for all - how will the vision become reality?"
+                p
+                  span 10 Mar 2016:
+                  a(href='javascript:void(0);') Additional EUR 59 million boost fight against malaria in Chad
+                p
+                  span 09 Mar 2016:
+                  a(href='javascript:void(0);') Helen Clark: Speech on SDGs at the Danish Ministry of Foreign Affairs
+                p
+                  span 08 Mar 2016:
+                  a(href='javascript:void(0);') Helen Clark: Speech at the "Women - the Key to a Sustainable World" event
+                p
+                  span 10 Mar 2016:
+                  a(href='javascript:void(0);') Helen Clark: Statement on International Women’s Day 2016
+                a.link-view(href='javascript:void(0);') View more &raquo;
+            .aside-collapse-wrap
+              button.navbar-toggle.box-toggle.collapsed(type='button', data-toggle='collapse', data-target='#undp-focus')
+                | UNDP in Focus
+                i.icon-caret-down.pull-right
+              #undp-focus.latest-box.focus-box.collapse.navbar-collapse.box-collapse
+                h4 UNDP in Focus
+                .media.media-focus
+                  .media-body
+                    p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
+                  .media-right
+                    a(href='javascript:void(0);')
+                      img.media-object(src='images/undp-article-img01.png', alt='UNDP Article Image')
+                a.link-view(href='javascript:void(0);') View more &raquo;
+            .aside-collapse-wrap
+              button.navbar-toggle.box-toggle.collapsed(type='button', data-toggle='collapse', data-target='#undp-social')
+                | Find us on
+                i.icon-caret-down.pull-right
+              #undp-social.latest-box.social-box.collapse.navbar-collapse.box-collapse
+                h4 Find us on
+                ul.list-unstyled.list-social-nav
+                  li
+                    a(href='http://www.facebook.com/undp', target='_blank')
+                      svg.icon-box.facebook(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 32 32', title='Facebook', alt='Facebook', style='width: 25px; height: 25px;')
+                        g
+                          path(d='M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z', fill-rule='evenodd')
+                      span Facebook
+                  li
+                    a(href='http://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=undp', target='_blank')
+                      svg.icon-box.twitter(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 32 32', title='Twitter', alt='Twitter', style='width: 25px; height: 25px;')
+                        g
+                          path(d='M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336', fill-rule='evenodd')
+                      span Twitter
+                  //li
+                  //  a.icon-box.linkedin(href='http://www.linkedin.com/company/undp', target='_blank')
+                  //    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 32 32', title='LinkedIn', alt='LinkedIn', style='width: 25px; height: 25px;')
+                  //      g
+                  //        path(d='M26 25.963h-4.185v-6.55c0-1.56-.027-3.57-2.175-3.57-2.18 0-2.51 1.7-2.51 3.46v6.66h-4.182V12.495h4.012v1.84h.058c.558-1.058 1.924-2.174 3.96-2.174 4.24 0 5.022 2.79 5.022 6.417v7.386zM8.23 10.655a2.426 2.426 0 0 1 0-4.855 2.427 2.427 0 0 1 0 4.855zm-2.098 1.84h4.19v13.468h-4.19V12.495z', fill-rule='evenodd')
+                  //  a(href='http://www.linkedin.com/company/undp', target='_blank')
+                  //    span Linkedin
+                  li
+                    a(href='http://www.youtube.com/user/undp?sub_confirmation=1', target='_blank')
+                      svg.icon-box.youtube(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 32 32', title='YouTube', alt='YouTube', style='width: 25px; height: 25px;')
+                        g
+                          path(d='M13.73 18.974V12.57l5.945 3.212-5.944 3.192zm12.18-9.778c-.837-.908-1.775-.912-2.205-.965C20.625 8 16.007 8 16.007 8c-.01 0-4.628 0-7.708.23-.43.054-1.368.058-2.205.966-.66.692-.875 2.263-.875 2.263S5 13.303 5 15.15v1.728c0 1.845.22 3.69.22 3.69s.215 1.57.875 2.262c.837.908 1.936.88 2.426.975 1.76.175 7.482.23 7.482.15 0 .08 4.624.072 7.703-.16.43-.052 1.368-.057 2.205-.965.66-.69.875-2.262.875-2.262s.22-1.845.22-3.69v-1.73c0-1.844-.22-3.69-.22-3.69s-.215-1.57-.875-2.262z', fill-rule='evenodd')
+                      span YouTube
+                  li
+                    a(href='http://instagram.com/undp', target='_blank')
+                      svg.icon-box.instagram(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 32 32', title='Instagram', alt='Instagram', style='width: 25px; height: 25px;')
+                        g
+                          path(d='M23.734 22.9a.79.79 0 0 1-.794.795H9.02a.79.79 0 0 1-.793-.794v-8.436h1.835c-.17.533-.26 1.12-.26 1.705 0 3.333 2.787 6.028 6.21 6.028 3.44 0 6.225-2.695 6.225-6.03 0-.585-.09-1.17-.26-1.704h1.757V22.9zm-3.698-6.94c0 2.15-1.796 3.894-4.023 3.894-2.214 0-4.01-1.745-4.01-3.893 0-2.148 1.796-3.892 4.01-3.892 2.227 0 4.023 1.745 4.023 3.893zm3.698-4.687a.9.9 0 0 1-.898.9H20.57a.9.9 0 0 1-.898-.9V9.125a.9.9 0 0 1 .898-.898h2.266a.9.9 0 0 1 .898.898v2.148zM26 8.565A2.58 2.58 0 0 0 23.435 6H8.565A2.58 2.58 0 0 0 6 8.565v14.87A2.58 2.58 0 0 0 8.565 26h14.87A2.58 2.58 0 0 0 26 23.435V8.565z', fill-rule='evenodd')
+                      span Instagram
+
+        .col-md-6
+          .content-wrap.stories-wrap
+            h2 Our Stories
+            a.btn-subscribe(href='javascript:void(0);')
+              | Subscribe
+              img(src='images/rss.png', alt='Subscribe')
+            .form-wrap
+              form
+                .form-group
+                  label(for='country') Region/Country:
+                  .select-box
+                    select#country.form-control.select-control
+                      option Any
+                      option USA
+                      option India
+                      option China
+                      option Russia
+                    i.icon-caret-down
+
+                .form-group
+                  label(for='area') Focus area:
+                  .select-box
+                    select#area.form-control.select-control
+                      option Any
+                      option USA
+                      option India
+                      option China
+                      option Russia
+                    i.icon-caret-down
+
+            .article-wrap
+              .media.media-stories
+                .media-left
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/undp-article-img01.png', alt='UNDP Article Image')
+                .media-body
+                  a.media-heading(href='javascript:void(0);') Empowering women boosts food security in rural Cuba
+                  p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
+
+              .media.media-stories
+                .media-left
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/undp-article-img01.png', alt='UNDP Article Image')
+                .media-body
+                  a.media-heading(href='javascript:void(0);') Empowering women boosts food security in rural Cuba
+                  p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
+
+              .media.media-stories
+                .media-left
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/undp-article-img01.png', alt='UNDP Article Image')
+                .media-body
+                  a.media-heading(href='javascript:void(0);') Empowering women boosts food security in rural Cuba
+                  p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
+
+              .media.media-stories
+                .media-left
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/undp-article-img01.png', alt='UNDP Article Image')
+                .media-body
+                  a.media-heading(href='javascript:void(0);') Empowering women boosts food security in rural Cuba
+                  p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
+
+              .media.media-stories
+                .media-left
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/undp-article-img01.png', alt='UNDP Article Image')
+                .media-body
+                  a.media-heading(href='javascript:void(0);') Empowering women boosts food security in rural Cuba
+                  p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
+
+              .media.media-stories
+                .media-left
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/undp-article-img01.png', alt='UNDP Article Image')
+                .media-body
+                  a.media-heading(href='javascript:void(0);') Empowering women boosts food security in rural Cuba
+                  p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
+
+              .media.media-stories
+                .media-left
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/undp-article-img01.png', alt='UNDP Article Image')
+                .media-body
+                  a.media-heading(href='javascript:void(0);') Empowering women boosts food security in rural Cuba
+                  p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
+
+              .media.media-stories
+                .media-left
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/undp-article-img01.png', alt='UNDP Article Image')
+                .media-body
+                  a.media-heading(href='javascript:void(0);') Empowering women boosts food security in rural Cuba
+                  p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
+
+              .media.media-stories
+                .media-left
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/undp-article-img01.png', alt='UNDP Article Image')
+                .media-body
+                  a.media-heading(href='javascript:void(0);') Empowering women boosts food security in rural Cuba
+                  p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
+
+              .media.media-stories
+                .media-left
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/undp-article-img01.png', alt='UNDP Article Image')
+                .media-body
+                  a.media-heading(href='javascript:void(0);') Empowering women boosts food security in rural Cuba
+                  p In Cuba, a UNDP programme is promoting partnerships between governments and scientific institutions in order to connect people with the knowledge they need in order to actively and consistently participate in the development of their municipality.
+          nav.nav-pagination
+            ul.pagination.undp-pagination
+              li.hide
+                a(href='javascript:void(0);', aria-label='Previous')
+                  span(aria-hidden='true') &laquo; Previous
+              li.active
+                a(href='javascript:void(0);') 1
+              li
+                a(href='javascript:void(0);') 2
+              li
+                a(href='javascript:void(0);') 3
+              li
+                a(href='javascript:void(0);') 4
+              li
+                a(href='javascript:void(0);', aria-label='Next')
+                  span(aria-hidden='true') Next &raquo;
+
+        .col-md-3
+          aside.aside-wrap.aside-link
+            block dropdown
+              button.navbar-toggle.box-toggle.collapsed(type='button', data-toggle='collapse', data-target='#aside-link')
+                | Our Stories
+                i.icon-caret-down.pull-right
+              include inc/work_dropdown
+    .info-link-box
+      .container
+        .row-eq-height.clearfix
+          .col-md-4.col-sm-4.one
+            .info-wrap.work-wrap
+              h4
+                a(href='javascript:void(0);') Our Work &raquo;
+              img.pull-right(src='images/undp-footer-logo.png', alt='UNDP Logo', class='img-responsive')
+              ul.list-unstyled.nav-work
+                li
+                  a(href='javascript:void(0);') History
+                li
+                  a(href='javascript:void(0);') Africa
+                li
+                  a(href='javascript:void(0);') Arab States
+                li
+                  a(href='javascript:void(0);') Asia and the Pacific
+                li
+                  a(href='javascript:void(0);') Europe and Central Asia
+                li
+                  a(href='javascript:void(0);') Latin America and the Caribbean
+                li
+                  a(href='javascript:void(0);') Looking forward
+          .col-md-4.col-sm-4.two
+            .info-wrap.goal-wrap
+             h4
+               a(href='javascript:void(0);') Sustainable Development Goals &raquo;
+             img(src='images/goals.png', alt='Sustainable Development Goals', class='img-responsive')
+          .col-md-4.col-sm-4.three
+            .info-wrap.prespective-wrap
+              h4
+                a(href='javascript:void(0);') Our Perspectives &raquo;
+              a(href='javascript:void(0);') Transforming local communities amidst conflict
+              .media
+                .media-body
+                  h4.media-heading 03 Mar 2016
+                  p Looking back 50 years, the concept of development has shifted.
+                .media-right
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/img-prespective.png', alt='Perspectives')

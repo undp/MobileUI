@@ -1,0 +1,26 @@
+//top navigation starts
+ul.list-top-nav
+  li.dropdown-countries(data-pop)
+    a#MenuContries(href='javascript:void(0);')
+      span UNDP around the world
+      i.icon-caret
+    block popups
+      include ./../inc/pop_contries
+  li
+    a(href='javascript:void(0);') About us
+  li
+    a(href='research-and-publication.html') Publications
+  li
+    a(href='javascript:void(0);') News Center
+  li.dropdown-funding(data-popfunding, data-target='#dropdown-funding')
+    a#dropdownMenuFunding(href='javascript:void(0);')
+      span Funding
+      i.icon-caret
+    ul#dropdown-funding.funding-popup.hide
+      li
+        a(href='javascript:void(0);') Top contributors
+      li
+        a(href='javascript:void(0);') Funding channels
+      li
+        a(href='javascript:void(0);') Partners
+//top navigation ends

@@ -7,5 +7,16 @@
 /* Bootstrap */
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+/* Custom SCSS*/
+@import "global";
+@import "slick";
+@import "slick-theme";
+@import "home";
+@import "work";
+@import "country";
+@import "video";
+@import "global-kitchen";
+@import "rtl-3-column";
+
 /* Components */
 @import "components/*";

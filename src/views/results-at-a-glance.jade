@@ -1,0 +1,99 @@
+extends ./layouts/index1
+block vars
+  -var page='Results at a Glance'
+block content
+  .main-content.main-content-work
+    .container
+      ul.list-inline.undp-breadcrumb
+        li
+          a(href='home.html') Home
+          span.icon-arrow-right
+        li.active
+          a(href='javascript:void(0);') About us
+          span.icon-arrow-right
+      .row
+        .col-md-3
+          aside.aside-wrap.aside-link
+            button.navbar-toggle.box-toggle.collapsed(type='button', data-toggle='collapse', data-target='#aside-link')
+              | Results at a Glance
+              i.icon-caret-down.pull-right
+            ul#aside-link.list-unstyled.collapse.navbar-collapse.box-collapse
+              li.active
+                a(href='javascript:void(0);') Results at a Glance
+              li
+                a(href='javascript:void(0);') Organizational Chart
+              li
+                a(href='javascript:void(0);') Frequently Asked Questions
+
+        .col-md-9
+          .content-wrap.result-wrap
+            h2 Results at a Glance
+            div.development-result
+              h3 Key development results 2014
+              img.img-responsive(src="images/ndp.jpg", alt="NDP")
+            .result-list
+              p Sustainable development pathways. UNDP projects led to:
+              ul
+                li 11.2 million people (5.7 million women) benefiting from improved livelihoods in 94 countries
+                li 920,000 new jobs (41 percent for women) being created in 77 countries
+                li 33 countries adopting policies and systems to boost employment and livelihoods creation
+                li Technology support in 48 countries to phase out gases that destroy the ozone layer
+                li 40 countries or entities implementing or completing MDG acceleration framework action plans
+                li 39 countries implementing measures towards low-emission and climate-resilient development objectives
+            .result-list
+              p Inclusive and effective democratic governance. UNDP projects led to:
+              ul
+                li Over 18 million new voters registered in 21 countries, including nearly 4 million in Afghanistan, where one million more women registered than in 2009
+                li 750,000 people (51 percent women) in 22 countries gaining access to legal aid services
+                li 1.4 million people receiving antiretroviral treatment in 20 countries
+                li 22 million people receiving HIV-related behavioural change communication in 20 countries
+                li Over 7 million people (49 percent women) expressing their vision for the future through the
+                li UNDP-hosted ‘My World’ global survey, the largest crowd-sourcing exercise in United Nations history
+            .result-list
+              p Resilience building. UNDP projects led to:
+              ul
+                li 98 new disaster reduction and adaptation plans being put in place in 23 countries
+                li 21 countries with enforceable laws or regulations to address disaster and climate risks
+                li 1.3 million people achieving better access to energy in 26 countries
+                li 158 new early warning systems in 17 countries
+                li 254 new disaster response and recovery plans in 14 countries
+    .info-link-box
+      .container
+        .row-eq-height.clearfix
+          .col-md-4.col-sm-4
+            .info-wrap.work-wrap
+              h4
+                a(href='javascript:void(0);') Our Work &raquo;
+              img.pull-right(src='images/undp-footer-logo.png', alt='UNDP Logo', class='img-responsive')
+              ul.list-unstyled.nav-work
+                li
+                  a(href='javascript:void(0);') History
+                li
+                  a(href='javascript:void(0);') Africa
+                li
+                  a(href='javascript:void(0);') Arab States
+                li
+                  a(href='javascript:void(0);') Asia and the Pacific
+                li
+                  a(href='javascript:void(0);') Europe and Central Asia
+                li
+                  a(href='javascript:void(0);') Latin America and the Caribbean
+                li
+                  a(href='javascript:void(0);') Looking forward
+          .col-md-4.col-sm-4
+            .info-wrap.goal-wrap
+              h4
+                a(href='javascript:void(0);') Sustainable Development Goals &raquo;
+              img(src='images/goals.png', alt='Sustainable Development Goals', class='img-responsive')
+          .col-md-4.col-sm-4
+            .info-wrap.prespective-wrap
+              h4
+                a(href='javascript:void(0);') Our Perspectives &raquo;
+              a(href='javascript:void(0);') Transforming local communities amidst conflict
+              .media
+                .media-body
+                  h4.media-heading 03 Mar 2016
+                  p Looking back 50 years, the concept of development has shifted.
+                .media-right
+                  a(href='javascript:void(0);')
+                    img.media-object(src='images/img-prespective.png', alt='Perspectives')

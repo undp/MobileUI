@@ -1,0 +1,15 @@
+.off-canvas.country-off-canvas#slide-menu
+  div.canvas-header
+    a.btn-close(href='javascript:void(0);',data-sidemenu) &times;
+    block search
+      include search_country
+    h3.country-heading United Nations Development Programme in
+      span
+        | Bosnia and Herzegovina
+        a(href='javascript:void(0);')
+          img.header-small-img(src='images/Flag_of_Bosnia_and_Herzegovina.svg', alt='Country Flag')
+  div.canvas-scroll
+    block mainnav
+      include ./../inc/nav_main
+    block topnav
+      include ./../inc/nav_top.jade

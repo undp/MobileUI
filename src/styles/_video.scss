@@ -1,0 +1,35 @@
+.video-gallery,.video-list-wrap {
+  margin-bottom: 30px;
+}
+.video-gallery {
+  h1 {
+    margin-top: 0;
+  }
+}
+.video-list-wrap {
+  @media (max-width: $screen-md-max) {
+    margin-bottom: 0;
+  }
+  h3 {
+    font-weight: bold;
+  }
+}
+.video-list-item {
+  @media (max-width: $screen-md-max) {
+    margin-bottom: 30px;
+  }
+  > img {
+    margin-bottom: 15px;
+    @media (max-width: $screen-md-max) {
+      width: 100%;
+    }
+  }
+  .text-content {
+    font-size: 13px;
+    > h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+}
