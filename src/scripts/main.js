@@ -72,7 +72,7 @@
       var popDiv = $(this).find('.funding-popup');
       if(e.type == 'touchstart'){
         window.touchenabled = true;
-        console.log('click', e.type);
+        //console.log('click', e.type);
         if($(popDiv).hasClass('hide')){
           $(popDiv).removeClass('hide');
           $(this).addClass('hover');
@@ -87,7 +87,7 @@
         }
         $(popDiv).toggleClass('hide');
         $(this).toggleClass('hover');
-        console.log($(popDiv).className);
+        //console.log($(popDiv).className);
       }
     });
 
@@ -95,7 +95,7 @@
       if(window.touchenabled == true){
         return true;
       }
-      console.log('mouseover', e.type);
+      //console.log('mouseover', e.type);
       var popDiv = $(this).find('.funding-popup');
       $(popDiv).removeClass('hide');
       $(this).addClass('hover');
@@ -105,7 +105,7 @@
       if(window.touchenabled == true){
         return true;
       }
-      console.log('mouseout');
+      //console.log('mouseout');
       var popDiv = $(this).find('.funding-popup');
       $(popDiv).addClass('hide');
       $(this).removeClass('hover');
@@ -159,7 +159,7 @@
       $this.html(htmlEntities($this.html()));
     });
 
-    
+
 
   });
 })(window, document, jQuery);
